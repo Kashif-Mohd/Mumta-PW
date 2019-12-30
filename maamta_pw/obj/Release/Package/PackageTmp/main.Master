@@ -1,0 +1,534 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="maamta_pw.main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>Mumta Trial PW</title>
+    <link id="Link1" runat="server" rel="icon" href="~/assets/img/mom-child-orange.png" type="image/png" />
+    <link rel="stylesheet" href="css/divtable.css" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <%--  <script src="JS/jquery.min.js"></script>
+    <script src="JS/bootstrap-select.js"></script>
+
+    <script src="JS/bootstrap.min.js"></script>
+    <link href="Bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="Bootstrap/bootstrap-select.css" rel="stylesheet" />
+    <link href="Bootstrap/bootstrap.min.css" rel="stylesheet" />--%>
+
+
+
+    <style type="text/css">
+        .transparentButton {
+            background-color: transparent;
+            border: none;
+            color: #428bca;
+        }
+
+        .txtboxx {
+            color: black;
+            /*font-family: 'Times New Roman';*/
+            text-transform: uppercase;
+            padding: 8px;
+            border-radius: 5px;
+            border: 2px solid #00b894;
+        }
+
+        /* For Mobile Browser*/
+        @media only screen and (max-width: 40em) {
+
+            thead th {
+                display: none;
+            }
+
+            td[data-th]:before {
+                content: attr(data-th);
+            }
+
+
+
+            /* own design*/
+            table {
+                border-collapse: collapse;
+                /*width: 100%;*/
+            }
+
+            .trCSS {
+                border-bottom: 1px solid #ddd;
+            }
+
+            .tdCSS, thCSS {
+                margin-top: 1em;
+                display: block;
+                font-family: Trebuchet MS;
+                text-align: center;
+            }
+
+            .Mobile {
+                width: 90%;
+                padding-left: 7%;
+            }
+
+            .ColumTOP {
+                padding-top: 2.2em;
+            }
+
+            .ColumBOTTOM {
+                padding-bottom: 1em;
+            }
+
+
+            .hideUserLogged {
+                display: none;
+            }
+        }
+
+
+
+
+
+
+
+        /* For Web Browser*/
+
+        @media only screen and (min-width: 40em) {
+            .buttonWeb {
+                width: 22%;
+                margin-left: 38%;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            thCSS, .tdCSS {
+                width: 50%;
+                padding: 7px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .Mobile {
+                padding-left: 5%;
+                text-align: center;
+                width: 95%;
+            }
+
+            .trCSS {
+                height: 30px;
+            }
+        }
+
+
+
+
+
+        .mycheckbox input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .CalendarCSS {
+            /*background-color: red;
+            color: Snow;
+            border: solid 1px red;*/
+        }
+
+        .ajax__calendar_days {
+            background-color: #55efc4;
+            color: White;
+        }
+
+        .ajax__calendar_day {
+            background-color: #00b894;
+            font-family: Courier;
+        }
+
+        .ajax__calendar_header {
+            background-color: #34495E;
+            color: white;
+        }
+
+        .calanderButton {
+            margin-left: -34px;
+            margin-bottom: -9px;
+            height: 28px;
+            width: 30px;
+            margin-top: 5px;
+        }
+    </style>
+
+    <%--<script>
+          $(document).ready(function () {
+              $(":input").inputmask();
+          });
+</script>
+    --%>
+
+    <!-- Javascripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js">
+    </script>
+
+
+
+
+    <script type="text/javascript">
+
+
+
+        function onlyAlphabets(evt) {
+            var charCode;
+            if (window.event)
+                charCode = window.event.keyCode;  //for IE
+            else
+                charCode = evt.which;  //for firefox
+            if (charCode == 32) //for &lt;space&gt; symbol
+                return true;
+            if (charCode > 31 && charCode < 65) //for characters before 'A' in ASCII Table
+                return false;
+            if (charCode > 90 && charCode < 97) //for characters between 'Z' and 'a' in ASCII Table
+                return false;
+            if (charCode > 122) //for characters beyond 'z' in ASCII Table
+                return false;
+            return true;
+        }
+        function lettersOnly() {
+            var charCode = event.keyCode;
+
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8)
+
+                return true;
+            else
+                return false;
+        }
+
+        function OnlyNumeric(evt) {
+            var theEvent = evt || window.event;
+            var key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode(key);
+            var regex = /[0-9]/;
+            if (!regex.test(key)) {
+                theEvent.returnValue = false;
+                if (theEvent.preventDefault) theEvent.preventDefault();
+            }
+        }
+    </script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/css/footable.min.css"
+        rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/js/footable.min.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+
+    <script src="assets/js/chart-master/Chart.js"></script>
+
+
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body style="overflow: auto; width: 100%; height: 100%; background-color: #ffffff">
+    <form id="form1" runat="server">
+
+        <section id="container">
+            <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+            <!--header start style="background-color:#00BCD4"  5893b8-->
+            <header class="header black-bg" style="background-color: #ff5533; border-bottom-color: #e17055">
+                <div class="sidebar-toggle-box">
+                    <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+                </div>
+                <!--logo start-->
+                <a href="#" class="logo"><b>VITAL PAK &nbsp
+                        <asp:Label ID="lbeUserName" CssClass="hideUserLogged" runat="server" Text="" ForeColor="#ECF0F1" Font-Bold="True" Font-Size="Medium"></asp:Label>
+                </b></a>
+                <!--logo end-->
+
+                <div class="top-menu">
+                    <ul class="nav pull-right top-menu">
+                        <li><a class="logout" style="font-size: 14px" href="login.aspx"><span class="glyphicon glyphicon-log-out"></span>&nbsp Logout</a></li>
+                    </ul>
+                </div>
+            </header>
+            <!--header end-->
+
+            <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+            <!--sidebar start-->
+            <aside>
+
+                <div id="sidebar" class="nav-collapse ">
+                    <!-- sidebar menu start-->
+                    <ul class="sidebar-menu" id="nav-accordion">
+
+                        <p class="centered">
+                            <img src="assets/img/mom-child-orange.png" style="border-radius: 10px 35px;" width="100">
+                        </p>
+
+                        <h5 class="centered">MUMTA Trial PW</h5>
+
+                        <li class="sub-menu" id="navdash" runat="server">
+                            <a id="dashboard" runat="server" href="javascript:;">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                            <ul class="sub">
+                                <li runat="server" id="dashUltra"><a href="dashUltra.aspx">UltraSound</a></li>
+                                <li runat="server" id="dashANC"><a href="dashANC.aspx">ANC-Visit</a></li>
+                                <li runat="server" id="random"><a href="dashboardRandom.aspx">RANDOMIZATION TEAM</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu" id="navReportUltra" runat="server">
+                            <a runat="server" id="ReportUltra" href="javascript:;">
+                                <i class="fa fa-tasks"></i>
+                                <span>Print Report</span>
+                            </a>
+                            <ul class="sub">
+                                <li runat="server" id="ultraReport"><a href="ultraReport.aspx">Ultrasound Report</a></li>
+                                <li runat="server" id="ancReport"><a href="ancReport.aspx">ANC-Visit Report</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="sub-menu" id="navTaskList" runat="server">
+                            <a runat="server" id="TaskList" href="javascript:;">
+                                <i class="fa fa-tasks"></i>
+                                <span>Tasks List</span>
+                            </a>
+                            <ul class="sub">
+                                <li runat="server" id="expectedOutcome"><a href="expectedOutcome.aspx">Expected Outcome (ALL)</a></li>
+                                <li runat="server" id="ancPending"><a href="ancPending.aspx">ANC Pending</a></li>
+                                <li runat="server" id="ancVisits"><a href="ancVisits.aspx">ANC-Visit Schedule</a></li>
+                                <li runat="server" id="labinvestigation"><a href="labinvestigation.aspx">Lab Investigation</a></li>
+                                <li runat="server" id="expectedOutcomeEnrolled"><a href="expectedOutcomeEnrolled.aspx">Outcome List (Enrolled)</a></li>
+                                <li runat="server" id="enrollmentPending"><a href="enrollmentPending.aspx">Enrollment Pending</a></li>
+                                <li runat="server" id="azithromycin"><a href="azithromycin.aspx">Azithromycin</a></li>
+                                <li runat="server" id="followups4"><a href="followups4.aspx">Follow-ups (4)</a></li>
+                                <li runat="server" id="followups5a"><a href="followups5a.aspx">Follow-ups (5a)</a></li>
+                                <li runat="server" id="followups5b"><a href="followups5b.aspx">Follow-ups (5b)</a></li>
+                                <li runat="server" id="followups5c"><a href="followups5c.aspx">Follow-ups (5c)</a></li>
+                                <li runat="server" id="followups6"><a href="followups6.aspx">Follow-ups (6)</a></li>
+                            </ul>
+                        </li>
+
+
+
+
+                        <li class="sub-menu" id="navScrRandForms" runat="server">
+                            <a runat="server" id="ScrRandForms" href="javascript:;">
+                                <i class="fa fa-tasks"></i>
+                                <span>Ultra & ANC Forms</span>
+                            </a>
+                            <ul class="sub">
+                                <li runat="server" id="randomSequence"><a href="randomSequence.aspx">RANDOM-ID SEQUENCE</a></li>
+                                <li runat="server" id="showcrf1"><a href="showcrf1.aspx">Ultrasound</a></li>
+                                <li runat="server" id="showanc"><a href="showanc.aspx">ANC-Visits</a></li>
+                                <li runat="server" id="showFirstUltrasound"><a href="showFirstUltrasound.aspx">First Ultrasound</a></li>
+                                <li runat="server" id="showanc_enrolled"><a href="showanc_enrolled.aspx">ANC-Visits (Enrolled)</a></li>
+                                <li runat="server" id="showcrf2"><a href="showcrf2.aspx">RANDOM---CRF-2</a></li>
+                                <li runat="server" id="showcrf3a"><a href="showcrf3a.aspx">RANDOM---CRF-3a</a></li>
+                                <li runat="server" id="showcrf3b"><a href="showcrf3b.aspx">RANDOM---CRF-3b</a></li>
+                                <li runat="server" id="showcrf3c"><a href="showcrf3c.aspx">RANDOM---CRF-3c</a></li>
+                                <li runat="server" id="showcrf4"><a href="showcrf4.aspx">RANDOM---CRF-4</a></li>
+                                <li runat="server" id="showcrf4b"><a href="showcrf4b.aspx">RANDOM---CRF-4b</a></li>
+                                <li runat="server" id="showcrf5a"><a href="showcrf5a.aspx">RANDOM---CRF-5a</a></li>
+                                <li runat="server" id="showcrf5b"><a href="showcrf5b.aspx">RANDOM---CRF-5b</a></li>
+                                <li runat="server" id="showcrf5c"><a href="showcrf5c.aspx">RANDOM---CRF-5c</a></li>
+                                <li runat="server" id="showcrf6a"><a href="showcrf6a.aspx">RANDOM---CRF-6a</a></li>
+                                <li runat="server" id="showcrf6b"><a href="showcrf6b.aspx">RANDOM---CRF-6b</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="sub-menu" id="navWebEntry" runat="server">
+                            <a runat="server" id="WebEntry" href="javascript:;">
+                                <i class="fa fa-th"></i>
+                                <span>Entry Forms</span>
+                            </a>
+                            <ul class="sub">
+                                <li runat="server" id="showcrf4Compliance"><a href="showcrf4Compliance.aspx">CRF-4 (Compliance)</a></li>
+                                <li runat="server" id="entrycompliance"><a href="entrycompliance.aspx">Entry Empty Sachet</a></li>
+                                <li runat="server" id="checkcompliance"><a href="checkcompliance.aspx">Search Compliance</a></li>
+                            </ul>
+                        </li>
+
+
+
+
+
+
+                        <li class="sub-menu" id="navDuplicate" runat="server">
+                            <a runat="server" id="duplicate" href="javascript:;">
+                                <i class="fa fa-th"></i>
+                                <span>Error</span>
+                            </a>
+                            <ul class="sub">
+                                <li runat="server" id="duplicateCRF1"><a href="duplicateCRF1.aspx">Duplicate Screening</a></li>
+                                <li runat="server" id="duplicateANC"><a href="duplicateANC.aspx">Duplicate ANC</a></li>
+                                <li runat="server" id="ancSerialMissed"><a href="ancSerialMissed.aspx">ANC Serial Missed</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="sub-menu" id="navMonitoring" runat="server">
+                            <a runat="server" id="monitoring" href="javascript:;">
+                                <i class="fa fa-th"></i>
+                                <span>Monitoring</span>
+                            </a>
+                            <ul class="sub">
+                                <%--<li runat="server" id="ebfPrtage"><a href="ebfPrtage.aspx">EBF Percentage</a></li>--%>
+                                <li runat="server" id="compPrtage"><a href="compPrtage.aspx">Compliance Percentage</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="sub-menu" id="navTabUsr" runat="server">
+                            <a runat="server" id="TabUsr" href="javascript:;">
+                                <i class="fa fa-tablet"></i>
+                                <span>Tab User</span>
+                            </a>
+                            <ul class="sub">
+                                <li runat="server" id="listUsr"><a href="listusers.aspx">List of Users</a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="sub-menu" id="navSetting" runat="server">
+                            <a runat="server" id="setting" href="javascript:;">
+                                <i class="fa fa-cogs"></i>
+                                <span>Setting</span>
+                            </a>
+                            <ul class="sub">
+                                <%--<li runat="server" id="changePass"><a href="changepass.aspx">Change Password</a></li>--%>
+                                <br />
+                                <li runat="server" id="Li1">&nbsp&nbsp
+                                    <asp:Label ID="lbeUserNav" ForeColor="WhiteSmoke" Style="text-transform: capitalize" runat="server"></asp:Label></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <!-- sidebar menu end-->
+                </div>
+            </aside>
+
+            <!--sidebar end-->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+            <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+            <!--main content start-->
+
+            <section id="main-content">
+                <%--e9f7f2--%>
+                <section class="wrapper">
+                    <asp:ScriptManager ID="ScriptManger1" runat="Server"></asp:ScriptManager>
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </section>
+            </section>
+
+            <!--main content end-->
+            <!--footer start-->
+            <%-- <footer class="site-footer">
+                <div class="text-center">
+                    &copy; Copyright at Vital Pakistan Trust (VPT). All rights reserved. (2018-19)  ||    App. Developed by M.Kashif
+                </div>
+                <a href="#" class="go-top">
+                    <i class="fa fa-angle-up"></i>
+                </a>
+
+            </footer>--%>
+            <!--footer end-->
+        </section>
+
+        <!-- js placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/jquery-1.8.3.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+        <script src="assets/js/jquery.scrollTo.min.js"></script>
+        <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.sparkline.js"></script>
+
+
+        <!--common script for all pages-->
+        <script src="assets/js/common-scripts.js"></script>
+
+        <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
+        <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
+
+        <!--script for this page-->
+        <script src="assets/js/sparkline-chart.js"></script>
+        <script src="assets/js/zabuto_calendar.js"></script>
+
+
+        <script type="application/javascript">
+            $(document).ready(function () {
+                $("#date-popover").popover({ html: true, trigger: "manual" });
+                $("#date-popover").hide();
+                $("#date-popover").click(function (e) {
+                    $(this).hide();
+                });
+
+                $("#my-calendar").zabuto_calendar({
+                    action: function () {
+                        return myDateFunction(this.id, false);
+                    },
+                    action_nav: function () {
+                        return myNavFunction(this.id);
+                    },
+                    ajax: {
+                        url: "show_data.php?action=1",
+                        modal: true
+                    },
+                    legend: [
+                        { type: "text", label: "Special event", badge: "00" },
+                        { type: "block", label: "Regular event", }
+                    ]
+                });
+            });
+
+
+            function myNavFunction(id) {
+                $("#date-popover").hide();
+                var nav = $("#" + id).data("navigation");
+                var to = $("#" + id).data("to");
+                console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+            }
+        </script>
+
+    </form>
+
+</body>
+</html>

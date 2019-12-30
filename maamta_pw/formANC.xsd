@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="formANC" targetNamespace="http://tempuri.org/formANC.xsd" xmlns:mstns="http://tempuri.org/formANC.xsd" xmlns="http://tempuri.org/formANC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="vitalpak_hineshConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="vitalpak_hineshConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.vitalpak_hineshConnectionString.ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="formANC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="formANC" msprop:Generator_UserDSName="formANC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="anc_visit_appoint" msprop:Generator_TableClassName="anc_visit_appointDataTable" msprop:Generator_TableVarName="tableanc_visit_appoint" msprop:Generator_TablePropName="anc_visit_appoint" msprop:Generator_RowDeletingName="anc_visit_appointRowDeleting" msprop:Generator_RowChangingName="anc_visit_appointRowChanging" msprop:Generator_RowEvHandlerName="anc_visit_appointRowChangeEventHandler" msprop:Generator_RowDeletedName="anc_visit_appointRowDeleted" msprop:Generator_UserTableName="anc_visit_appoint" msprop:Generator_RowChangedName="anc_visit_appointRowChanged" msprop:Generator_RowEvArgName="anc_visit_appointRowChangeEvent" msprop:Generator_RowClassName="anc_visit_appointRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="date_of_attempt" msprop:Generator_ColumnVarNameInTable="columndate_of_attempt" msprop:Generator_ColumnPropNameInRow="date_of_attempt" msprop:Generator_ColumnPropNameInTable="date_of_attemptColumn" msprop:Generator_UserColumnName="date_of_attempt" type="xs:string" minOccurs="0" />
+              <xs:element name="anc_visit_48" msprop:Generator_ColumnVarNameInTable="columnanc_visit_48" msprop:Generator_ColumnPropNameInRow="anc_visit_48" msprop:Generator_ColumnPropNameInTable="anc_visit_48Column" msprop:Generator_UserColumnName="anc_visit_48" type="xs:string" minOccurs="0" />
+              <xs:element name="anc_visit_49" msprop:Generator_ColumnVarNameInTable="columnanc_visit_49" msprop:Generator_ColumnPropNameInRow="anc_visit_49" msprop:Generator_ColumnPropNameInTable="anc_visit_49Column" msprop:Generator_UserColumnName="anc_visit_49" type="xs:string" minOccurs="0" />
+              <xs:element name="q50_next_visit_dt" msprop:Generator_ColumnVarNameInTable="columnq50_next_visit_dt" msprop:Generator_ColumnPropNameInRow="q50_next_visit_dt" msprop:Generator_ColumnPropNameInTable="q50_next_visit_dtColumn" msprop:Generator_UserColumnName="q50_next_visit_dt" type="xs:string" minOccurs="0" />
+              <xs:element name="Q51" msprop:Generator_ColumnVarNameInTable="columnQ51" msprop:Generator_ColumnPropNameInRow="Q51" msprop:Generator_ColumnPropNameInTable="Q51Column" msprop:Generator_UserColumnName="Q51" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="anc_visit_details" msprop:Generator_TableClassName="anc_visit_detailsDataTable" msprop:Generator_TableVarName="tableanc_visit_details" msprop:Generator_TablePropName="anc_visit_details" msprop:Generator_RowDeletingName="anc_visit_detailsRowDeleting" msprop:Generator_RowChangingName="anc_visit_detailsRowChanging" msprop:Generator_RowEvHandlerName="anc_visit_detailsRowChangeEventHandler" msprop:Generator_RowDeletedName="anc_visit_detailsRowDeleted" msprop:Generator_UserTableName="anc_visit_details" msprop:Generator_RowChangedName="anc_visit_detailsRowChanged" msprop:Generator_RowEvArgName="anc_visit_detailsRowChangeEvent" msprop:Generator_RowClassName="anc_visit_detailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="date_of_attempt" msprop:Generator_ColumnVarNameInTable="columndate_of_attempt" msprop:Generator_ColumnPropNameInRow="date_of_attempt" msprop:Generator_ColumnPropNameInTable="date_of_attemptColumn" msprop:Generator_UserColumnName="date_of_attempt" type="xs:string" minOccurs="0" />
+              <xs:element name="q50_sbp" msprop:Generator_ColumnVarNameInTable="columnq50_sbp" msprop:Generator_ColumnPropNameInRow="q50_sbp" msprop:Generator_ColumnPropNameInTable="q50_sbpColumn" msprop:Generator_UserColumnName="q50_sbp" type="xs:string" minOccurs="0" />
+              <xs:element name="q50_dbp" msprop:Generator_ColumnVarNameInTable="columnq50_dbp" msprop:Generator_ColumnPropNameInRow="q50_dbp" msprop:Generator_ColumnPropNameInTable="q50_dbpColumn" msprop:Generator_UserColumnName="q50_dbp" type="xs:string" minOccurs="0" />
+              <xs:element name="q50_wt" msprop:Generator_ColumnVarNameInTable="columnq50_wt" msprop:Generator_ColumnPropNameInRow="q50_wt" msprop:Generator_ColumnPropNameInTable="q50_wtColumn" msprop:Generator_UserColumnName="q50_wt" type="xs:string" minOccurs="0" />
+              <xs:element name="q50_wop" msprop:Generator_ColumnVarNameInTable="columnq50_wop" msprop:Generator_ColumnPropNameInRow="q50_wop" msprop:Generator_ColumnPropNameInTable="q50_wopColumn" msprop:Generator_UserColumnName="q50_wop" type="xs:string" minOccurs="0" />
+              <xs:element name="q50_uts" msprop:Generator_ColumnVarNameInTable="columnq50_uts" msprop:Generator_ColumnPropNameInRow="q50_uts" msprop:Generator_ColumnPropNameInTable="q50_utsColumn" msprop:Generator_UserColumnName="q50_uts" type="xs:string" minOccurs="0" />
+              <xs:element name="q50_pres" msprop:Generator_ColumnVarNameInTable="columnq50_pres" msprop:Generator_ColumnPropNameInRow="q50_pres" msprop:Generator_ColumnPropNameInTable="q50_presColumn" msprop:Generator_UserColumnName="q50_pres" type="xs:string" minOccurs="0" />
+              <xs:element name="q50_fhs" msprop:Generator_ColumnVarNameInTable="columnq50_fhs" msprop:Generator_ColumnPropNameInRow="q50_fhs" msprop:Generator_ColumnPropNameInTable="q50_fhsColumn" msprop:Generator_UserColumnName="q50_fhs" type="xs:string" minOccurs="0" />
+              <xs:element name="q50_odm" msprop:Generator_ColumnVarNameInTable="columnq50_odm" msprop:Generator_ColumnPropNameInRow="q50_odm" msprop:Generator_ColumnPropNameInTable="q50_odmColumn" msprop:Generator_UserColumnName="q50_odm" type="xs:string" minOccurs="0" />
+              <xs:element name="q50_anm" msprop:Generator_ColumnVarNameInTable="columnq50_anm" msprop:Generator_ColumnPropNameInRow="q50_anm" msprop:Generator_ColumnPropNameInTable="q50_anmColumn" msprop:Generator_UserColumnName="q50_anm" type="xs:string" minOccurs="0" />
+              <xs:element name="q50_rcomp" msprop:Generator_ColumnVarNameInTable="columnq50_rcomp" msprop:Generator_ColumnPropNameInRow="q50_rcomp" msprop:Generator_ColumnPropNameInTable="q50_rcompColumn" msprop:Generator_UserColumnName="q50_rcomp" type="xs:string" minOccurs="0" />
+              <xs:element name="q50_rks" msprop:Generator_ColumnVarNameInTable="columnq50_rks" msprop:Generator_ColumnPropNameInRow="q50_rks" msprop:Generator_ColumnPropNameInTable="q50_rksColumn" msprop:Generator_UserColumnName="q50_rks" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="past_history" msprop:Generator_TableClassName="past_historyDataTable" msprop:Generator_TableVarName="tablepast_history" msprop:Generator_TablePropName="past_history" msprop:Generator_RowDeletingName="past_historyRowDeleting" msprop:Generator_RowChangingName="past_historyRowChanging" msprop:Generator_RowEvHandlerName="past_historyRowChangeEventHandler" msprop:Generator_RowDeletedName="past_historyRowDeleted" msprop:Generator_UserTableName="past_history" msprop:Generator_RowChangedName="past_historyRowChanged" msprop:Generator_RowEvArgName="past_historyRowChangeEvent" msprop:Generator_RowClassName="past_historyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="anc_q13_dob" msprop:Generator_ColumnVarNameInTable="columnanc_q13_dob" msprop:Generator_ColumnPropNameInRow="anc_q13_dob" msprop:Generator_ColumnPropNameInTable="anc_q13_dobColumn" msprop:Generator_UserColumnName="anc_q13_dob" type="xs:string" minOccurs="0" />
+              <xs:element name="anc_q13_dop" msprop:Generator_ColumnVarNameInTable="columnanc_q13_dop" msprop:Generator_ColumnPropNameInRow="anc_q13_dop" msprop:Generator_ColumnPropNameInTable="anc_q13_dopColumn" msprop:Generator_UserColumnName="anc_q13_dop" type="xs:string" minOccurs="0" />
+              <xs:element name="anc_q13_ofp" msprop:Generator_ColumnVarNameInTable="columnanc_q13_ofp" msprop:Generator_ColumnPropNameInRow="anc_q13_ofp" msprop:Generator_ColumnPropNameInTable="anc_q13_ofpColumn" msprop:Generator_UserColumnName="anc_q13_ofp" type="xs:string" minOccurs="0" />
+              <xs:element name="anc_q13_pob" msprop:Generator_ColumnVarNameInTable="columnanc_q13_pob" msprop:Generator_ColumnPropNameInRow="anc_q13_pob" msprop:Generator_ColumnPropNameInTable="anc_q13_pobColumn" msprop:Generator_UserColumnName="anc_q13_pob" type="xs:string" minOccurs="0" />
+              <xs:element name="anc_q13_mod" msprop:Generator_ColumnVarNameInTable="columnanc_q13_mod" msprop:Generator_ColumnPropNameInRow="anc_q13_mod" msprop:Generator_ColumnPropNameInTable="anc_q13_modColumn" msprop:Generator_UserColumnName="anc_q13_mod" type="xs:string" minOccurs="0" />
+              <xs:element name="anc_q13_gender" msprop:Generator_ColumnVarNameInTable="columnanc_q13_gender" msprop:Generator_ColumnPropNameInRow="anc_q13_gender" msprop:Generator_ColumnPropNameInTable="anc_q13_genderColumn" msprop:Generator_UserColumnName="anc_q13_gender" type="xs:string" minOccurs="0" />
+              <xs:element name="anc_q13_vital_status" msprop:Generator_ColumnVarNameInTable="columnanc_q13_vital_status" msprop:Generator_ColumnPropNameInRow="anc_q13_vital_status" msprop:Generator_ColumnPropNameInTable="anc_q13_vital_statusColumn" msprop:Generator_UserColumnName="anc_q13_vital_status" type="xs:string" minOccurs="0" />
+              <xs:element name="anc_q13_cn" msprop:Generator_ColumnVarNameInTable="columnanc_q13_cn" msprop:Generator_ColumnPropNameInRow="anc_q13_cn" msprop:Generator_ColumnPropNameInTable="anc_q13_cnColumn" msprop:Generator_UserColumnName="anc_q13_cn" type="xs:string" minOccurs="0" />
+              <xs:element name="anc_q13_complication" msprop:Generator_ColumnVarNameInTable="columnanc_q13_complication" msprop:Generator_ColumnPropNameInRow="anc_q13_complication" msprop:Generator_ColumnPropNameInTable="anc_q13_complicationColumn" msprop:Generator_UserColumnName="anc_q13_complication" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

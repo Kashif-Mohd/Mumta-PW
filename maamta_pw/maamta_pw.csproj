@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71AD9181-97CC-4F17-84CF-8F63DA0103EF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>maamta_pw</RootNamespace>
+    <AssemblyName>maamta_pw</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=17.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Fabric.Plugin, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DataVisualization.Design" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ancPending.aspx" />
+    <Content Include="ancReport.aspx" />
+    <Content Include="ancSerialMissed.aspx" />
+    <Content Include="ancVisits.aspx" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\style-responsive.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\table-responsive.css" />
+    <Content Include="assets\css\to-do.css" />
+    <Content Include="assets\css\zabuto_calendar.css" />
+    <Content Include="assets\font-awesome\css\font-awesome.css" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\img\aablur.jpg" />
+    <Content Include="assets\img\calendar.png" />
+    <Content Include="assets\img\calendar1.png" />
+    <Content Include="assets\img\checkbox-gray.png" />
+    <Content Include="assets\img\login-bg.jpg" />
+    <Content Include="assets\img\pw_back.jpg" />
+    <Content Include="assets\img\radio-gray.png" />
+    <Content Include="assets\img\vpt.jpg" />
+    <Content Include="assets\img\zoom.png" />
+    <Content Include="assets\js\bootstrap-inputmask\bootstrap-inputmask.min.js" />
+    <Content Include="assets\js\bootstrap-switch.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\calendar-conf-events.js" />
+    <Content Include="assets\js\chart-master\Chart.js" />
+    <Content Include="assets\js\chartjs-conf.js" />
+    <Content Include="assets\js\common-scripts.js" />
+    <Content Include="assets\js\easy-pie-chart.js" />
+    <Content Include="assets\js\fancybox\jquery.fancybox.css" />
+    <Content Include="assets\js\fancybox\jquery.fancybox.js" />
+    <Content Include="assets\js\form-component.js" />
+    <Content Include="assets\js\fullcalendar\bootstrap-fullcalendar.css" />
+    <Content Include="assets\js\fullcalendar\fullcalendar.min.js" />
+    <Content Include="assets\js\gritter-conf.js" />
+    <Content Include="assets\js\gritter\css\jquery.gritter.css" />
+    <Content Include="assets\js\gritter\css\jquery.gritter0.css" />
+    <Content Include="assets\js\gritter\images\gritter-light.png" />
+    <Content Include="assets\js\gritter\images\gritter-long.png" />
+    <Content Include="assets\js\gritter\images\gritter.png" />
+    <Content Include="assets\js\gritter\images\ie-spacer.gif" />
+    <Content Include="assets\js\gritter\js\jquery.gritter.js" />
+    <Content Include="assets\js\jquery-1.8.3.min.js" />
+    <Content Include="assets\js\jquery-easy-pie-chart\jquery.easy-pie-chart.css" />
+    <Content Include="assets\js\jquery-easy-pie-chart\jquery.easy-pie-chart.js" />
+    <Content Include="assets\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="assets\js\jquery.backstretch.min.js" />
+    <Content Include="assets\js\jquery.dcjqaccordion.2.7.js" />
+    <Content Include="assets\js\jquery.js" />
+    <Content Include="assets\js\jquery.nicescroll.js" />
+    <Content Include="assets\js\jquery.scrollTo.min.js" />
+    <Content Include="assets\js\jquery.sparkline.js" />
+    <Content Include="assets\js\jquery.tagsinput.js" />
+    <Content Include="assets\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="assets\js\morris-conf.js" />
+    <Content Include="assets\js\sparkline-chart.js" />
+    <Content Include="assets\js\tasks.js" />
+    <Content Include="assets\js\zabuto_calendar.js" />
+    <Content Include="assets\lineicons\fonts\linecons.svg" />
+    <Content Include="assets\lineicons\index.html" />
+    <Content Include="assets\lineicons\lte-ie7.js" />
+    <Content Include="assets\lineicons\style.css" />
+    <Content Include="azithromycin.aspx" />
+    <Content Include="checkcompliance.aspx" />
+    <Content Include="compPrtage.aspx" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\divtable.css" />
+    <Content Include="dashANC.aspx" />
+    <Content Include="dashboardRandom.aspx" />
+    <Content Include="dashUltra.aspx" />
+    <Content Include="duplicateANC.aspx" />
+    <Content Include="duplicateCRF1.aspx" />
+    <Content Include="enrollmentPending.aspx" />
+    <Content Include="entrycompliance.aspx" />
+    <Content Include="expectedOutcome.aspx" />
+    <Content Include="expectedOutcomeEnrolled.aspx" />
+    <Content Include="followups4.aspx" />
+    <Content Include="followups5a.aspx" />
+    <Content Include="followups5b.aspx" />
+    <Content Include="followups5c.aspx" />
+    <Content Include="followups6.aspx" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-1.9.1.min.js" />
+    <Content Include="js\jquery.easing.min.js" />
+    <Content Include="js\modernizr-2.6.2-respond-1.1.0.min.js" />
+    <Content Include="js\scrolling-nav.js" />
+    <Content Include="labinvestigation.aspx" />
+    <Content Include="labinvestigationEdit.aspx" />
+    <Content Include="randomSequence.aspx" />
+    <Content Include="listusers.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="showanc.aspx" />
+    <Content Include="showanc_enrolled.aspx" />
+    <Content Include="showcrf1.aspx" />
+    <Content Include="showcrf2.aspx" />
+    <Content Include="showcrf2byid.aspx" />
+    <Content Include="showcrf3a.aspx" />
+    <Content Include="showcrf3abyid.aspx" />
+    <Content Include="showcrf3b.aspx" />
+    <Content Include="showcrf3bbyid.aspx" />
+    <Content Include="showcrf3c.aspx" />
+    <Content Include="showcrf3cbyid.aspx" />
+    <Content Include="showcrf4.aspx" />
+    <Content Include="showcrf4b.aspx" />
+    <Content Include="showcrf4bbyid.aspx" />
+    <Content Include="showcrf4byid.aspx" />
+    <Content Include="showcrf4Compliance.aspx" />
+    <Content Include="showcrf5a.aspx" />
+    <Content Include="showcrf5abyid.aspx" />
+    <Content Include="showcrf5b.aspx" />
+    <Content Include="showcrf5bbyid.aspx" />
+    <Content Include="showcrf5c.aspx" />
+    <Content Include="showcrf5cbyid.aspx" />
+    <Content Include="showcrf6a.aspx" />
+    <Content Include="showcrf6b.aspx" />
+    <Content Include="showFirstUltrasound.aspx" />
+    <Content Include="ultraReport.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ancPending.aspx.cs">
+      <DependentUpon>ancPending.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ancPending.aspx.designer.cs">
+      <DependentUpon>ancPending.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ancReport.aspx.cs">
+      <DependentUpon>ancReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ancReport.aspx.designer.cs">
+      <DependentUpon>ancReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ancSerialMissed.aspx.cs">
+      <DependentUpon>ancSerialMissed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ancSerialMissed.aspx.designer.cs">
+      <DependentUpon>ancSerialMissed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ancVisits.aspx.cs">
+      <DependentUpon>ancVisits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ancVisits.aspx.designer.cs">
+      <DependentUpon>ancVisits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="azithromycin.aspx.cs">
+      <DependentUpon>azithromycin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="azithromycin.aspx.designer.cs">
+      <DependentUpon>azithromycin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkcompliance.aspx.cs">
+      <DependentUpon>checkcompliance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkcompliance.aspx.designer.cs">
+      <DependentUpon>checkcompliance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="compPrtage.aspx.cs">
+      <DependentUpon>compPrtage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="compPrtage.aspx.designer.cs">
+      <DependentUpon>compPrtage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashANC.aspx.cs">
+      <DependentUpon>dashANC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashANC.aspx.designer.cs">
+      <DependentUpon>dashANC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardRandom.aspx.cs">
+      <DependentUpon>dashboardRandom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboardRandom.aspx.designer.cs">
+      <DependentUpon>dashboardRandom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashUltra.aspx.cs">
+      <DependentUpon>dashUltra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashUltra.aspx.designer.cs">
+      <DependentUpon>dashUltra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="duplicateANC.aspx.cs">
+      <DependentUpon>duplicateANC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="duplicateANC.aspx.designer.cs">
+      <DependentUpon>duplicateANC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="duplicateCRF1.aspx.cs">
+      <DependentUpon>duplicateCRF1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="duplicateCRF1.aspx.designer.cs">
+      <DependentUpon>duplicateCRF1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="enrollmentPending.aspx.cs">
+      <DependentUpon>enrollmentPending.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="enrollmentPending.aspx.designer.cs">
+      <DependentUpon>enrollmentPending.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="entrycompliance.aspx.cs">
+      <DependentUpon>entrycompliance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="entrycompliance.aspx.designer.cs">
+      <DependentUpon>entrycompliance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="expectedOutcome.aspx.cs">
+      <DependentUpon>expectedOutcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="expectedOutcome.aspx.designer.cs">
+      <DependentUpon>expectedOutcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="expectedOutcomeEnrolled.aspx.cs">
+      <DependentUpon>expectedOutcomeEnrolled.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="expectedOutcomeEnrolled.aspx.designer.cs">
+      <DependentUpon>expectedOutcomeEnrolled.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="followups4.aspx.cs">
+      <DependentUpon>followups4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="followups4.aspx.designer.cs">
+      <DependentUpon>followups4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="followups5a.aspx.cs">
+      <DependentUpon>followups5a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="followups5a.aspx.designer.cs">
+      <DependentUpon>followups5a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="followups5b.aspx.cs">
+      <DependentUpon>followups5b.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="followups5b.aspx.designer.cs">
+      <DependentUpon>followups5b.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="followups5c.aspx.cs">
+      <DependentUpon>followups5c.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="followups5c.aspx.designer.cs">
+      <DependentUpon>followups5c.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="followups6.aspx.cs">
+      <DependentUpon>followups6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="followups6.aspx.designer.cs">
+      <DependentUpon>followups6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="formANC.cs">
+      <DependentUpon>formANC.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="formANC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>formANC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="labinvestigation.aspx.cs">
+      <DependentUpon>labinvestigation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labinvestigation.aspx.designer.cs">
+      <DependentUpon>labinvestigation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labinvestigationEdit.aspx.cs">
+      <DependentUpon>labinvestigationEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labinvestigationEdit.aspx.designer.cs">
+      <DependentUpon>labinvestigationEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="randomSequence.aspx.cs">
+      <DependentUpon>randomSequence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="randomSequence.aspx.designer.cs">
+      <DependentUpon>randomSequence.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listusers.aspx.cs">
+      <DependentUpon>listusers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listusers.aspx.designer.cs">
+      <DependentUpon>listusers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="main.Master.cs">
+      <DependentUpon>main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main.Master.designer.cs">
+      <DependentUpon>main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="showanc.aspx.cs">
+      <DependentUpon>showanc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showanc.aspx.designer.cs">
+      <DependentUpon>showanc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showanc_enrolled.aspx.cs">
+      <DependentUpon>showanc_enrolled.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showanc_enrolled.aspx.designer.cs">
+      <DependentUpon>showanc_enrolled.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf1.aspx.cs">
+      <DependentUpon>showcrf1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf1.aspx.designer.cs">
+      <DependentUpon>showcrf1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf2.aspx.cs">
+      <DependentUpon>showcrf2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf2.aspx.designer.cs">
+      <DependentUpon>showcrf2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf2byid.aspx.cs">
+      <DependentUpon>showcrf2byid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf2byid.aspx.designer.cs">
+      <DependentUpon>showcrf2byid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf3a.aspx.cs">
+      <DependentUpon>showcrf3a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf3a.aspx.designer.cs">
+      <DependentUpon>showcrf3a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf3abyid.aspx.cs">
+      <DependentUpon>showcrf3abyid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf3abyid.aspx.designer.cs">
+      <DependentUpon>showcrf3abyid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf3b.aspx.cs">
+      <DependentUpon>showcrf3b.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf3b.aspx.designer.cs">
+      <DependentUpon>showcrf3b.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf3bbyid.aspx.cs">
+      <DependentUpon>showcrf3bbyid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf3bbyid.aspx.designer.cs">
+      <DependentUpon>showcrf3bbyid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf3c.aspx.cs">
+      <DependentUpon>showcrf3c.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf3c.aspx.designer.cs">
+      <DependentUpon>showcrf3c.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf3cbyid.aspx.cs">
+      <DependentUpon>showcrf3cbyid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf3cbyid.aspx.designer.cs">
+      <DependentUpon>showcrf3cbyid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf4.aspx.cs">
+      <DependentUpon>showcrf4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf4.aspx.designer.cs">
+      <DependentUpon>showcrf4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf4b.aspx.cs">
+      <DependentUpon>showcrf4b.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf4b.aspx.designer.cs">
+      <DependentUpon>showcrf4b.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf4bbyid.aspx.cs">
+      <DependentUpon>showcrf4bbyid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf4bbyid.aspx.designer.cs">
+      <DependentUpon>showcrf4bbyid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf4byid.aspx.cs">
+      <DependentUpon>showcrf4byid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf4byid.aspx.designer.cs">
+      <DependentUpon>showcrf4byid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf4Compliance.aspx.cs">
+      <DependentUpon>showcrf4Compliance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf4Compliance.aspx.designer.cs">
+      <DependentUpon>showcrf4Compliance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf5a.aspx.cs">
+      <DependentUpon>showcrf5a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf5a.aspx.designer.cs">
+      <DependentUpon>showcrf5a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf5abyid.aspx.cs">
+      <DependentUpon>showcrf5abyid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf5abyid.aspx.designer.cs">
+      <DependentUpon>showcrf5abyid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf5b.aspx.cs">
+      <DependentUpon>showcrf5b.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf5b.aspx.designer.cs">
+      <DependentUpon>showcrf5b.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf5bbyid.aspx.cs">
+      <DependentUpon>showcrf5bbyid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf5bbyid.aspx.designer.cs">
+      <DependentUpon>showcrf5bbyid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf5c.aspx.cs">
+      <DependentUpon>showcrf5c.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf5c.aspx.designer.cs">
+      <DependentUpon>showcrf5c.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf5cbyid.aspx.cs">
+      <DependentUpon>showcrf5cbyid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf5cbyid.aspx.designer.cs">
+      <DependentUpon>showcrf5cbyid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf6a.aspx.cs">
+      <DependentUpon>showcrf6a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf6a.aspx.designer.cs">
+      <DependentUpon>showcrf6a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showcrf6b.aspx.cs">
+      <DependentUpon>showcrf6b.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showcrf6b.aspx.designer.cs">
+      <DependentUpon>showcrf6b.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showFirstUltrasound.aspx.cs">
+      <DependentUpon>showFirstUltrasound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showFirstUltrasound.aspx.designer.cs">
+      <DependentUpon>showFirstUltrasound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ultraReport.aspx.cs">
+      <DependentUpon>ultraReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ultraReport.aspx.designer.cs">
+      <DependentUpon>ultraReport.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="main.Master" />
+    <Content Include="assets\.DS_Store" />
+    <Content Include="assets\css\.DS_Store" />
+    <Content Include="assets\font-awesome\.DS_Store" />
+    <Content Include="assets\font-awesome\css\.DS_Store" />
+    <Content Include="assets\font-awesome\fonts\.DS_Store" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\.DS_Store" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\img\.DS_Store" />
+    <Content Include="assets\img\Thumbs.db" />
+    <Content Include="assets\js\.DS_Store" />
+    <Content Include="assets\js\bootstrap-inputmask\.DS_Store" />
+    <Content Include="assets\js\chart-master\.DS_Store" />
+    <Content Include="assets\js\fancybox\.DS_Store" />
+    <Content Include="assets\js\fullcalendar\.DS_Store" />
+    <Content Include="assets\js\gritter\.DS_Store" />
+    <Content Include="assets\js\gritter\css\.DS_Store" />
+    <Content Include="assets\js\gritter\images\.DS_Store" />
+    <Content Include="assets\js\gritter\js\.DS_Store" />
+    <Content Include="assets\js\jquery-easy-pie-chart\.DS_Store" />
+    <Content Include="assets\lineicons\.DS_Store" />
+    <Content Include="assets\lineicons\fonts\.DS_Store" />
+    <Content Include="assets\lineicons\fonts\linecons.eot" />
+    <Content Include="assets\lineicons\fonts\linecons.ttf" />
+    <Content Include="assets\lineicons\fonts\linecons.woff" />
+    <Content Include="formANC.xsc">
+      <DependentUpon>formANC.xsd</DependentUpon>
+    </Content>
+    <None Include="formANC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>formANC.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="formANC.xss">
+      <DependentUpon>formANC.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\maamtaPW.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ancReport.rdlc" />
+    <EmbeddedResource Include="Report1.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9744/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

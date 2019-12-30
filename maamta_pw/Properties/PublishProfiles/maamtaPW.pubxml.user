@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\LiveTest\mumtaPW</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ancPending.aspx">
+      <publishTime>01/30/2019 15:54:12</publishTime>
+    </File>
+    <File Include="ancReport.aspx">
+      <publishTime>12/06/2018 18:12:45</publishTime>
+    </File>
+    <File Include="ancSerialMissed.aspx">
+      <publishTime>10/29/2019 08:59:27</publishTime>
+    </File>
+    <File Include="ancVisits.aspx">
+      <publishTime>12/06/2018 13:47:17</publishTime>
+    </File>
+    <File Include="assets/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/css/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap.css">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/css/style-responsive.css">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/css/style.css">
+      <publishTime>11/13/2018 00:36:28</publishTime>
+    </File>
+    <File Include="assets/css/table-responsive.css">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/css/to-do.css">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/css/zabuto_calendar.css">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/font-awesome/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/font-awesome/css/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/font-awesome/css/font-awesome.css">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/font-awesome/fonts/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/font-awesome/fonts/fontawesome-webfont.eot">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/font-awesome/fonts/fontawesome-webfont.svg">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/font-awesome/fonts/fontawesome-webfont.ttf">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/font-awesome/fonts/fontawesome-webfont.woff">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/font-awesome/fonts/FontAwesome.otf">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/fonts/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/img/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/img/aablur.jpg">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/img/blog-bg.jpg">
+      <publishTime>10/11/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/img/calendar.png">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/img/calendar1.png">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/img/checkbox-gray.png">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/img/health.jpg">
+      <publishTime>10/11/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/img/health1.jpg">
+      <publishTime>10/11/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/img/login-bg.jpg">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/img/pw_back.jpg">
+      <publishTime>12/14/2018 16:21:26</publishTime>
+    </File>
+    <File Include="assets/img/radio-gray.png">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/img/Thumbs.db">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/img/vpt.jpg">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/img/zoom.png">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap-inputmask/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap-switch.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap.min.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/calendar-conf-events.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/chart-master/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/chart-master/Chart.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/chartjs-conf.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/common-scripts.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/easy-pie-chart.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/fancybox/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/fancybox/jquery.fancybox.css">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/fancybox/jquery.fancybox.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/form-component.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/fullcalendar/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/fullcalendar/bootstrap-fullcalendar.css">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/fullcalendar/fullcalendar.min.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/gritter-conf.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/gritter/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/gritter/css/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/gritter/css/jquery.gritter.css">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/gritter/css/jquery.gritter0.css">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/gritter/images/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/gritter/images/gritter-light.png">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/gritter/images/gritter-long.png">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/gritter/images/gritter.png">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/gritter/images/ie-spacer.gif">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/gritter/js/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/gritter/js/jquery.gritter.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/jquery-1.8.3.min.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/jquery-easy-pie-chart/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/jquery-easy-pie-chart/jquery.easy-pie-chart.css">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/jquery-easy-pie-chart/jquery.easy-pie-chart.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/jquery-ui-1.9.2.custom.min.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/jquery.backstretch.min.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/jquery.dcjqaccordion.2.7.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/jquery.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/jquery.nicescroll.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/jquery.scrollTo.min.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/jquery.sparkline.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/jquery.tagsinput.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/jquery.ui.touch-punch.min.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/morris-conf.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/sparkline-chart.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/tasks.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/js/zabuto_calendar.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/lineicons/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/lineicons/fonts/.DS_Store">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/lineicons/fonts/linecons.eot">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/lineicons/fonts/linecons.svg">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/lineicons/fonts/linecons.ttf">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/lineicons/fonts/linecons.woff">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/lineicons/index.html">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/lineicons/lte-ie7.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="assets/lineicons/style.css">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="azithromycin.aspx">
+      <publishTime>08/23/2019 10:32:40</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>07/29/2017 13:40:14</publishTime>
+    </File>
+    <File Include="bin/maamta_pw.dll">
+      <publishTime>12/27/2019 18:30:54</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.Entity.EF6.dll">
+      <publishTime>06/17/2016 18:28:04</publishTime>
+    </File>
+    <File Include="bin/MySql.Fabric.Plugin.dll">
+      <publishTime>06/17/2016 18:28:04</publishTime>
+    </File>
+    <File Include="checkcompliance.aspx">
+      <publishTime>10/29/2019 10:50:29</publishTime>
+    </File>
+    <File Include="compPrtage.aspx">
+      <publishTime>10/07/2019 18:49:48</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="css/divtable.css">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="dashANC.aspx">
+      <publishTime>12/21/2019 16:27:56</publishTime>
+    </File>
+    <File Include="dashboardRandom.aspx">
+      <publishTime>12/21/2019 16:23:36</publishTime>
+    </File>
+    <File Include="dashUltra.aspx">
+      <publishTime>12/21/2019 16:23:36</publishTime>
+    </File>
+    <File Include="duplicateANC.aspx">
+      <publishTime>01/21/2019 16:29:54</publishTime>
+    </File>
+    <File Include="duplicateCRF1.aspx">
+      <publishTime>01/21/2019 13:41:26</publishTime>
+    </File>
+    <File Include="enrollmentPending.aspx">
+      <publishTime>09/24/2019 09:54:18</publishTime>
+    </File>
+    <File Include="entrycompliance.aspx">
+      <publishTime>10/29/2019 10:19:20</publishTime>
+    </File>
+    <File Include="expectedOutcome.aspx">
+      <publishTime>03/18/2019 15:07:10</publishTime>
+    </File>
+    <File Include="expectedOutcomeEnrolled.aspx">
+      <publishTime>09/21/2019 18:01:19</publishTime>
+    </File>
+    <File Include="followups4.aspx">
+      <publishTime>08/19/2019 15:58:34</publishTime>
+    </File>
+    <File Include="followups5a.aspx">
+      <publishTime>08/19/2019 17:06:16</publishTime>
+    </File>
+    <File Include="followups5b.aspx">
+      <publishTime>08/19/2019 17:14:55</publishTime>
+    </File>
+    <File Include="followups5c.aspx">
+      <publishTime>08/19/2019 17:14:55</publishTime>
+    </File>
+    <File Include="followups6.aspx">
+      <publishTime>11/26/2019 14:30:51</publishTime>
+    </File>
+    <File Include="formANC.xsc">
+      <publishTime>04/08/2019 10:12:25</publishTime>
+    </File>
+    <File Include="formANC.xss">
+      <publishTime>04/08/2019 10:12:25</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="js/jquery-1.9.1.min.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="js/jquery.easing.min.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="js/modernizr-2.6.2-respond-1.1.0.min.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="js/scrolling-nav.js">
+      <publishTime>11/10/2018 13:52:56</publishTime>
+    </File>
+    <File Include="labinvestigation.aspx">
+      <publishTime>09/25/2019 19:02:57</publishTime>
+    </File>
+    <File Include="labinvestigationEdit.aspx">
+      <publishTime>09/25/2019 16:11:07</publishTime>
+    </File>
+    <File Include="listusers.aspx">
+      <publishTime>08/23/2019 16:29:29</publishTime>
+    </File>
+    <File Include="login.aspx">
+      <publishTime>01/11/2019 18:04:06</publishTime>
+    </File>
+    <File Include="main.Master">
+      <publishTime>11/26/2019 14:31:54</publishTime>
+    </File>
+    <File Include="randomSequence.aspx">
+      <publishTime>08/20/2019 17:18:51</publishTime>
+    </File>
+    <File Include="showanc.aspx">
+      <publishTime>12/18/2018 10:57:54</publishTime>
+    </File>
+    <File Include="showanc_enrolled.aspx">
+      <publishTime>10/29/2019 09:41:59</publishTime>
+    </File>
+    <File Include="showcrf1.aspx">
+      <publishTime>01/21/2019 14:26:23</publishTime>
+    </File>
+    <File Include="showcrf2.aspx">
+      <publishTime>08/20/2019 13:58:53</publishTime>
+    </File>
+    <File Include="showcrf2byid.aspx">
+      <publishTime>08/20/2019 17:16:30</publishTime>
+    </File>
+    <File Include="showcrf3a.aspx">
+      <publishTime>08/20/2019 14:48:05</publishTime>
+    </File>
+    <File Include="showcrf3abyid.aspx">
+      <publishTime>08/20/2019 17:16:40</publishTime>
+    </File>
+    <File Include="showcrf3b.aspx">
+      <publishTime>08/20/2019 15:17:31</publishTime>
+    </File>
+    <File Include="showcrf3bbyid.aspx">
+      <publishTime>08/20/2019 17:16:59</publishTime>
+    </File>
+    <File Include="showcrf3c.aspx">
+      <publishTime>11/11/2019 17:52:37</publishTime>
+    </File>
+    <File Include="showcrf3cbyid.aspx">
+      <publishTime>08/20/2019 17:17:12</publishTime>
+    </File>
+    <File Include="showcrf4.aspx">
+      <publishTime>11/11/2019 17:56:31</publishTime>
+    </File>
+    <File Include="showcrf4b.aspx">
+      <publishTime>12/21/2019 16:43:53</publishTime>
+    </File>
+    <File Include="showcrf4bbyid.aspx">
+      <publishTime>08/20/2019 17:11:29</publishTime>
+    </File>
+    <File Include="showcrf4byid.aspx">
+      <publishTime>08/20/2019 17:17:23</publishTime>
+    </File>
+    <File Include="showcrf4Compliance.aspx">
+      <publishTime>12/27/2019 18:30:04</publishTime>
+    </File>
+    <File Include="showcrf5a.aspx">
+      <publishTime>11/13/2019 16:42:28</publishTime>
+    </File>
+    <File Include="showcrf5abyid.aspx">
+      <publishTime>08/21/2019 10:28:06</publishTime>
+    </File>
+    <File Include="showcrf5b.aspx">
+      <publishTime>11/12/2019 13:26:41</publishTime>
+    </File>
+    <File Include="showcrf5bbyid.aspx">
+      <publishTime>11/12/2019 13:41:19</publishTime>
+    </File>
+    <File Include="showcrf5c.aspx">
+      <publishTime>11/12/2019 15:30:44</publishTime>
+    </File>
+    <File Include="showcrf5cbyid.aspx">
+      <publishTime>11/12/2019 14:54:30</publishTime>
+    </File>
+    <File Include="showcrf6a.aspx">
+      <publishTime>11/26/2019 17:16:26</publishTime>
+    </File>
+    <File Include="showcrf6b.aspx">
+      <publishTime>11/26/2019 17:17:59</publishTime>
+    </File>
+    <File Include="showFirstUltrasound.aspx">
+      <publishTime>08/27/2019 15:53:45</publishTime>
+    </File>
+    <File Include="ultraReport.aspx">
+      <publishTime>12/17/2018 17:25:55</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/07/2019 18:52:25</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
