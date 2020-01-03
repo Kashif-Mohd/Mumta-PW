@@ -112,8 +112,16 @@
         <div style="background-color: #095e66; margin: 0 0 10px 10px; -moz-box-shadow: 0 6px 6px -6px gray; box-shadow: 0 6px 6px -6px gray;">
             <h1 style="text-align: center; margin-top: 10px; font-size: 28px; word-spacing: 5px; color: white; text-transform: capitalize; background-color: #55efc4; padding-top: 8px; padding-bottom: 7px; font-family: Arial"><b>Randomization Team Performance</b></h1>
         </div>
-        <div style="width: 100%; text-align: center; overflow: auto; margin-top: 30px">
-            <asp:Label ID="lbeTotalEnrollment" runat="server" Text="" Font-Bold="true" Font-Size="Large" ForeColor="#00b894" Font-Underline="true"></asp:Label><br />
+        <table style="width: 40%; text-align: center; margin-left: 30%; color: white; border-collapse: collapse; margin-top: 40px; margin-bottom: 0px">
+            <tr class="trCSS" style="padding: 10px">
+                <td class="TableColumn" style="background-color: #8dd9fc; border-radius: 10px; font-size: 20px; text-align: center; padding: 10px;"><b>TOTAL ENROLLMENT</b><br />
+                    <asp:Label ID="lbeTotalEnrollment" runat="server" Text=""></asp:Label>
+                </td>
+            </tr>
+        </table>
+
+        <div style="width: 100%; text-align: center; overflow: auto; margin-top: 0px">
+
 
             <asp:Chart ID="Chart2" runat="server" Width="1000" Height="400px">
                 <Series>

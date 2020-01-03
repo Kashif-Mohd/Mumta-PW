@@ -66,6 +66,7 @@ namespace maamta_pw
                 Chart2.ChartAreas["ChartArea2"].AxisX.MajorGrid.Enabled = false;
                 Chart2.DataBind();
 
+                Chart2.ChartAreas[0].AxisY.Maximum = 120;
 
                 //Target Line:
                 StripLine targetLine = new StripLine();
@@ -73,8 +74,8 @@ namespace maamta_pw
                 targetLine.BorderColor = ColorTranslator.FromHtml("#55efc4");
                 targetLine.BorderWidth = 3;
                 targetLine.BorderDashStyle = ChartDashStyle.Dash;
-                targetLine.IntervalOffset = 50; // In my case I am plotting percentages.
-                targetLine.Text = "Target";
+                targetLine.IntervalOffset = 74; // In my case I am plotting percentages.
+                targetLine.Text = "Per Month Target (74)";
                 targetLine.TextOrientation = TextOrientation.Horizontal;
                 targetLine.ForeColor = targetLine.BorderColor;
                 Chart2.ChartAreas[0].AxisY.StripLines.Add(targetLine);
@@ -448,7 +449,7 @@ namespace maamta_pw
 
                 if (dr.Read() == true)
                 {
-                    lbeTotalEnrollment.Text = "Total: " + dr["total"].ToString();
+                    lbeTotalEnrollment.Text =  dr["total"].ToString();
                 }
             }
             finally
