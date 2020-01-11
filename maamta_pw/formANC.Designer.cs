@@ -359,6 +359,8 @@ namespace maamta_pw {
             
             private global::System.Data.DataColumn columnQ51;
             
+            private global::System.Data.DataColumn columnQ52;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public anc_visit_appointDataTable() {
@@ -434,6 +436,14 @@ namespace maamta_pw {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Q52Column {
+                get {
+                    return this.columnQ52;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -469,14 +479,15 @@ namespace maamta_pw {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public anc_visit_appointRow Addanc_visit_appointRow(string date_of_attempt, string anc_visit_48, string anc_visit_49, string q50_next_visit_dt, string Q51) {
+            public anc_visit_appointRow Addanc_visit_appointRow(string date_of_attempt, string anc_visit_48, string anc_visit_49, string q50_next_visit_dt, string Q51, string Q52) {
                 anc_visit_appointRow rowanc_visit_appointRow = ((anc_visit_appointRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         date_of_attempt,
                         anc_visit_48,
                         anc_visit_49,
                         q50_next_visit_dt,
-                        Q51};
+                        Q51,
+                        Q52};
                 rowanc_visit_appointRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowanc_visit_appointRow);
                 return rowanc_visit_appointRow;
@@ -504,6 +515,7 @@ namespace maamta_pw {
                 this.columnanc_visit_49 = base.Columns["anc_visit_49"];
                 this.columnq50_next_visit_dt = base.Columns["q50_next_visit_dt"];
                 this.columnQ51 = base.Columns["Q51"];
+                this.columnQ52 = base.Columns["Q52"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -519,6 +531,8 @@ namespace maamta_pw {
                 base.Columns.Add(this.columnq50_next_visit_dt);
                 this.columnQ51 = new global::System.Data.DataColumn("Q51", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQ51);
+                this.columnQ52 = new global::System.Data.DataColumn("Q52", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQ52);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1501,6 +1515,22 @@ namespace maamta_pw {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Q52 {
+                get {
+                    try {
+                        return ((string)(this[this.tableanc_visit_appoint.Q52Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Q52\' in table \'anc_visit_appoint\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableanc_visit_appoint.Q52Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isdate_of_attemptNull() {
                 return this.IsNull(this.tableanc_visit_appoint.date_of_attemptColumn);
             }
@@ -1557,6 +1587,18 @@ namespace maamta_pw {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetQ51Null() {
                 this[this.tableanc_visit_appoint.Q51Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsQ52Null() {
+                return this.IsNull(this.tableanc_visit_appoint.Q52Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetQ52Null() {
+                this[this.tableanc_visit_appoint.Q52Column] = global::System.Convert.DBNull;
             }
         }
         

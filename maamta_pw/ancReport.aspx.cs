@@ -215,10 +215,10 @@ namespace maamta_pw
                     string Q44 = dr["anc_form_44"].ToString();
                     string Q45 = dr["anc_form_45"].ToString();
 
-                    string Q46b_a = dr["anc_form_46_a"].ToString();
-                    string Q46b_b = dr["anc_form_46_b"].ToString();
-                    string Q46b_c = dr["anc_form_46_c"].ToString();
-                    string Q46b_d = dr["anc_form_46_d"].ToString();
+                    //string Q46b_a = dr["anc_form_46_a"].ToString();
+                    //string Q46b_b = dr["anc_form_46_b"].ToString();
+                    //string Q46b_c = dr["anc_form_46_c"].ToString();
+                    //string Q46b_d = dr["anc_form_46_d"].ToString();
 
                     string Q46a_a = dr["anc_form_46b_a"].ToString();
                     string Q46a_b = dr["anc_form_46b_b"].ToString();
@@ -465,10 +465,10 @@ namespace maamta_pw
 
 
 
-                    if (Q46b_a != "") Q46b_a = Q46b_a + ", ";
-                    if (Q46b_b != "") Q46b_b = Q46b_b + ", ";
-                    if (Q46b_c != "") Q46b_c = Q46b_c + ", ";
-                    string Q46b = Q46b_a + Q46b_b + Q46b_c + Q46b_d;
+                    //if (Q46b_a != "") Q46b_a = Q46b_a + ", ";
+                    //if (Q46b_b != "") Q46b_b = Q46b_b + ", ";
+                    //if (Q46b_c != "") Q46b_c = Q46b_c + ", ";
+                    //string Q46b = Q46b_a + Q46b_b + Q46b_c + Q46b_d;
 
 
 
@@ -627,8 +627,8 @@ namespace maamta_pw
                     ReportParameters.Add(new ReportParameter("Q46a", Q46a));
                     this.ReportViewer1.LocalReport.SetParameters(ReportParameters);
 
-                    ReportParameters.Add(new ReportParameter("Q46b", Q46b));
-                    this.ReportViewer1.LocalReport.SetParameters(ReportParameters);
+                    //ReportParameters.Add(new ReportParameter("Q46b", Q46b));
+                    //this.ReportViewer1.LocalReport.SetParameters(ReportParameters);
 
 
                     //Table of ANC Appoint Date
@@ -670,7 +670,7 @@ namespace maamta_pw
             {
                 con.Open();
                 MySqlCommand cmd;
-                cmd = new MySqlCommand("select a.date_of_attempt,a.anc_visit_48,a.anc_visit_49,a.q50_next_visit_dt,concat(if(a.anc_visit_51_a=1,'Venofer dose, ',''), if(a.anc_visit_51_b=2,'Augmentin, ',''), if(a.anc_visit_51_c=3,'Flagyl, ',''), if(a.anc_visit_51_d=4,'Diclofenac tab, ',''), if(a.anc_visit_51_e=5,'Diclofenac inj, ',''), if(a.anc_visit_51_f=6,'Nospa, ',''), if(a.anc_visit_51_g=7,'Citrosoda, ',''), if(a.anc_visit_51_h=8,'Douphaston, ',''), if(a.anc_visit_51_i=9,'Lialac syrup, ',''), if(a.anc_visit_51_j=10,'Adicos syrup, ',''), if(a.anc_visit_51_k=11,'Canestin vaginal cream, ',''), if(a.anc_visit_51_l=12,'Methyldopa, ',''), if(a.anc_visit_51_m=13,'Captorpil, ',''), if(a.anc_visit_51_n=14,'Ascard,',''), if(a.anc_visit_51_o=15,'Vermox, ',''), if(a.anc_visit_51_p=16,'Ferrous suplphate, ',''), if(a.anc_visit_51_q=17,'Folic acid, ',''), if(a.anc_visit_51_r=18,'Paracetamol, ',''), if(a.anc_visit_51_s=19,'Ponstan, ',''), if(a.anc_visit_51_t=20,'Softin, ',''), if(a.anc_visit_51_u=21,'Tricel, ',''), if(a.anc_visit_51_w!='','Buscopan, ','')  , if(a.anc_visit_51_x!='','Canestin topical cream, ','') , if(a.anc_visit_51_y!='','Hydrozol cream, ','') , if(a.anc_visit_51_z!='','Synto injection, ','') , if(a.anc_visit_51_aa!='','S T mom tablet, ','') , if(a.anc_visit_51_ab!='','ORS, ','') , if(a.anc_visit_51_ac!='','NS 1000 ml, ','') , if(a.anc_visit_51_ad!='','LR 1000 ml, ',''), 		if(a.anc_visit_51_v !='',concat(a.anc_visit_51_v,', '),''), 		if(a.anc_visit_51_v1 !='',concat(a.anc_visit_51_v1,', '),''),		if(a.anc_visit_51_v2 !='',concat(a.anc_visit_51_v2,', '),''),		if(a.anc_visit_51_v3 !='',concat(a.anc_visit_51_v3,', '),''),		if(a.anc_visit_51_v4 !='',concat(a.anc_visit_51_v4,', '),'')		) as Q51 from anc_visit_details as a 		 where a.pw_assist_id='" + Assess_ID + "' order by str_to_date(a.date_of_attempt, '%d-%m-%Y')", con);
+                cmd = new MySqlCommand("select a.date_of_attempt,a.anc_visit_48,a.anc_visit_49,a.q50_next_visit_dt,concat(if(a.anc_visit_51_a=1,'Venofer dose, ',''), if(a.anc_visit_51_b=2,'Augmentin, ',''), if(a.anc_visit_51_c=3,'Flagyl, ',''), if(a.anc_visit_51_d=4,'Diclofenac tab, ',''), if(a.anc_visit_51_e=5,'Diclofenac inj, ',''), if(a.anc_visit_51_f=6,'Nospa, ',''), if(a.anc_visit_51_g=7,'Citrosoda, ',''), if(a.anc_visit_51_h=8,'Douphaston, ',''), if(a.anc_visit_51_i=9,'Lialac syrup, ',''), if(a.anc_visit_51_j=10,'Adicos syrup, ',''), if(a.anc_visit_51_k=11,'Canestin vaginal cream, ',''), if(a.anc_visit_51_l=12,'Methyldopa, ',''), if(a.anc_visit_51_m=13,'Captorpil, ',''), if(a.anc_visit_51_n=14,'Ascard,',''), if(a.anc_visit_51_o=15,'Vermox, ',''), if(a.anc_visit_51_p=16,'Ferrous suplphate, ',''), if(a.anc_visit_51_q=17,'Folic acid, ',''), if(a.anc_visit_51_r=18,'Paracetamol, ',''), if(a.anc_visit_51_s=19,'Ponstan, ',''), if(a.anc_visit_51_t=20,'Softin, ',''), if(a.anc_visit_51_u=21,'Tricel, ',''), if(a.anc_visit_51_w!='','Buscopan, ','')  , if(a.anc_visit_51_x!='','Canestin topical cream, ','') , if(a.anc_visit_51_y!='','Hydrozol cream, ','') , if(a.anc_visit_51_z!='','Synto injection, ','') , if(a.anc_visit_51_aa!='','S T mom tablet, ','') , if(a.anc_visit_51_ab!='','ORS, ','') , if(a.anc_visit_51_ac!='','NS 1000 ml, ','') , if(a.anc_visit_51_ad!='','LR 1000 ml, ',''), 		if(a.anc_visit_51_v !='',concat(a.anc_visit_51_v,', '),''), 		if(a.anc_visit_51_v1 !='',concat(a.anc_visit_51_v1,', '),''),		if(a.anc_visit_51_v2 !='',concat(a.anc_visit_51_v2,', '),''),		if(a.anc_visit_51_v3 !='',concat(a.anc_visit_51_v3,', '),''),		if(a.anc_visit_51_v4 !='',concat(a.anc_visit_51_v4,', '),'')		) as Q51,                CONCAT(  (IF(a.52a !='',CONCAT(a.52a,', '),'')), (IF(a.52b !='',CONCAT(a.52b,', '),'')), (IF(a.52c !='',CONCAT(a.52c,', '),'')), (IF(a.52d !='',CONCAT(a.52d,', '),''))) AS Q52                  from anc_visit_details as a 		 where a.pw_assist_id='" + Assess_ID + "' order by str_to_date(a.date_of_attempt, '%d-%m-%Y')", con);
 
                 //cmd = new MySqlCommand("select a.date_of_attempt,a.anc_visit_48,a.anc_visit_49,a.q50_next_visit_dt,concat(if(a.anc_visit_51_a=1,'Venofer dose, ',''), if(a.anc_visit_51_b=2,'Augmentin, ',''), if(a.anc_visit_51_c=3,'Flagyl, ',''), if(a.anc_visit_51_d=4,'Diclofenac tab, ',''), if(a.anc_visit_51_e=5,'Diclofenac inj, ',''), if(a.anc_visit_51_f=6,'Nospa, ',''), if(a.anc_visit_51_g=7,'Citrosoda, ',''), if(a.anc_visit_51_h=8,'Douphaston, ',''), if(a.anc_visit_51_i=9,'Lialac syrup, ',''), if(a.anc_visit_51_j=10,'Adicos syrup, ',''), if(a.anc_visit_51_k=11,'Canestin vaginal cream, ',''), if(a.anc_visit_51_l=12,'Methyldopa, ',''), if(a.anc_visit_51_m=13,'Captorpil, ',''), if(a.anc_visit_51_n=14,'Ascard,',''), if(a.anc_visit_51_o=15,'Vermox, ',''), if(a.anc_visit_51_p=16,'Ferrous suplphate, ',''), if(a.anc_visit_51_q=17,'Folic acid, ',''), if(a.anc_visit_51_r=18,'Paracetamol, ',''), if(a.anc_visit_51_s=19,'Ponstan, ',''), if(a.anc_visit_51_t=20,'Softin, ',''), if(a.anc_visit_51_u=21,'Tricel, ',''), if(a.anc_visit_51_v !='',a.anc_visit_51_v,'')) as Q51 from anc_visit_details as a where a.pw_assist_id='" + Assess_ID + "' order by str_to_date(a.date_of_attempt, '%d-%m-%Y')", con);
 
@@ -702,7 +702,7 @@ namespace maamta_pw
             {
                 con.Open();
                 MySqlCommand cmd;
-                cmd = new MySqlCommand("select a.date_of_attempt,a.q50_sbp,a.q50_dbp,a.q50_wt,a.q50_wop,a.q50_uts,	(CASE WHEN a.q50_pres= '1' THEN 'Cephalic' WHEN a.q50_pres = '2' THEN 'Breech' WHEN a.q50_pres = '3' THEN 'Shoulder' WHEN a.q50_pres = '4' THEN 'Not determined yet' WHEN a.q50_pres = '5' THEN 'Not recorded'  ELSE a.q50_pres END) as q50_pres,		(CASE WHEN a.q50_fhs= '1' THEN 'Yes' WHEN a.q50_fhs = '2' THEN 'No' END) as q50_fhs,	(CASE WHEN a.q50_odm= '1' THEN 'Yes' WHEN a.q50_odm = '2' THEN 'No' END) as q50_odm,	(CASE WHEN a.q50_anm= '1' THEN 'Yes' WHEN a.q50_anm= '2' THEN 'No' END) as q50_anm,			(CASE WHEN a.q50_rcomp= '1' THEN 'JPMC' WHEN a.q50_rcomp= '2' THEN 'CIVIL' WHEN a.q50_rcomp= '3' THEN 'AKU KHARADAR' WHEN a.q50_rcomp= '4' THEN 'AKU' WHEN a.q50_rcomp= '5' THEN 'ATTIYA' WHEN a.q50_rcomp= '9' THEN 'not required' ELSE a.q50_rcomp END) as q50_rcomp,	a.q50_rks from anc_visit_details as a where a.pw_assist_id='" + Assess_ID + "' order by str_to_date(a.date_of_attempt, '%d-%m-%Y')", con);
+                cmd = new MySqlCommand("select a.date_of_attempt,a.q50_sbp,a.q50_dbp,a.q50_wt,a.q50_wop,a.q50_uts,	(CASE WHEN a.q50_pres= '1' THEN 'Cephalic' WHEN a.q50_pres = '2' THEN 'Breech' WHEN a.q50_pres = '3' THEN 'Shoulder' WHEN a.q50_pres = '4' THEN 'Not determined yet' WHEN a.q50_pres = '5' THEN 'Not recorded'  ELSE a.q50_pres END) as q50_pres,		(CASE WHEN a.q50_fhs= '1' THEN 'Yes' WHEN a.q50_fhs = '2' THEN 'No' END) as q50_fhs,	(CASE WHEN a.q50_odm= '1' THEN 'Yes' WHEN a.q50_odm = '2' THEN 'No' END) as q50_odm,	(CASE WHEN a.q50_anm= '1' THEN 'Yes' WHEN a.q50_anm= '2' THEN 'No' END) as q50_anm,			(CASE WHEN a.q50_rcomp= '1' THEN 'JPMC' WHEN a.q50_rcomp= '2' THEN 'CIVIL' WHEN a.q50_rcomp= '3' THEN 'AKU KHARADAR' WHEN a.q50_rcomp= '4' THEN 'AKU' WHEN a.q50_rcomp= '5' THEN 'ATTIYA' WHEN a.q50_rcomp= '9' THEN 'not required' ELSE a.q50_rcomp END) as q50_rcomp,	a.q50_rks           from anc_visit_details as a where a.pw_assist_id='" + Assess_ID + "' order by str_to_date(a.date_of_attempt, '%d-%m-%Y')", con);
 
                 //cmd = new MySqlCommand("select date_of_attempt,	q50_sbp,	q50_dbp,	q50_wt,	q50_wop,	q50_uts,	(CASE WHEN q50_pres= '1' THEN 'Cephalic' WHEN q50_pres = '2' THEN 'Breech' WHEN q50_pres = '3' THEN 'Shoulder' WHEN q50_pres = '4' THEN 'Not determined yet' WHEN q50_pres = '5' THEN 'Not recorded'  ELSE q50_pres END) as q50_pres,		(CASE WHEN q50_fhs= '1' THEN 'Yes' WHEN q50_fhs = '2' THEN 'No' END) as q50_fhs,	(CASE WHEN q50_odm= '1' THEN 'Yes' WHEN q50_odm = '2' THEN 'No' END) as q50_odm,	(CASE WHEN q50_anm= '1' THEN 'Yes' WHEN q50_anm= '2' THEN 'No' END) as q50_anm,			(CASE WHEN q50_rcomp= '1' THEN 'JPMC' WHEN q50_rcomp= '2' THEN 'CIVIL' WHEN q50_rcomp= '3' THEN 'AKU KHARADAR' WHEN q50_rcomp= '4' THEN 'AKU' WHEN q50_rcomp= '5' THEN 'ATTIYA' WHEN q50_rcomp= '9' THEN 'not required' ELSE q50_rcomp END) as q50_rcomp,	q50_rks from anc_visit_details as a where a.pw_assist_id='" + Assess_ID + "' order by str_to_date(a.date_of_attempt, '%d-%m-%Y')", con);
 

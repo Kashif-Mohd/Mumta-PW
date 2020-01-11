@@ -2056,7 +2056,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>14.40586in</Top>
+        <Top>14.15586in</Top>
         <Left>1.0697in</Left>
         <Height>0.26167in</Height>
         <Width>4.25694in</Width>
@@ -2078,19 +2078,22 @@
               <Width>0.34653in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.79251in</Width>
+              <Width>0.68948in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.94002in</Width>
+              <Width>0.79441in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.30985in</Width>
+              <Width>1.0919in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.6028in</Width>
+              <Width>1.33087in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.9034in</Width>
+              <Width>0.82822in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.8101in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -2108,6 +2111,7 @@
                             <TextRun>
                               <Value>No.</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -2142,6 +2146,7 @@
                             <TextRun>
                               <Value>Visit Date</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -2176,6 +2181,7 @@
                             <TextRun>
                               <Value>Serial No.</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -2210,6 +2216,7 @@
                             <TextRun>
                               <Value>Key Lab Report</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -2244,6 +2251,7 @@
                             <TextRun>
                               <Value>Medicine</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -2269,6 +2277,41 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Textbox14">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>High risk factor for current pregnancy</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox14</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="Textbox51">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -2278,6 +2321,7 @@
                             <TextRun>
                               <Value>Next Visit</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -2316,7 +2360,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=RowNumber(Nothing)</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -2348,7 +2394,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!date_of_attempt.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -2380,7 +2428,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!anc_visit_48.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -2413,7 +2463,7 @@
                             <TextRun>
                               <Value>=Fields!anc_visit_49.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2447,7 +2497,7 @@
                             <TextRun>
                               <Value>=Fields!Q51.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2472,6 +2522,40 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Q52">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Q52.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Q52</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="q50_next_visit_dt">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -2480,7 +2564,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!q50_next_visit_dt.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -2514,6 +2600,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -2527,10 +2614,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>anc_visit_app</DataSetName>
-        <Top>14.71774in</Top>
+        <Top>14.46774in</Top>
         <Left>0.28013in</Left>
         <Height>0.5in</Height>
-        <Width>5.89511in</Width>
+        <Width>5.89151in</Width>
         <ZIndex>64</ZIndex>
         <Style>
           <Border>
@@ -3495,7 +3582,7 @@
             <Value>=Fields!q50_rks.Value</Value>
           </SortExpression>
         </SortExpressions>
-        <Top>15.35316in</Top>
+        <Top>15.10316in</Top>
         <Left>0.28013in</Left>
         <Height>1.33333in</Height>
         <Width>5.90194in</Width>
@@ -3530,7 +3617,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>17.30701in</Top>
+        <Top>17.05701in</Top>
         <Left>1.10819in</Left>
         <Height>0.26167in</Height>
         <Width>4.25694in</Width>
@@ -4264,7 +4351,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>past_history</DataSetName>
-        <Top>17.59667in</Top>
+        <Top>17.34667in</Top>
         <Left>0.24263in</Left>
         <Height>1.90625in</Height>
         <Width>5.93947in</Width>
@@ -4294,7 +4381,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox38</rd:DefaultName>
-        <Top>19.5941in</Top>
+        <Top>19.3441in</Top>
         <Left>0.29805in</Left>
         <Height>0.25in</Height>
         <Width>5.87718in</Width>
@@ -5534,72 +5621,6 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox85">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>High risk factor for current pregnancy:</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>arial</FontFamily>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>13.11198in</Top>
-        <Left>0.28918in</Left>
-        <Height>0.21527in</Height>
-        <Width>2.69565in</Width>
-        <ZIndex>105</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="txtWomanNm41">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Parameters!Q46b.Value</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <Top>13.11685in</Top>
-        <Left>3.0384in</Left>
-        <Height>0.21527in</Height>
-        <Width>3.13324in</Width>
-        <ZIndex>106</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Textbox Name="Textbox86">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -5620,11 +5641,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>13.48768in</Top>
+        <Top>13.23768in</Top>
         <Left>0.29546in</Left>
         <Height>0.21527in</Height>
         <Width>2.69389in</Width>
-        <ZIndex>107</ZIndex>
+        <ZIndex>105</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -5651,11 +5672,11 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>13.49463in</Top>
+        <Top>13.24463in</Top>
         <Left>3.03042in</Left>
         <Height>0.21527in</Height>
         <Width>3.13324in</Width>
-        <ZIndex>108</ZIndex>
+        <ZIndex>106</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -5686,11 +5707,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>13.71545in</Top>
+        <Top>13.46545in</Top>
         <Left>0.29548in</Left>
         <Height>0.21527in</Height>
         <Width>2.69389in</Width>
-        <ZIndex>109</ZIndex>
+        <ZIndex>107</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -5717,11 +5738,11 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>13.7224in</Top>
+        <Top>13.4724in</Top>
         <Left>3.02965in</Left>
         <Height>0.21527in</Height>
         <Width>3.13324in</Width>
-        <ZIndex>110</ZIndex>
+        <ZIndex>108</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -5733,10 +5754,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>20.4441in</Height>
+    <Height>19.95452in</Height>
     <Style />
   </Body>
-  <Width>6.42163in</Width>
+  <Width>6.36915in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
@@ -5843,6 +5864,10 @@
         </Field>
         <Field Name="Q51">
           <DataField>Q51</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Q52">
+          <DataField>Q52</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
