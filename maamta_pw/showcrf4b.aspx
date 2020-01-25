@@ -172,9 +172,11 @@
                     <asp:BoundField DataField="pw_crf4b_18" HeaderText="pw_crf4b_18" />
                     <asp:BoundField DataField="pw_crf4b_18_qty" HeaderText="pw_crf4b_18_qty" />                    
                     <asp:BoundField DataField="pw_crf4b_18b_qty" HeaderText="pw_crf4b_18b_qty" />                    
+                    <asp:BoundField DataField="pw_crf4b_18c_qty" HeaderText="pw_crf4b_18c_qty" />                    
                     <asp:BoundField DataField="pw_crf4b_19" HeaderText="pw_crf4b_19" />
                     <asp:BoundField DataField="pw_crf4b_19_qty" HeaderText="pw_crf4b_19_qty" />
                     <asp:BoundField DataField="pw_crf4b_19b_qty" HeaderText="pw_crf4b_19b_qty" />
+                    <asp:BoundField DataField="pw_crf4b_19c_qty" HeaderText="pw_crf4b_19c_qty" />
                     <asp:BoundField DataField="pw_crf4b_20" HeaderText="pw_crf4b_20" />
                     <asp:BoundField DataField="pw_crf4b_21" HeaderText="pw_crf4b_21" />
                     <asp:BoundField DataField="pw_crf4b_22" HeaderText="pw_crf4b_22" />
@@ -238,9 +240,11 @@
                     <asp:BoundField DataField="pw_crf4b_18" HeaderText="pw_crf4b_18" />
                     <asp:BoundField DataField="pw_crf4b_18_qty" HeaderText="pw_crf4b_18_qty" />                    
                     <asp:BoundField DataField="pw_crf4b_18b_qty" HeaderText="pw_crf4b_18b_qty" />                    
+                    <asp:BoundField DataField="pw_crf4b_18c_qty" HeaderText="pw_crf4b_18c_qty" />                    
                     <asp:BoundField DataField="pw_crf4b_19" HeaderText="pw_crf4b_19" />
                     <asp:BoundField DataField="pw_crf4b_19_qty" HeaderText="pw_crf4b_19_qty" />
                     <asp:BoundField DataField="pw_crf4b_19b_qty" HeaderText="pw_crf4b_19b_qty" />
+                    <asp:BoundField DataField="pw_crf4b_19c_qty" HeaderText="pw_crf4b_19c_qty" />
                     <asp:BoundField DataField="pw_crf4b_20" HeaderText="pw_crf4b_20" />
                     <asp:BoundField DataField="pw_crf4b_21" HeaderText="pw_crf4b_21" />
                     <asp:BoundField DataField="pw_crf4b_22" HeaderText="pw_crf4b_22" />

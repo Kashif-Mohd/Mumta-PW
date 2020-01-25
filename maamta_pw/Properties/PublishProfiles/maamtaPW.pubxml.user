@@ -304,7 +304,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/29/2017 13:40:14</publishTime>
     </File>
     <File Include="bin/maamta_pw.dll">
-      <publishTime>01/11/2020 15:43:10</publishTime>
+      <publishTime>01/25/2020 11:12:37</publishTime>
     </File>
     <File Include="bin/MySql.Data.Entity.EF6.dll">
       <publishTime>06/17/2016 18:28:04</publishTime>
