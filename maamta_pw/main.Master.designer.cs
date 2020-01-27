@@ -544,6 +544,24 @@ namespace maamta_pw {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl compPrtage;
         
         /// <summary>
+        /// CholinePrtage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CholinePrtage;
+        
+        /// <summary>
+        /// NicotinamidePrtage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl NicotinamidePrtage;
+        
+        /// <summary>
         /// navTabUsr control.
         /// </summary>
         /// <remarks>

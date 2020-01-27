@@ -405,6 +405,8 @@
                             <ul class="sub">
                                 <%--<li runat="server" id="ebfPrtage"><a href="ebfPrtage.aspx">EBF Percentage</a></li>--%>
                                 <li runat="server" id="compPrtage"><a href="compPrtage.aspx">Compliance Percentage</a></li>
+                                <li runat="server" id="CholinePrtage"><a href="CholinePrtage.aspx">Choline Percentage</a></li>
+                                <li runat="server" id="NicotinamidePrtage"><a href="NicotinamidePrtage.aspx">Nicotinamide Percentage</a></li>
                             </ul>
                         </li>
 

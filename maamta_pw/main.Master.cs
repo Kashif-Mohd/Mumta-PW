@@ -320,6 +320,24 @@ namespace maamta_pw
                     compPrtage.Attributes.Add("class", "active");
                     Session["WebForm"] = null;
                 }
+                else if (Convert.ToString(Session["WebForm"]) == "compPrtage")
+                {
+                    monitoring.Attributes.Add("class", "active");
+                    compPrtage.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
+                else if (Convert.ToString(Session["WebForm"]) == "CholinePrtage")
+                {
+                    monitoring.Attributes.Add("class", "active");
+                    CholinePrtage.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
+                else if (Convert.ToString(Session["WebForm"]) == "NicotinamidePrtage")
+                {
+                    monitoring.Attributes.Add("class", "active");
+                    NicotinamidePrtage.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
 
                 //TAB user Account:
                 else if (Convert.ToString(Session["WebForm"]) == "ListOfUsers")

@@ -134,6 +134,7 @@
     <Content Include="assets\lineicons\style.css" />
     <Content Include="azithromycin.aspx" />
     <Content Include="checkcompliance.aspx" />
+    <Content Include="CholinePrtage.aspx" />
     <Content Include="compPrtage.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\divtable.css" />
@@ -158,6 +159,7 @@
     <Content Include="js\scrolling-nav.js" />
     <Content Include="labinvestigation.aspx" />
     <Content Include="labinvestigationEdit.aspx" />
+    <Content Include="NicotinamidePrtage.aspx" />
     <Content Include="randomSequence.aspx" />
     <Content Include="listusers.aspx" />
     <Content Include="login.aspx" />
@@ -231,6 +233,13 @@
     </Compile>
     <Compile Include="checkcompliance.aspx.designer.cs">
       <DependentUpon>checkcompliance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CholinePrtage.aspx.cs">
+      <DependentUpon>CholinePrtage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CholinePrtage.aspx.designer.cs">
+      <DependentUpon>CholinePrtage.aspx</DependentUpon>
     </Compile>
     <Compile Include="compPrtage.aspx.cs">
       <DependentUpon>compPrtage.aspx</DependentUpon>
@@ -359,6 +368,13 @@
     </Compile>
     <Compile Include="labinvestigationEdit.aspx.designer.cs">
       <DependentUpon>labinvestigationEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NicotinamidePrtage.aspx.cs">
+      <DependentUpon>NicotinamidePrtage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NicotinamidePrtage.aspx.designer.cs">
+      <DependentUpon>NicotinamidePrtage.aspx</DependentUpon>
     </Compile>
     <Compile Include="randomSequence.aspx.cs">
       <DependentUpon>randomSequence.aspx</DependentUpon>
