@@ -409,7 +409,16 @@
                                 <li runat="server" id="NicotinamidePrtage"><a href="NicotinamidePrtage.aspx">Nicotinamide Percentage</a></li>
                             </ul>
                         </li>
-
+                        
+                        <li class="sub-menu" id="navSecret" runat="server">
+                            <a runat="server" id="secret" href="javascript:;">
+                                <i class="fa fa-th"></i>
+                                <span>Secret</span>
+                            </a>
+                            <ul class="sub">
+                                <li runat="server" id="Sticker"><a href="stickerReport.aspx">Sticker Report</a></li>
+                            </ul>
+                        </li>
 
                         <li class="sub-menu" id="navTabUsr" runat="server">
                             <a runat="server" id="TabUsr" href="javascript:;">

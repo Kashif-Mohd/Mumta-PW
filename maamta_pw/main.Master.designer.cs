@@ -562,6 +562,33 @@ namespace maamta_pw {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl NicotinamidePrtage;
         
         /// <summary>
+        /// navSecret control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navSecret;
+        
+        /// <summary>
+        /// secret control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor secret;
+        
+        /// <summary>
+        /// Sticker control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Sticker;
+        
+        /// <summary>
         /// navTabUsr control.
         /// </summary>
         /// <remarks>
