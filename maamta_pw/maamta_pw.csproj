@@ -145,6 +145,8 @@
     <Content Include="duplicateCRF1.aspx" />
     <Content Include="enrollmentPending.aspx" />
     <Content Include="entrycompliance.aspx" />
+    <Content Include="errorCompliance.aspx" />
+    <Content Include="ErrorMissingFollowup.aspx" />
     <Content Include="expectedOutcome.aspx" />
     <Content Include="expectedOutcomeEnrolled.aspx" />
     <Content Include="followups4.aspx" />
@@ -296,6 +298,20 @@
     </Compile>
     <Compile Include="entrycompliance.aspx.designer.cs">
       <DependentUpon>entrycompliance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="errorCompliance.aspx.cs">
+      <DependentUpon>errorCompliance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="errorCompliance.aspx.designer.cs">
+      <DependentUpon>errorCompliance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorMissingFollowup.aspx.cs">
+      <DependentUpon>ErrorMissingFollowup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorMissingFollowup.aspx.designer.cs">
+      <DependentUpon>ErrorMissingFollowup.aspx</DependentUpon>
     </Compile>
     <Compile Include="expectedOutcome.aspx.cs">
       <DependentUpon>expectedOutcome.aspx</DependentUpon>

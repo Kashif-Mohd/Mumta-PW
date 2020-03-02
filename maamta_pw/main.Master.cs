@@ -291,35 +291,48 @@ namespace maamta_pw
 
 
 
-                //Duplicate ERROR Forms:
+
+
+                // ERROR Forms:
                 else if (Convert.ToString(Session["WebForm"]) == "duplicateCRF1")
                 {
-                    duplicate.Attributes.Add("class", "active");
+                    Error.Attributes.Add("class", "active");
                     duplicateCRF1.Attributes.Add("class", "active");
                     Session["WebForm"] = null;
                 }
                 else if (Convert.ToString(Session["WebForm"]) == "duplicateANC")
                 {
-                    duplicate.Attributes.Add("class", "active");
+                    Error.Attributes.Add("class", "active");
                     duplicateANC.Attributes.Add("class", "active");
                     Session["WebForm"] = null;
                 }
                 else if (Convert.ToString(Session["WebForm"]) == "ancSerialNo")
                 {
-                    duplicate.Attributes.Add("class", "active");
+                    Error.Attributes.Add("class", "active");
                     ancSerialMissed.Attributes.Add("class", "active");
                     Session["WebForm"] = null;
                 }
+                else if (Convert.ToString(Session["WebForm"]) == "errorCompliance")
+                {
+                    Error.Attributes.Add("class", "active");
+                    errorCompliance.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
+                else if (Convert.ToString(Session["WebForm"]) == "ErrorMissingFollowup")
+                {
+                    Error.Attributes.Add("class", "active");
+                    ErrorMissingFollowup.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
+
+
+
+
+
 
 
 
                  // Monitoring:
-                else if (Convert.ToString(Session["WebForm"]) == "compPrtage")
-                {
-                    monitoring.Attributes.Add("class", "active");
-                    compPrtage.Attributes.Add("class", "active");
-                    Session["WebForm"] = null;
-                }
                 else if (Convert.ToString(Session["WebForm"]) == "compPrtage")
                 {
                     monitoring.Attributes.Add("class", "active");
@@ -339,6 +352,9 @@ namespace maamta_pw
                     Session["WebForm"] = null;
                 }
 
+
+                    
+                    
                 //TAB user Account:
                 else if (Convert.ToString(Session["WebForm"]) == "ListOfUsers")
                 {
@@ -346,7 +362,10 @@ namespace maamta_pw
                     listUsr.Attributes.Add("class", "active");
                     Session["WebForm"] = null;
                 }
+
                
+
+
             }
         }
 

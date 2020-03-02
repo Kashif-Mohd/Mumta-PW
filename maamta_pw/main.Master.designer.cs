@@ -472,22 +472,22 @@ namespace maamta_pw {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl checkcompliance;
         
         /// <summary>
-        /// navDuplicate control.
+        /// navError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navDuplicate;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navError;
         
         /// <summary>
-        /// duplicate control.
+        /// Error control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor duplicate;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor Error;
         
         /// <summary>
         /// duplicateCRF1 control.
@@ -515,6 +515,24 @@ namespace maamta_pw {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ancSerialMissed;
+        
+        /// <summary>
+        /// errorCompliance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorCompliance;
+        
+        /// <summary>
+        /// ErrorMissingFollowup control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ErrorMissingFollowup;
         
         /// <summary>
         /// navMonitoring control.

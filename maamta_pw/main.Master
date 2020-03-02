@@ -384,8 +384,8 @@
 
 
 
-                        <li class="sub-menu" id="navDuplicate" runat="server">
-                            <a runat="server" id="duplicate" href="javascript:;">
+                        <li class="sub-menu" id="navError" runat="server">
+                            <a runat="server" id="Error" href="javascript:;">
                                 <i class="fa fa-th"></i>
                                 <span>Error</span>
                             </a>
@@ -393,6 +393,8 @@
                                 <li runat="server" id="duplicateCRF1"><a href="duplicateCRF1.aspx">Duplicate Screening</a></li>
                                 <li runat="server" id="duplicateANC"><a href="duplicateANC.aspx">Duplicate ANC</a></li>
                                 <li runat="server" id="ancSerialMissed"><a href="ancSerialMissed.aspx">ANC Serial Missed</a></li>
+                                <li runat="server" id="errorCompliance"><a href="errorCompliance.aspx">Error LNS Compliance</a></li>
+                                <li runat="server" id="ErrorMissingFollowup"><a href="ErrorMissingFollowup.aspx">Followups Missed</a></li>
                             </ul>
                         </li>
 
@@ -404,7 +406,7 @@
                             </a>
                             <ul class="sub">
                                 <%--<li runat="server" id="ebfPrtage"><a href="ebfPrtage.aspx">EBF Percentage</a></li>--%>
-                                <li runat="server" id="compPrtage"><a href="compPrtage.aspx">Compliance Percentage</a></li>
+                                <li runat="server" id="compPrtage"><a href="compPrtage.aspx">Compliance LNS Percentage</a></li>
                                 <li runat="server" id="CholinePrtage"><a href="CholinePrtage.aspx">Choline Percentage</a></li>
                                 <li runat="server" id="NicotinamidePrtage"><a href="NicotinamidePrtage.aspx">Nicotinamide Percentage</a></li>
                             </ul>
