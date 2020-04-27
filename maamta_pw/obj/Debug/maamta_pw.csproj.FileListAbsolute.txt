@@ -26,3 +26,12 @@ C:\Users\FA0421\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\obj\De
 C:\Users\FA0421\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\obj\Debug\RdlCompile.compiled
 C:\Users\FA0421\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\obj\Debug\maamta_pw.dll
 C:\Users\FA0421\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\obj\Debug\maamta_pw.pdb
+C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\bin\maamta_pw.dll
+C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\bin\maamta_pw.pdb
+C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\bin\MySql.Data.Entity.EF6.dll
+C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\bin\MySql.Fabric.Plugin.dll
+C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\bin\MySql.Data.Entity.EF6.xml
+C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\obj\Debug\RdlCompile.cache
+C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\obj\Debug\RdlCompile.compiled
+C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\obj\Debug\maamta_pw.dll
+C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\obj\Debug\maamta_pw.pdb

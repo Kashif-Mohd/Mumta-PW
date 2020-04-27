@@ -143,7 +143,7 @@ namespace maamta_pw
             {
                 con.Open();
                 MySqlCommand cmd;
-                cmd = new MySqlCommand("select b.anc_form_id,(select max(str_to_date(z.date_of_attempt, '%d-%m-%Y')) from anc_visit_details as z where z.pw_assist_id=a.assis_id) as date_of_attempt,a.pw_age,a.pw_hb_occp,a.pw_marriage_year,a.pw_marriage_months,concat(a.pw_crf_1_11,a.pw_crf_1_12,a.pw_crf_1_13,a.pw_crf_1_14,a.pw_crf_1_15,a.pw_crf_1_16) as dssid,a.assis_id,a.pw_crf_1_09 as woman_nm,a.pw_crf_1_10 as husband_nm,b.anc_form_8,b.anc_form_9,b.anc_form_10,b.anc_form_11,b.anc_form_12,b.anc_form_14,b.anc_form_15,b.anc_form_16,b.anc_form_17,b.anc_form_18,b.anc_form_19,b.anc_form_20,b.anc_form_21,b.anc_form_22,b.anc_form_23,b.anc_form_24,b.anc_form_25,b.anc_form_26,b.anc_form_27,b.anc_form_28,b.anc_form_29,b.anc_form_30,b.anc_form_31,b.anc_form_32,b.anc_form_33,b.anc_form_34,b.anc_form_35,b.anc_form_36,b.anc_form_37,b.anc_form_38,b.anc_form_39,b.anc_form_40,b.anc_form_41,b.anc_form_42,b.anc_form_43,b.anc_form_44,b.anc_form_45,    b.anc_form_46_a,b.anc_form_46_b,b.anc_form_46_c,b.anc_form_46_d,    b.anc_form_46b_a,b.anc_form_46b_b,b.anc_form_46b_c,b.anc_form_46b_d, b.tt_1_date, b.tt_2_date       from pregnant_woman as a inner join anc_form as b on a.assis_id=b.pw_assist_code where a.assis_id='" + Assess_ID + "'", con);
+                cmd = new MySqlCommand("select b.anc_form_id,(select DATE_FORMAT(MAX(STR_TO_DATE(z.date_of_attempt, '%d-%m-%Y')), '%d-%m-%Y') from anc_visit_details as z where z.pw_assist_id=a.assis_id) as date_of_attempt,a.pw_age,a.pw_hb_occp,a.pw_marriage_year,a.pw_marriage_months,concat(a.pw_crf_1_11,a.pw_crf_1_12,a.pw_crf_1_13,a.pw_crf_1_14,a.pw_crf_1_15,a.pw_crf_1_16) as dssid,a.assis_id,a.pw_crf_1_09 as woman_nm,a.pw_crf_1_10 as husband_nm,b.anc_form_8,b.anc_form_9,b.anc_form_10,b.anc_form_11,b.anc_form_12,b.anc_form_14,b.anc_form_15,b.anc_form_16,b.anc_form_17,b.anc_form_18,b.anc_form_19,b.anc_form_20,b.anc_form_21,b.anc_form_22,b.anc_form_23,b.anc_form_24,b.anc_form_25,b.anc_form_26,b.anc_form_27,b.anc_form_28,b.anc_form_29,b.anc_form_30,b.anc_form_31,b.anc_form_32,b.anc_form_33,b.anc_form_34,b.anc_form_35,b.anc_form_36,b.anc_form_37,b.anc_form_38,b.anc_form_39,b.anc_form_40,b.anc_form_41,b.anc_form_42,b.anc_form_43,b.anc_form_44,b.anc_form_45,    b.anc_form_46_a,b.anc_form_46_b,b.anc_form_46_c,b.anc_form_46_d,    b.anc_form_46b_a,b.anc_form_46b_b,b.anc_form_46b_c,b.anc_form_46b_d, b.tt_1_date, b.tt_2_date       from pregnant_woman as a inner join anc_form as b on a.assis_id=b.pw_assist_code where a.assis_id='" + Assess_ID + "'", con);
 
                 //cmd = new MySqlCommand("select b.anc_form_id,a.pw_age,a.pw_hb_occp,a.pw_marriage_year,a.pw_marriage_months,concat(a.pw_crf_1_11,a.pw_crf_1_12,a.pw_crf_1_13,a.pw_crf_1_14,a.pw_crf_1_15,a.pw_crf_1_16) as dssid,a.assis_id,a.pw_crf_1_09 as woman_nm,a.pw_crf_1_10 as husband_nm,b.anc_form_8,b.anc_form_9,b.anc_form_10,b.anc_form_11,b.anc_form_12,b.anc_form_14,b.anc_form_15,b.anc_form_16,b.anc_form_17,b.anc_form_18,b.anc_form_19,b.anc_form_20,b.anc_form_21,b.anc_form_22,b.anc_form_23,b.anc_form_24,b.anc_form_25,b.anc_form_26,b.anc_form_27,b.anc_form_28_a,b.anc_form_28_b,b.anc_form_28_c,b.anc_form_28_d from pregnant_woman as a inner join anc_form as b on a.assis_id=b.pw_assist_code where a.assis_id='EMP1:RG:5'", con);
                 MySqlDataReader dr = cmd.ExecuteReader();
@@ -161,12 +161,12 @@ namespace maamta_pw
                     string hb_occp = dr["pw_hb_occp"].ToString();
                     string date_of_attempt = dr["date_of_attempt"].ToString();
 
-                    // Convert Date of Visit  Format
-                    string[] commandArgs = date_of_attempt.ToString().Split(new char[] { '-' });
-                    string a = commandArgs[0];
-                    string b = commandArgs[1];
-                    string c = commandArgs[2];
-                    date_of_attempt = c + "-" + b + "-" + a;
+                    //// Convert Date of Visit  Format (Only for Server)
+                    //string[] commandArgs = date_of_attempt.ToString().Split(new char[] { '-' });
+                    //string a = commandArgs[0];
+                    //string b = commandArgs[1];
+                    //string c = commandArgs[2];
+                    //date_of_attempt = c + "-" + b + "-" + a;
 
 
 
