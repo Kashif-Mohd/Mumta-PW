@@ -40,6 +40,15 @@ namespace maamta_pw {
         protected global::System.Web.UI.HtmlControls.HtmlButton btnExport;
         
         /// <summary>
+        /// btnExport_CRF6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnExport_CRF6;
+        
+        /// <summary>
         /// txtCalndrDate control.
         /// </summary>
         /// <remarks>
@@ -146,5 +155,59 @@ namespace maamta_pw {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView9;
+        
+        /// <summary>
+        /// GridView_CRF6_01 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_CRF6_01;
+        
+        /// <summary>
+        /// GridView_CRF6_02 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_CRF6_02;
+        
+        /// <summary>
+        /// GridView_CRF6_03 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_CRF6_03;
+        
+        /// <summary>
+        /// GridView_CRF6_04 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_CRF6_04;
+        
+        /// <summary>
+        /// GridView_CRF6_05 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_CRF6_05;
+        
+        /// <summary>
+        /// GridView_CRF6_06 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_CRF6_06;
     }
 }

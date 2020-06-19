@@ -301,7 +301,8 @@
                             <ul class="sub">
                                 <li runat="server" id="dashUltra"><a href="dashUltra.aspx">UltraSound</a></li>
                                 <li runat="server" id="dashANC"><a href="dashANC.aspx">ANC-Visit</a></li>
-                                <li runat="server" id="random"><a href="dashboardRandom.aspx">RANDOMIZATION TEAM</a></li>
+                                <li runat="server" id="random"><a href="dashboardRandom.aspx">Randomization Team</a></li>
+                                <li runat="server" id="dashWorkerPerformance"><a href="dashWorkerPerformance.aspx">Worker Performance</a></li>
                             </ul>
                         </li>
 
@@ -415,10 +416,10 @@
                         <li class="sub-menu" id="navSecret" runat="server">
                             <a runat="server" id="secret" href="javascript:;">
                                 <i class="fa fa-th"></i>
-                                <span>Secret</span>
+                                <span>Secret Information</span>
                             </a>
                             <ul class="sub">
-                                <li runat="server" id="Sticker"><a href="stickerReport.aspx">Sticker Report</a></li>
+                                <li runat="server" id="CumulativeDatasets"><a href="CumulativeDatasets.aspx">Cumulative Datasets</a></li>
                             </ul>
                         </li>
 

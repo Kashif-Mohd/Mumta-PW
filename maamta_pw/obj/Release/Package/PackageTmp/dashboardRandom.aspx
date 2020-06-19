@@ -129,7 +129,10 @@
                     </asp:Series>
                 </Series>
                 <ChartAreas>
-                    <asp:ChartArea Name="ChartArea2"></asp:ChartArea>
+                    <asp:ChartArea Name="ChartArea2">
+                        <AxisX Interval="1" TextOrientation="Rotated90">
+                        </AxisX>
+                    </asp:ChartArea>
                 </ChartAreas>
                 <Titles>
                     <asp:Title Docking="Left" Name="Left Title" Text="Total" Font="Arial Rounded MT Bold, 12pt, ">
@@ -155,8 +158,14 @@
 
 
     <div style="text-align: right; margin-top: 8px">
+
         <button type="button" id="btnExport" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_Click">
             CRF-2 Report &nbsp<span class="glyphicon glyphicon-export"></span>
+        </button>
+
+
+        <button type="button" id="btnExport_CRF6" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_CRF6_Click">
+            CRF-6 Report &nbsp<span class="glyphicon glyphicon-export"></span>
         </button>
 
     </div>
@@ -217,61 +226,10 @@
 
     <%--Report: Date Wise--%>
     <asp:GridView ID="GridView5" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
-        <%-- <Columns>
-            <asp:BoundField DataField="AG" HeaderText="Site " />
-            <asp:BoundField DataField="TotalFilled_CRF2" HeaderText="Total Approached" />
-            <asp:BoundField DataField="LW_died" HeaderText="Lactating women died before screening" />
-            <asp:BoundField DataField="NewBorn_died" HeaderText="Newborn died before lactating women screening" />
-            <asp:BoundField DataField="Stillbirth" HeaderText="Lactating women was not screened as outcome was stillbirth" />
-            <asp:BoundField DataField="Miscarriage" HeaderText="Lactating women was not screened as outcome was miscarriage" />
-            <asp:BoundField DataField="Type_Pregnancy" HeaderText="Lactating women was not screened as outcome was more than one" />
-            <asp:BoundField DataField="Refused" HeaderText="Lactating women was not screened as refused for screening" />
-            <asp:BoundField DataField="Not_at_home" HeaderText="Lactating women was not screened as not at home" />
-            <asp:BoundField DataField="Out_of_DSS" HeaderText="Lactating women was not screened as shifted out" />
-            <asp:BoundField DataField="Adopted" HeaderText="Lactating women was not screened as child was adopted" />
-            <asp:BoundField DataField="False_Preg" HeaderText="Lactating women was not screened as False Pregnancy" />
-            <asp:BoundField DataField="Complete" HeaderText="Total lactating women screened for eligibility" />
-            <asp:BoundField DataField="MUAC_GreaterEqual_23" HeaderText="Not eligible lactating women as MUAC equal or greater than  23.0 cm" />
-            <asp:BoundField DataField="MUAC_Less_23" HeaderText="Eligible lactating as MUAC less than 23.0cm" />
-
-            <asp:BoundField DataField="MUAC_Less23_Age_Greater_7days_and_AnyExclusion" HeaderText="Eligible lactating as MUAC less than 23.0cm and child was captured greater than 7 days of age, but has any exclusion criteria" />
-            <asp:BoundField DataField="MUAC_Less23_Age_Greater_7days_noExclusion" HeaderText="Eligible lactating as MUAC less than 23.0cm and child was captured greater than 7 days of age with no exclusion criteria" />
-            <asp:BoundField DataField="MUAC_Less23_Age_btw_0to6_and_AnyExclusion" HeaderText="Eligible lactating as MUAC less than 23.0cm and child was captured within 0-6 days of age, but has any exclusion criteria" />
-            <asp:BoundField DataField="MUAC_Less23_Age_btw_0to6_noExclusion" HeaderText="Eligible lactating as MUAC less than 23.0cm and child was captured within 0-6 days of age with no exclusion criteria" />
-
-            <asp:BoundField DataField="consent_refusedQ47" HeaderText="Eligible lactating as MUAC less than 23.0cm and child was captured within 0-6 days of age with no exclusion criteria, but consent refused" />
-            <asp:BoundField DataField="consented_enrolledQ47" HeaderText="Eligible lactating as MUAC less than 23.0cm and child was captured within 0-6 days of age with no exclusion criteria,  consented and enrolled" />
-            <asp:BoundField DataField="Total_RandomFilled_3a" HeaderText="Total Randomization Filled" />
-        </Columns>--%>
     </asp:GridView>
+
     <%--Report: Date without Date--%>
     <asp:GridView ID="GridView6" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
-        <%--  <Columns>
-            <asp:BoundField DataField="AG" HeaderText="Site " />
-            <asp:BoundField DataField="TotalFilled_CRF2" HeaderText="Total Approached" />
-            <asp:BoundField DataField="LW_died" HeaderText="Lactating women died before screening" />
-            <asp:BoundField DataField="NewBorn_died" HeaderText="Newborn died before lactating women screening" />
-            <asp:BoundField DataField="Stillbirth" HeaderText="Lactating women was not screened as outcome was stillbirth" />
-            <asp:BoundField DataField="Miscarriage" HeaderText="Lactating women was not screened as outcome was miscarriage" />
-            <asp:BoundField DataField="Type_Pregnancy" HeaderText="Lactating women was not screened as outcome was more than one" />
-            <asp:BoundField DataField="Refused" HeaderText="Lactating women was not screened as refused for screening" />
-            <asp:BoundField DataField="Not_at_home" HeaderText="Lactating women was not screened as not at home" />
-            <asp:BoundField DataField="Out_of_DSS" HeaderText="Lactating women was not screened as shifted out" />
-            <asp:BoundField DataField="Adopted" HeaderText="Lactating women was not screened as child was adopted" />
-            <asp:BoundField DataField="False_Preg" HeaderText="Lactating women was not screened as False Pregnancy" />
-            <asp:BoundField DataField="Complete" HeaderText="Total lactating women screened for eligibility" />
-            <asp:BoundField DataField="MUAC_GreaterEqual_23" HeaderText="Not eligible lactating women as MUAC equal or greater than  23.0 cm" />
-            <asp:BoundField DataField="MUAC_Less_23" HeaderText="Eligible lactating as MUAC less than 23.0cm" />
-
-            <asp:BoundField DataField="MUAC_Less23_Age_Greater_7days_and_AnyExclusion" HeaderText="Eligible lactating as MUAC less than 23.0cm and child was captured greater than 7 days of age, but has any exclusion criteria" />
-            <asp:BoundField DataField="MUAC_Less23_Age_Greater_7days_noExclusion" HeaderText="Eligible lactating as MUAC less than 23.0cm and child was captured greater than 7 days of age with no exclusion criteria" />
-            <asp:BoundField DataField="MUAC_Less23_Age_btw_0to6_and_AnyExclusion" HeaderText="Eligible lactating as MUAC less than 23.0cm and child was captured within 0-6 days of age, but has any exclusion criteria" />
-            <asp:BoundField DataField="MUAC_Less23_Age_btw_0to6_noExclusion" HeaderText="Eligible lactating as MUAC less than 23.0cm and child was captured within 0-6 days of age with no exclusion criteria" />
-
-            <asp:BoundField DataField="consent_refusedQ47" HeaderText="Eligible lactating as MUAC less than 23.0cm and child was captured within 0-6 days of age with no exclusion criteria, but consent refused" />
-            <asp:BoundField DataField="consented_enrolledQ47" HeaderText="Eligible lactating as MUAC less than 23.0cm and child was captured within 0-6 days of age with no exclusion criteria,  consented and enrolled" />
-            <asp:BoundField DataField="Total_RandomFilled_3a" HeaderText="Total Randomization Filled" />
-        </Columns>--%>
     </asp:GridView>
 
     <%--ARM: Date Wise--%>
@@ -281,4 +239,47 @@
     <%--ARM: without Date--%>
     <asp:GridView ID="GridView9" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
     </asp:GridView>
+
+
+
+
+
+
+
+
+
+    <%--Report: Table-1 --%>
+    <asp:GridView ID="GridView_CRF6_01" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+
+    <%--Report: Table-2 --%>
+    <asp:GridView ID="GridView_CRF6_02" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+
+    <%--Report:  Table-3 --%>
+    <asp:GridView ID="GridView_CRF6_03" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+
+    <%--Report:  Table-4 --%>
+    <asp:GridView ID="GridView_CRF6_04" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+
+    <%--Report:  Table-5 --%>
+    <asp:GridView ID="GridView_CRF6_05" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+
+    <%--Report:  Table-6 --%>
+    <asp:GridView ID="GridView_CRF6_06" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+
+
+
+
+
+
+
+
+
+
+
 </asp:Content>

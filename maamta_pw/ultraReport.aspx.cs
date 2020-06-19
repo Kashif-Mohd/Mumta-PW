@@ -424,7 +424,7 @@ namespace maamta_pw
                         ReportParameters.Add(new ReportParameter("Q31_" + i + "", Q31 + " gm"));
                         this.ReportViewer1.LocalReport.SetParameters(ReportParameters);
 
-                        ReportParameters.Add(new ReportParameter("Q32_" + i + "", Q32 + " ml"));
+                        ReportParameters.Add(new ReportParameter("Q32_" + i + "", Q32 + " cm"));
                         this.ReportViewer1.LocalReport.SetParameters(ReportParameters);
 
                         ReportParameters.Add(new ReportParameter("Q30_" + i + "", Q30));

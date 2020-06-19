@@ -35,3 +35,5 @@ C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\obj\D
 C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\obj\Debug\RdlCompile.compiled
 C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\obj\Debug\maamta_pw.dll
 C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\obj\Debug\maamta_pw.pdb
+C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\bin\maamta_pw.dll.CodeAnalysisLog.xml
+C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\maamta_pw\maamta_pw\bin\maamta_pw.dll.lastcodeanalysissucceeded

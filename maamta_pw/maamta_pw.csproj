@@ -138,7 +138,9 @@
     <Content Include="compPrtage.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\divtable.css" />
+    <Content Include="CumulativeDatasets.aspx" />
     <Content Include="dashANC.aspx" />
+    <Content Include="dashWorkerPerformance.aspx" />
     <Content Include="dashboardRandom.aspx" />
     <Content Include="dashUltra.aspx" />
     <Content Include="duplicateANC.aspx" />
@@ -191,7 +193,9 @@
     <Content Include="showcrf6b.aspx" />
     <Content Include="showFirstUltrasound.aspx" />
     <Content Include="ultraReport.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ancPending.aspx.cs">
@@ -250,12 +254,26 @@
     <Compile Include="compPrtage.aspx.designer.cs">
       <DependentUpon>compPrtage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CumulativeDatasets.aspx.cs">
+      <DependentUpon>CumulativeDatasets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CumulativeDatasets.aspx.designer.cs">
+      <DependentUpon>CumulativeDatasets.aspx</DependentUpon>
+    </Compile>
     <Compile Include="dashANC.aspx.cs">
       <DependentUpon>dashANC.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="dashANC.aspx.designer.cs">
       <DependentUpon>dashANC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashWorkerPerformance.aspx.cs">
+      <DependentUpon>dashWorkerPerformance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashWorkerPerformance.aspx.designer.cs">
+      <DependentUpon>dashWorkerPerformance.aspx</DependentUpon>
     </Compile>
     <Compile Include="dashboardRandom.aspx.cs">
       <DependentUpon>dashboardRandom.aspx</DependentUpon>

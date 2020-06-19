@@ -162,6 +162,7 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="Cumulative_Choline" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -195,6 +196,7 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="Cumulative_Choline" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -228,6 +230,7 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="Cumulative_Choline" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -261,6 +264,7 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="Cumulative_Choline" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -293,6 +297,7 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="Cumulative_Choline" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -368,6 +373,8 @@
                         <asp:BoundField DataField="CRF4b_Attempt" HeaderText="CRF4b Attempt" />
                         <asp:BoundField DataField="CRF4b_Complete" HeaderText="CRF4b Complete" />
                         <asp:BoundField DataField="Cumulative_Choline" HeaderText="Cumulative Choline Percentage" />
+                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -403,6 +410,8 @@
                         <asp:BoundField DataField="CRF4b_Attempt" HeaderText="CRF4b Attempt" />
                         <asp:BoundField DataField="CRF4b_Complete" HeaderText="CRF4b Complete" />
                         <asp:BoundField DataField="Cumulative_Choline" HeaderText="Cumulative Choline Percentage" />
+                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
                 </asp:GridView>
             </div>

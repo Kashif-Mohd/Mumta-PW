@@ -41,7 +41,7 @@ namespace maamta_pw
                 con.Open();
                 MySqlCommand cmd;
 
-                cmd = new MySqlCommand("select a.form_crf_3a_id,a.Site,a.study_code,a.pw_crf_3a_2, a.pw_crf_3a_3,a.pw_crf_3a_18,a.pw_crf_3a_19,a.study_code,a.dssid,b.Randomization_ID,b.treatment from view_crf3a as a left join lab_investigation as b on a.pw_crf_3a_18=b.Randomization_ID order by a.Site,str_to_date(a.pw_crf_3a_2, '%d-%m-%Y'), STR_TO_DATE(a.pw_crf_3a_3,  '%H:%i')", con);
+                cmd = new MySqlCommand("select a.form_crf_3a_id,a.Site,a.study_code,a.pw_crf_3a_2, a.pw_crf_3a_3,a.pw_crf_3a_18,a.pw_crf_3a_19,a.study_code,a.dssid,b.Randomization_ID,b.treatment from view_crf3a as a left join lab_investigation as b on a.pw_crf_3a_18=b.Randomization_ID order by str_to_date(a.pw_crf_3a_2, '%d-%m-%Y'), STR_TO_DATE(a.pw_crf_3a_3,  '%H:%i')", con);
 
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 {
@@ -103,7 +103,7 @@ namespace maamta_pw
 
                 con.Open();
                 MySqlCommand cmd;
-                cmd = new MySqlCommand("select a.form_crf_3a_id,a.Site,a.study_code,a.pw_crf_3a_2, a.pw_crf_3a_3,a.pw_crf_3a_18,a.pw_crf_3a_19,a.study_code,a.dssid,b.Randomization_ID,b.treatment from view_crf3a as a left join lab_investigation as b on a.pw_crf_3a_18=b.Randomization_ID order by a.Site,str_to_date(a.pw_crf_3a_2, '%d-%m-%Y'), STR_TO_DATE(a.pw_crf_3a_3,  '%H:%i')", con);
+                cmd = new MySqlCommand("select a.form_crf_3a_id,a.Site,a.study_code,a.pw_crf_3a_2, a.pw_crf_3a_3,a.pw_crf_3a_18,a.pw_crf_3a_19,a.study_code,a.dssid,b.Randomization_ID,b.treatment from view_crf3a as a left join lab_investigation as b on a.pw_crf_3a_18=b.Randomization_ID order by str_to_date(a.pw_crf_3a_2, '%d-%m-%Y'), STR_TO_DATE(a.pw_crf_3a_3,  '%H:%i')", con);
 
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 {

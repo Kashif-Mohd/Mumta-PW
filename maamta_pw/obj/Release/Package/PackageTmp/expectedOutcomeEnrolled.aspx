@@ -61,6 +61,7 @@
                     <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                     <asp:BoundField DataField="Expected_Date" HeaderText="Expected Date" />
+                    <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                 </Columns>
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <EditRowStyle BackColor="#999999" />
@@ -89,6 +90,7 @@
                     <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                     <asp:BoundField DataField="Expected_Date" HeaderText="Expected Date" />
+                    <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                 </Columns>
             </asp:GridView>
         </div>

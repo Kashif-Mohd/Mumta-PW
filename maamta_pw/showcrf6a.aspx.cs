@@ -80,7 +80,7 @@ namespace maamta_pw
                 {
                     con.Open();
                     MySqlCommand cmd;
-                    cmd = new MySqlCommand("select * from view_crf6a WHERE DSSID LIKE '%" + txtdssid.Text + "%' and (str_to_date(pw_crf_6a_2, '%d-%m-%Y') between str_to_date('" + txtCalndrDate.Text + "', '%d-%m-%Y') and str_to_date('" + txtCalndrDate1.Text + "', '%d-%m-%Y'))	order by str_to_date(pw_crf_6a_2, '%d-%m-%Y'), STR_TO_DATE(pw_crf_6a_3,  '%H:%i')", con);
+                    cmd = new MySqlCommand("select a.*, CONCAT(SUBSTRING_INDEX(ABS(DATEDIFF(STR_TO_DATE(a.pw_crf_6a_19,'%d-%m-%Y'),e.LMP)/7),'.',1)		,'.',    SUBSTRING_INDEX(ABS(DATEDIFF(STR_TO_DATE(a.pw_crf_6a_19,'%d-%m-%Y'),e.LMP)),'.',1)-SUBSTRING_INDEX(ABS(DATEDIFF(STR_TO_DATE(a.pw_crf_6a_19,'%d-%m-%Y'),e.LMP))/7,'.',1)*7) AS gestational_age from view_crf6a as a LEFT JOIN (SELECT * FROM (SELECT b.form_crf_1_id,b.`pw_id`,b.`pw_assist_code`,	 DATE_SUB((STR_TO_DATE(b.pw_crf1_02, '%d-%m-%Y')), INTERVAL ((c.pw_crf_1_30_week*7)+c.pw_crf_1_30_days)  DAY) AS LMP  FROM form_crf_1 AS b LEFT JOIN ultrasound_examination AS c ON c.form_crf1_id=b.form_crf_1_id ) AS a WHERE a.form_crf_1_id IN (SELECT MIN(z.form_crf_1_id) FROM form_crf_1 AS z GROUP BY z.pw_assist_code)) AS e ON e.pw_assist_code=a.assis_id         WHERE DSSID LIKE '%" + txtdssid.Text + "%' and (str_to_date(pw_crf_6a_2, '%d-%m-%Y') between str_to_date('" + txtCalndrDate.Text + "', '%d-%m-%Y') and str_to_date('" + txtCalndrDate1.Text + "', '%d-%m-%Y'))	order by str_to_date(pw_crf_6a_2, '%d-%m-%Y'), STR_TO_DATE(pw_crf_6a_3,  '%H:%i')", con);
                     MySqlDataAdapter sda = new MySqlDataAdapter();
                     {
                         cmd.Connection = con;
@@ -98,7 +98,7 @@ namespace maamta_pw
                 {
                     con.Open();
                     MySqlCommand cmd;
-                    cmd = new MySqlCommand("select * from view_crf6a WHERE DSSID LIKE '%" + txtdssid.Text + "%' 	order by str_to_date(pw_crf_6a_2, '%d-%m-%Y'), STR_TO_DATE(pw_crf_6a_3,  '%H:%i')", con);
+                    cmd = new MySqlCommand("select a.*, CONCAT(SUBSTRING_INDEX(ABS(DATEDIFF(STR_TO_DATE(a.pw_crf_6a_19,'%d-%m-%Y'),e.LMP)/7),'.',1)		,'.',    SUBSTRING_INDEX(ABS(DATEDIFF(STR_TO_DATE(a.pw_crf_6a_19,'%d-%m-%Y'),e.LMP)),'.',1)-SUBSTRING_INDEX(ABS(DATEDIFF(STR_TO_DATE(a.pw_crf_6a_19,'%d-%m-%Y'),e.LMP))/7,'.',1)*7) AS gestational_age from view_crf6a as a LEFT JOIN (SELECT * FROM (SELECT b.form_crf_1_id,b.`pw_id`,b.`pw_assist_code`,	 DATE_SUB((STR_TO_DATE(b.pw_crf1_02, '%d-%m-%Y')), INTERVAL ((c.pw_crf_1_30_week*7)+c.pw_crf_1_30_days)  DAY) AS LMP  FROM form_crf_1 AS b LEFT JOIN ultrasound_examination AS c ON c.form_crf1_id=b.form_crf_1_id ) AS a WHERE a.form_crf_1_id IN (SELECT MIN(z.form_crf_1_id) FROM form_crf_1 AS z GROUP BY z.pw_assist_code)) AS e ON e.pw_assist_code=a.assis_id          WHERE DSSID LIKE '%" + txtdssid.Text + "%' 	order by str_to_date(pw_crf_6a_2, '%d-%m-%Y'), STR_TO_DATE(pw_crf_6a_3,  '%H:%i')", con);
                     MySqlDataAdapter sda = new MySqlDataAdapter();
                     {
                         cmd.Connection = con;
@@ -171,7 +171,7 @@ namespace maamta_pw
                 {
                     con.Open();
                     MySqlCommand cmd;
-                    cmd = new MySqlCommand("select * from view_crf6a WHERE DSSID LIKE '%" + txtdssid.Text + "%' and (str_to_date(pw_crf_6a_2, '%d-%m-%Y') between str_to_date('" + txtCalndrDate.Text + "', '%d-%m-%Y') and str_to_date('" + txtCalndrDate1.Text + "', '%d-%m-%Y'))	order by str_to_date(pw_crf_6a_2, '%d-%m-%Y'), STR_TO_DATE(pw_crf_6a_3,  '%H:%i')", con);
+                    cmd = new MySqlCommand("select a.*, CONCAT(SUBSTRING_INDEX(ABS(DATEDIFF(STR_TO_DATE(a.pw_crf_6a_19,'%d-%m-%Y'),e.LMP)/7),'.',1)		,'.',    SUBSTRING_INDEX(ABS(DATEDIFF(STR_TO_DATE(a.pw_crf_6a_19,'%d-%m-%Y'),e.LMP)),'.',1)-SUBSTRING_INDEX(ABS(DATEDIFF(STR_TO_DATE(a.pw_crf_6a_19,'%d-%m-%Y'),e.LMP))/7,'.',1)*7) AS gestational_age from view_crf6a as a LEFT JOIN (SELECT * FROM (SELECT b.form_crf_1_id,b.`pw_id`,b.`pw_assist_code`,	 DATE_SUB((STR_TO_DATE(b.pw_crf1_02, '%d-%m-%Y')), INTERVAL ((c.pw_crf_1_30_week*7)+c.pw_crf_1_30_days)  DAY) AS LMP  FROM form_crf_1 AS b LEFT JOIN ultrasound_examination AS c ON c.form_crf1_id=b.form_crf_1_id ) AS a WHERE a.form_crf_1_id IN (SELECT MIN(z.form_crf_1_id) FROM form_crf_1 AS z GROUP BY z.pw_assist_code)) AS e ON e.pw_assist_code=a.assis_id           WHERE DSSID LIKE '%" + txtdssid.Text + "%' and (str_to_date(pw_crf_6a_2, '%d-%m-%Y') between str_to_date('" + txtCalndrDate.Text + "', '%d-%m-%Y') and str_to_date('" + txtCalndrDate1.Text + "', '%d-%m-%Y'))	order by str_to_date(pw_crf_6a_2, '%d-%m-%Y'), STR_TO_DATE(pw_crf_6a_3,  '%H:%i')", con);
                     MySqlDataAdapter sda = new MySqlDataAdapter();
                     {
                         cmd.Connection = con;
@@ -189,7 +189,7 @@ namespace maamta_pw
                 {
                     con.Open();
                     MySqlCommand cmd;
-                    cmd = new MySqlCommand("select * from view_crf6a WHERE DSSID LIKE '%" + txtdssid.Text + "%' 	order by str_to_date(pw_crf_6a_2, '%d-%m-%Y'), STR_TO_DATE(pw_crf_6a_3,  '%H:%i')", con);
+                    cmd = new MySqlCommand("select a.*, CONCAT(SUBSTRING_INDEX(ABS(DATEDIFF(STR_TO_DATE(a.pw_crf_6a_19,'%d-%m-%Y'),e.LMP)/7),'.',1)		,'.',    SUBSTRING_INDEX(ABS(DATEDIFF(STR_TO_DATE(a.pw_crf_6a_19,'%d-%m-%Y'),e.LMP)),'.',1)-SUBSTRING_INDEX(ABS(DATEDIFF(STR_TO_DATE(a.pw_crf_6a_19,'%d-%m-%Y'),e.LMP))/7,'.',1)*7) AS gestational_age from view_crf6a as a LEFT JOIN (SELECT * FROM (SELECT b.form_crf_1_id,b.`pw_id`,b.`pw_assist_code`,	 DATE_SUB((STR_TO_DATE(b.pw_crf1_02, '%d-%m-%Y')), INTERVAL ((c.pw_crf_1_30_week*7)+c.pw_crf_1_30_days)  DAY) AS LMP  FROM form_crf_1 AS b LEFT JOIN ultrasound_examination AS c ON c.form_crf1_id=b.form_crf_1_id ) AS a WHERE a.form_crf_1_id IN (SELECT MIN(z.form_crf_1_id) FROM form_crf_1 AS z GROUP BY z.pw_assist_code)) AS e ON e.pw_assist_code=a.assis_id           WHERE DSSID LIKE '%" + txtdssid.Text + "%' 	order by str_to_date(pw_crf_6a_2, '%d-%m-%Y'), STR_TO_DATE(pw_crf_6a_3,  '%H:%i')", con);
                     MySqlDataAdapter sda = new MySqlDataAdapter();
                     {
                         cmd.Connection = con;

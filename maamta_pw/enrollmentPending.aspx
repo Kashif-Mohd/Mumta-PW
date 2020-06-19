@@ -67,7 +67,9 @@
                     <asp:BoundField DataField="block" HeaderText="Block" />
                     <asp:BoundField DataField="pw_name" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_name" HeaderText="Husband Name" />
-                    <asp:BoundField DataField="end_date" HeaderText="End_Date" />
+                    <asp:BoundField DataField="start_date" HeaderText="Start Date" />
+                    <asp:BoundField DataField="end_date" HeaderText="End Date" />
+                    <asp:BoundField DataField="Current_GA" HeaderText="Current Gestination Age" />
                 </Columns>
 
 
@@ -97,7 +99,9 @@
                     <asp:BoundField DataField="block" HeaderText="Block" />
                     <asp:BoundField DataField="pw_name" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_name" HeaderText="Husband Name" />
-                    <asp:BoundField DataField="end_date" HeaderText="End_Date" />
+                    <asp:BoundField DataField="start_date" HeaderText="Start Date" />
+                    <asp:BoundField DataField="end_date" HeaderText="End Date" />
+                    <asp:BoundField DataField="Current_GA" HeaderText="Current Gestination Age" />
                 </Columns>
             </asp:GridView>
         </div>

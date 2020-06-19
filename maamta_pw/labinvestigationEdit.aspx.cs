@@ -94,7 +94,15 @@ namespace maamta_pw
 
         protected void chk19_wks_plasma_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk_19_wks_plasma.Checked == true)
+            if (chk_19_wks_plasma.Checked == true && txtDescription.Text == "")
+            {
+                chk_19_wks_plasma.Checked = false;
+                txt19_wks_plasma.Text = "";
+                txt19_wks_plasma.Enabled = false;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alerts", "javascript:alert('Description is None or Empty');", true);
+            }
+
+            else if (chk_19_wks_plasma.Checked == true && txtDescription.Text!="")
             {
                 txt19_wks_plasma.Text = DateTime.Now.ToString("dd-MM-yyyy");
                 txt19_wks_plasma.Attributes.Add("readonly", "readonly");
@@ -185,6 +193,38 @@ namespace maamta_pw
             }
         }
 
+
+
+
+
+        //  Cord Blood after Delivery
+
+        protected void chkcord_blood_delivery_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_cord_blood_delivery.Checked == true && txtDescription.Text == "")
+            {
+                chk_cord_blood_delivery.Checked = false;
+                txtcord_blood_delivery_dt.Text = "";
+                txtcord_blood_delivery_dt.Enabled = false;
+                txtcord_blood_delivery_tm.Text = "";
+                txtcord_blood_delivery_tm.Enabled = false;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alerts", "javascript:alert('Description is None or Empty');", true);
+            }
+            else if (chk_cord_blood_delivery.Checked == true && txtDescription.Text != "")
+            {
+                txtcord_blood_delivery_dt.Text = DateTime.Now.ToString("dd-MM-yyyy");
+                txtcord_blood_delivery_dt.Attributes.Add("readonly", "readonly");
+                txtcord_blood_delivery_dt.Enabled = true;
+                txtcord_blood_delivery_tm.Enabled = true;
+            }
+            else
+            {
+                txtcord_blood_delivery_dt.Text = "";
+                txtcord_blood_delivery_dt.Enabled = false;
+                txtcord_blood_delivery_tm.Text = "";
+                txtcord_blood_delivery_tm.Enabled = false;
+            }
+        }
 
 
 
@@ -341,9 +381,26 @@ namespace maamta_pw
                     showalert("Incorrect Date, 32_wks_plasma_niacin Date should be greater than DOR: " + DOR + "");
                     txt32_wks_plasma_niacin.Focus();
                 }
+
+                // Cord Blood after Delivery
+                if (chk_cord_blood_delivery.Checked == true && (DateTime.ParseExact(txtcord_blood_delivery_dt.Text, "dd-MM-yyyy", CultureInfo.InvariantCulture) > (DateTime.ParseExact(currentdate, "dd-MM-yyyy", CultureInfo.InvariantCulture))))
+                {
+                    showalert("Incorrect Date, Cord_blood_delivery Date should be Less than Current Date!");
+                    txtcord_blood_delivery_dt.Focus();
+                }
+                else if (chk_cord_blood_delivery.Checked == true && DOR != null && (DateTime.ParseExact(txtcord_blood_delivery_dt.Text, "dd-MM-yyyy", CultureInfo.InvariantCulture) < (DateTime.ParseExact(DOR, "dd-MM-yyyy", CultureInfo.InvariantCulture))))
+                {
+                    showalert("Incorrect Date, Cord_blood_delivery Date should be greater than DOR: " + DOR + "");
+                    txtcord_blood_delivery_dt.Focus();
+                }
+                else if (chk_cord_blood_delivery.Checked == true && (txtcord_blood_delivery_tm.Text == "" || txtcord_blood_delivery_tm.Text == "__:__"))
+                {
+                    showalert("Enter Time of Collection Cord Blood");
+                    txtcord_blood_delivery_tm.Focus();
+                }
                 else
                 {
-                    MySqlCommand cmd = new MySqlCommand("update lab_investigation set  enrollment_urine='" + txtenrollment_urine.Text + "', enrollment_hb='" + txtenrollment_hb.Text + "', enrollment_serum='" + txtenrollment_serum.Text + "', enrollment_plasma_niacin='" + txtenrollment_plasma_niacin.Text + "', 19_wks_plasma='" + txt19_wks_plasma.Text + "', 32_wks_urine='" + txt32_wks_urine.Text + "', 32_wks_hb='" + txt32_wks_hb.Text + "', 32_wks_serum='" + txt32_wks_serum.Text + "', 32_wks_plasma_proteomic='" + txt32_wks_plasma_proteomic.Text + "', 32_wks_plasma_niacin='" + txt32_wks_plasma_niacin.Text + "', entry_date='" + DateTime.Now.ToString("dd-MM-yyyy hh:mm tt") + "', enter_by='" + Convert.ToString(Session["MPusernamePW"]) + "'  where  Randomization_ID='" + Request.QueryString["RandID"] + "'", cn);
+                    MySqlCommand cmd = new MySqlCommand("update lab_investigation set  enrollment_urine='" + txtenrollment_urine.Text + "', enrollment_hb='" + txtenrollment_hb.Text + "', enrollment_serum='" + txtenrollment_serum.Text + "', enrollment_plasma_niacin='" + txtenrollment_plasma_niacin.Text + "', 19_wks_plasma='" + txt19_wks_plasma.Text + "', 32_wks_urine='" + txt32_wks_urine.Text + "', 32_wks_hb='" + txt32_wks_hb.Text + "', 32_wks_serum='" + txt32_wks_serum.Text + "', 32_wks_plasma_proteomic='" + txt32_wks_plasma_proteomic.Text + "', 32_wks_plasma_niacin='" + txt32_wks_plasma_niacin.Text + "'             , cord_blood_dt='" + txtcord_blood_delivery_dt.Text + "', cord_blood_tm='" + txtcord_blood_delivery_tm.Text + "'          , entry_date='" + DateTime.Now.ToString("dd-MM-yyyy hh:mm tt") + "', enter_by='" + Convert.ToString(Session["MPusernamePW"]) + "'  where  Randomization_ID='" + Request.QueryString["RandID"] + "'", cn);
                     cmd.ExecuteNonQuery();
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alerts", "javascript:alert('Record Updated Successfully!');window.location.href='labinvestigation.aspx';", true);
                 }
@@ -367,7 +424,8 @@ namespace maamta_pw
         public void FieldFill()
         {
             MySqlConnection con = new MySqlConnection(constr);
-            MySqlCommand cmd = new MySqlCommand("select * from (SELECT b.lab_invest_id,a.study_code,b.Randomization_ID,a.dssid,a.Block,a.woman_nm,a.husband_nm,	a.pw_crf_3a_2 AS Enrollment,	CASE    WHEN b.Treatment =1 THEN 'A'    WHEN b.Treatment =2 THEN 'B'    WHEN b.Treatment =3 THEN 'C'    WHEN b.Treatment =4 THEN 'D' END AS ARM,	IF (b.Description!='',		DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (133-((xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days)) DAY),'%d-%m-%Y') 	,'') AS  19_weeks,	DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (224-((xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days)) DAY),'%d-%m-%Y') AS  32_weeks,			b.HB_FR_Vit_D_at_enrollment_and_week_32, b.Description,			 b.enrollment_urine, ROUND((((TO_DAYS(STR_TO_DATE(b.enrollment_urine,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS enrollment_urine_Weeks,	 b.enrollment_hb, ROUND((((TO_DAYS(STR_TO_DATE(b.enrollment_hb,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS enrollment_hb_Weeks,	 b.enrollment_serum, ROUND((((TO_DAYS(STR_TO_DATE(b.enrollment_serum,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS enrollment_serum_Weeks,	 b.enrollment_plasma_niacin, ROUND((((TO_DAYS(STR_TO_DATE(b.enrollment_plasma_niacin,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS enrollment_plasma_niacin_Weeks,	 b.19_wks_plasma, ROUND((((TO_DAYS(STR_TO_DATE(b.19_wks_plasma,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS 19_wks_plasma_Weeks,	 b.32_wks_urine, ROUND((((TO_DAYS(STR_TO_DATE(b.32_wks_urine,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS 32_wks_urine_Weeks,	 b.32_wks_hb, ROUND((((TO_DAYS(STR_TO_DATE(b.32_wks_hb,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS 32_wks_hb_Weeks, b.32_wks_serum, ROUND((((TO_DAYS(STR_TO_DATE(b.32_wks_serum,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS 32_wks_serum_Weeks, b.32_wks_plasma_proteomic, ROUND((((TO_DAYS(STR_TO_DATE(b.32_wks_plasma_proteomic,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS 32_wks_plasma_proteomic_Weeks, b.32_wks_plasma_niacin, ROUND((((TO_DAYS(STR_TO_DATE(b.32_wks_plasma_niacin,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS 32_wks_plasma_niacin_Weeks FROM view_crf3a AS a LEFT JOIN lab_investigation AS b ON a.pw_crf_3a_18=b.Randomization_ID LEFT JOIN form_crf_3a AS yy ON yy.form_crf_3a_id=a.form_crf_3a_id LEFT JOIN (SELECT * FROM view_crf1 AS a WHERE a.form_crf_1_id IN (SELECT MIN(z.form_crf_1_id) FROM view_crf1 AS z GROUP BY z.assis_id)) AS xx ON SUBSTRING_INDEX(xx.assis_id,':',-1)=yy.pw_id 	ORDER BY b.Randomization_ID) as TableA                  where Randomization_ID='" + Request.QueryString["RandID"] + "'", con);
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM (SELECT b.lab_invest_id,a.study_code,b.Randomization_ID,a.dssid,a.Block,a.woman_nm,a.husband_nm,	a.pw_crf_3a_2 AS Enrollment,	CASE    WHEN b.Treatment =1 THEN 'A'    WHEN b.Treatment =2 THEN 'B'    WHEN b.Treatment =3 THEN 'C'    WHEN b.Treatment =4 THEN 'D' END AS ARM,	IF (b.Description!='',		DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (133-((xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days)) DAY),'%d-%m-%Y') 	,'') AS  19_weeks,	DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (224-((xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days)) DAY),'%d-%m-%Y') AS  32_weeks,			b.HB_FR_Vit_D_at_enrollment_and_week_32, b.Description,			 b.enrollment_urine, 	 b.enrollment_hb, b.enrollment_serum, b.enrollment_plasma_niacin, 	 b.19_wks_plasma, b.32_wks_urine, b.32_wks_hb, b.32_wks_serum, b.32_wks_plasma_proteomic, b.32_wks_plasma_niacin, b.cord_blood_dt,b.cord_blood_tm			 FROM view_crf3a AS a LEFT JOIN lab_investigation AS b ON a.pw_crf_3a_18=b.Randomization_ID LEFT JOIN studies AS yy ON yy.study_code=a.study_code LEFT JOIN (SELECT * FROM (SELECT b.form_crf_1_id,c.examination_id,b.pw_crf1_19 AS no_of_fetus,b.`pw_assist_code`,b.pw_crf1_02,b.pw_crf1_03,b.pw_crf1_18_a,b.pw_crf1_18_b,b.pw_crf1_18_c,b.pw_crf1_18_d,b.pw_crf1_18_e,b.pw_crf1_18_f,b.pw_crf1_18_g,b.pw_crf1_18_h,b.pw_crf1_18_i,b.pw_crf1_18_j,b.pw_crf1_19,c.pw_crf_1_20,c.pw_crf_1_21,c.pw_crf_1_22,c.pw_crf_1_23,c.pw_crf_1_24,c.pw_crf_1_25,c.pw_crf_1_26,c.pw_crf_1_27,c.pw_crf_1_28,c.pw_crf_1_29,c.pw_crf_1_30_days,c.pw_crf_1_30_week,c.pw_crf_1_31,c.pw_crf_1_32,c.pw_crf_1_33,c.pw_crf_1_34,c.pw_crf_1_35_a,c.pw_crf_1_35_b,c.pw_crf_1_35_c,c.pw_crf_1_35_d,c.pw_crf_1_35_e,c.pw_crf_1_35_f,c.pw_crf_1_35_g,c.pw_crf_1_35_h,c.pw_crf_1_35_i,c.pw_crf_1_35_j,c.pw_crf_1_35_k,c.pw_crf_1_35_l,c.pw_crf_1_36,c.pw_crf_1_37,b.pw_crf1_38 FROM form_crf_1 AS b LEFT JOIN ultrasound_examination AS c ON c.form_crf1_id=b.form_crf_1_id ) AS a WHERE a.form_crf_1_id IN (SELECT MIN(z.form_crf_1_id) FROM form_crf_1 AS z GROUP BY z.pw_assist_code)) AS xx ON SUBSTRING_INDEX(xx.pw_assist_code,':',-1)=yy.pw_id 	ORDER BY b.Randomization_ID) AS TableA                                    where Randomization_ID='" + Request.QueryString["RandID"] + "'", con);
+            //MySqlCommand cmd = new MySqlCommand("select * from (SELECT b.lab_invest_id,a.study_code,b.Randomization_ID,a.dssid,a.Block,a.woman_nm,a.husband_nm,	a.pw_crf_3a_2 AS Enrollment,	CASE    WHEN b.Treatment =1 THEN 'A'    WHEN b.Treatment =2 THEN 'B'    WHEN b.Treatment =3 THEN 'C'    WHEN b.Treatment =4 THEN 'D' END AS ARM,	IF (b.Description!='',		DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (133-((xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days)) DAY),'%d-%m-%Y') 	,'') AS  19_weeks,	DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (224-((xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days)) DAY),'%d-%m-%Y') AS  32_weeks,			b.HB_FR_Vit_D_at_enrollment_and_week_32, b.Description,			 b.enrollment_urine, ROUND((((TO_DAYS(STR_TO_DATE(b.enrollment_urine,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS enrollment_urine_Weeks,	 b.enrollment_hb, ROUND((((TO_DAYS(STR_TO_DATE(b.enrollment_hb,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS enrollment_hb_Weeks,	 b.enrollment_serum, ROUND((((TO_DAYS(STR_TO_DATE(b.enrollment_serum,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS enrollment_serum_Weeks,	 b.enrollment_plasma_niacin, ROUND((((TO_DAYS(STR_TO_DATE(b.enrollment_plasma_niacin,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS enrollment_plasma_niacin_Weeks,	 b.19_wks_plasma, ROUND((((TO_DAYS(STR_TO_DATE(b.19_wks_plasma,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS 19_wks_plasma_Weeks,	 b.32_wks_urine, ROUND((((TO_DAYS(STR_TO_DATE(b.32_wks_urine,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS 32_wks_urine_Weeks,	 b.32_wks_hb, ROUND((((TO_DAYS(STR_TO_DATE(b.32_wks_hb,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS 32_wks_hb_Weeks, b.32_wks_serum, ROUND((((TO_DAYS(STR_TO_DATE(b.32_wks_serum,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS 32_wks_serum_Weeks, b.32_wks_plasma_proteomic, ROUND((((TO_DAYS(STR_TO_DATE(b.32_wks_plasma_proteomic,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS 32_wks_plasma_proteomic_Weeks, b.32_wks_plasma_niacin, ROUND((((TO_DAYS(STR_TO_DATE(b.32_wks_plasma_niacin,'%d-%m-%Y')) - TO_DAYS(STR_TO_DATE(DATE_FORMAT(ADDDATE((STR_TO_DATE(xx.pw_crf1_02, '%d-%m-%Y')), INTERVAL (	-	(xx.pw_crf_1_30_week * 7) + xx.pw_crf_1_30_days) DAY),'%d-%m-%Y'),'%d-%m-%Y')))/7)),0) AS 32_wks_plasma_niacin_Weeks FROM view_crf3a AS a LEFT JOIN lab_investigation AS b ON a.pw_crf_3a_18=b.Randomization_ID LEFT JOIN form_crf_3a AS yy ON yy.form_crf_3a_id=a.form_crf_3a_id LEFT JOIN (SELECT * FROM view_crf1 AS a WHERE a.form_crf_1_id IN (SELECT MIN(z.form_crf_1_id) FROM view_crf1 AS z GROUP BY z.assis_id)) AS xx ON SUBSTRING_INDEX(xx.assis_id,':',-1)=yy.pw_id 	ORDER BY b.Randomization_ID) as TableA                  where Randomization_ID='" + Request.QueryString["RandID"] + "'", con);
             con.Open();
             try
             {
@@ -412,6 +470,9 @@ namespace maamta_pw
 
 
 
+                    //  Cord Blood after Delivery
+                    txtcord_blood_delivery_dt.Text = dr["cord_blood_dt"].ToString();
+                    txtcord_blood_delivery_tm.Text = dr["cord_blood_tm"].ToString();
 
 
                     //  Enrollement
@@ -483,6 +544,18 @@ namespace maamta_pw
                         txt32_wks_plasma_niacin.Attributes.Add("readonly", "readonly");
                         txt32_wks_plasma_niacin.Enabled = true;
                     }
+
+                    //  Cord Blood after Delivery
+                    if (txtcord_blood_delivery_dt.Text != "")
+                    {
+                        chk_cord_blood_delivery.Checked = true;
+                        txtcord_blood_delivery_dt.Attributes.Add("readonly", "readonly");
+                        txtcord_blood_delivery_dt.Enabled = true;
+                        txtcord_blood_delivery_tm.Enabled = true;
+                    }
+
+                
+                
                 }
             }
             finally

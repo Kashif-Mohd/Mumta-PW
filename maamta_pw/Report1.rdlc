@@ -1433,11 +1433,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Amount of Liquar</Value>
+                <Value>Amniotic Fluid / Index</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
-                  <FontFamily>arial</FontFamily>
-                  <FontSize>9pt</FontSize>
+                  <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
                   <TextDecoration>None</TextDecoration>
                   <Color>#000000</Color>

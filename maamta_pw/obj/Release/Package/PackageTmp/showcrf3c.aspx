@@ -172,6 +172,8 @@
                     <asp:BoundField DataField="c_start_time" HeaderText="c_start_time" />
                     <asp:BoundField DataField="c_end_time" HeaderText="c_end_time" />
                     <asp:BoundField DataField="sra_name" HeaderText="sra_name" />
+                    <asp:BoundField DataField="gestational_weeks" HeaderText="gestational_weeks" />
+                    <asp:BoundField DataField="gestational_days" HeaderText="gestational_days" />
                 </Columns>
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <EditRowStyle BackColor="#999999" />
@@ -228,6 +230,9 @@
                     <asp:BoundField DataField="c_start_time" HeaderText="c_start_time" />
                     <asp:BoundField DataField="c_end_time" HeaderText="c_end_time" />
                     <asp:BoundField DataField="sra_name" HeaderText="sra_name" />
+                    <asp:BoundField DataField="gestational_weeks" HeaderText="gestational_weeks" />
+                    <asp:BoundField DataField="gestational_days" HeaderText="gestational_days" />
+
                 </Columns>
             </asp:GridView>
         </div>

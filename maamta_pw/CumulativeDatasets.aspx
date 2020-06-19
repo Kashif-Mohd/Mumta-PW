@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="expectedOutcomeEnrolled.aspx.cs" Inherits="maamta_pw.expectedOutcomeEnrolled" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="CumulativeDatasets.aspx.cs" Inherits="maamta_pw.CumulativeReport" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-             <style>
+        <style>
         /* For DropDown CSS */
         .textDropDownCSS {
             font-size: 1.2em;
@@ -14,12 +14,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-               <div style="padding-left: 2%; margin-top: 15px;">
+    <div style="padding-left: 2%; margin-top: 15px;">
 
         <div style="color: #ff6b6b; font-size: 22px; width: 100%">
-            <b>Expected Outcome: </b>(Enrolled Participant)
-            <asp:Label ID="lbeDateFromTo" ForeColor="#10ac84" Font-Size="17px" Font-Bold="true" runat="server" Text=""></asp:Label>
+            Cumulative Datasets:
         </div>
+
         <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: -3px">
 
         <div id="divExportButton" runat="server" style="text-align: right; margin-top: -17px">
@@ -31,6 +31,8 @@
 
         <%--Search Button--%>
         <div id="divSearch" runat="server" class="col-lg-4 col-lg-offset-4" style="margin-bottom: 10px; margin-top: 0px;">
+
+
             <div id="imaginary_container" style="margin-top: 10px">
                 <div class="input-group stylish-input-group">
                     <asp:TextBox ID="txtdssid" CssClass="form-control txtboxx" ClientIDMode="Static" runat="server" placeholder="DSSID" MaxLength="11" ForeColor="Black"></asp:TextBox>
@@ -41,13 +43,15 @@
                     </span>
                 </div>
             </div>
+
         </div>
 
 
 
 
         <div style="width: 100%; overflow: auto">
-            <asp:GridView ID="GridView1" runat="server" EmptyDataText="No Record Found."  CssClass="footable" AllowSorting="false" ForeColor="#333333" AutoGenerateColumns="false">
+            <asp:GridView ID="GridView1" runat="server" EmptyDataText="No Record Found." OnRowDataBound="OnRowDataBound1" CssClass="footable" AllowSorting="false" ForeColor="#333333" AutoGenerateColumns="false">
+
                 <Columns>
                     <asp:TemplateField HeaderText="Serial no.">
                         <ItemTemplate>
@@ -57,12 +61,19 @@
                     </asp:TemplateField>
                     <asp:BoundField DataField="study_code" HeaderText="Study ID" />
                     <asp:BoundField DataField="dssid" HeaderText="DSSID" />
-                    <asp:BoundField DataField="block" HeaderText="Block" />
                     <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                    <asp:BoundField DataField="Expected_Date" HeaderText="Expected Date" />
+                    <asp:BoundField DataField="ARM" HeaderText="ARM" />
                     <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
+                    <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                    <asp:BoundField DataField="AZO_GA_20_Weeks" HeaderText="AZO Dose G.A 20_Weeks" />
+                    <asp:BoundField DataField="AZO_GA_28_Weeks" HeaderText="AZO Dose G.A 28_Weeks" />
+                    <asp:BoundField DataField="LNS_Cumulative" HeaderText="LNS Cumulative" />
+                    <asp:BoundField DataField="Choline_Cumulative" HeaderText="Choline Cumulative" />
+                    <asp:BoundField DataField="Nicotinamide_Cumulative" HeaderText="Nicotinamide Cumulative" />
                 </Columns>
+
+
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -84,16 +95,20 @@
                         </ItemTemplate>
                         <ItemStyle Width="2%" />
                     </asp:TemplateField>
-                    <asp:BoundField DataField="assis_id" HeaderText="Assisment ID" />
+                    <asp:BoundField DataField="study_code" HeaderText="Study ID" />
                     <asp:BoundField DataField="dssid" HeaderText="DSSID" />
-                    <asp:BoundField DataField="block" HeaderText="Block" />
                     <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                    <asp:BoundField DataField="Expected_Date" HeaderText="Expected Date" />
+                    <asp:BoundField DataField="ARM" HeaderText="ARM" />
                     <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
+                    <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                    <asp:BoundField DataField="AZO_GA_20_Weeks" HeaderText="AZO Dose G.A 20_Weeks" />
+                    <asp:BoundField DataField="AZO_GA_28_Weeks" HeaderText="AZO Dose G.A 28_Weeks" />
+                    <asp:BoundField DataField="LNS_Cumulative" HeaderText="LNS Cumulative" />
+                    <asp:BoundField DataField="Choline_Cumulative" HeaderText="Choline Cumulative" />
+                    <asp:BoundField DataField="Nicotinamide_Cumulative" HeaderText="Nicotinamide Cumulative" />
                 </Columns>
             </asp:GridView>
         </div>
     </div>
-
 </asp:Content>

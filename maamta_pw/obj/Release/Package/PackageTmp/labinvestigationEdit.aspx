@@ -554,6 +554,59 @@
 
 
 
+                <tr class="trCSS" style="font-size: 17px; background-color: whitesmoke">
+                    <td class="TableColumn tdCSS" colspan="2" style="text-align: center;">Cord Blood after Delivery</td>
+                </tr>
+
+
+
+                <%--for Cord Blood after Delivery--%>
+                <tr class="trCSS">
+                    <td class="TableColumn tdCSS">Cord Blood Collection</td>
+
+                    <td class="Space tdCSS">
+                        <%--Start    Date checks--%>
+                        <asp:UpdatePanel ID="UpdatePanel11" runat="server">
+                            <ContentTemplate>
+                                <asp:UpdateProgress ID="updateProgress11" runat="server">
+                                    <ProgressTemplate>
+                                        <div style="position: fixed; text-align: center; height: 100%; width: 100%; top: 0; right: 0; left: 0; z-index: 9999999; background-color: #000000; opacity: 0.75;">
+                                            <span style="border-width: 0px; border-radius: 10px; position: fixed; padding: 4%; color: white; background-color: #33D9B2; font-size: 36px; left: 40%; top: 40%;">Loading ...</span>
+                                        </div>
+                                    </ProgressTemplate>
+                                </asp:UpdateProgress>
+                                <div class="Mobile" id="Div11" runat="server">
+                                    <table style="width: 100%; margin-bottom: 15px">
+                                        <tr>
+                                            <td class="tddd">
+                                                <asp:TextBox ID="txtcord_blood_delivery_dt" Enabled="false" Font-Bold="true" Font-Size="16px" ClientIDMode="Static" CssClass="txtboxx" placeholder="dd-MM-yyyy" Height="32px" runat="server" Width="8.3em"></asp:TextBox>
+                                                <asp:ImageButton ID="imgcord_blood_delivery_dt" ImageUrl="~/assets/img/calendar1.png" CssClass="calanderButton" runat="server" />
+                                                <cc1:CalendarExtender ID="CalendarExtender11" runat="server" TargetControlID="txtcord_blood_delivery_dt" PopupButtonID="imgcord_blood_delivery_dt" Format="dd-MM-yyyy" />
+                                                <asp:CheckBox ID="chk_cord_blood_delivery" runat="server" OnCheckedChanged="chkcord_blood_delivery_CheckedChanged" AutoPostBack="true" CssClass="mycheckbox" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tddd" style="padding-top:10px;">
+                                                <asp:TextBox Enabled="false"  ID="txtcord_blood_delivery_tm" ClientIDMode="Static" type="text" CssClass="txtboxx" Font-Size="Medium" Width="7.5em" Height="2.1em" placeholder="Time" runat="server"></asp:TextBox></td>
+                                            <cc1:MaskedEditExtender ID="MaskedEditExtender1" runat="server" Mask="99:99" MaskType="Time" TargetControlID="txtcord_blood_delivery_tm" />
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                </div>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                        <%--End   Date checks--%>
+                    </td>
+                </tr>
+
+
+
+
+
+
+
+
             </table>
             <br />
             <div class="buttonWeb">

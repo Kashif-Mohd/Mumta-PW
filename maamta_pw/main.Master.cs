@@ -35,6 +35,7 @@ namespace maamta_pw
             if (Convert.ToString(Session["RolePW"]) != "web_sup_admin")
             {
                  navWebEntry.Visible = false;
+                 navSecret.Visible = false;
             }
 
 
@@ -69,7 +70,12 @@ namespace maamta_pw
                     random.Attributes.Add("class", "active");
                     Session["WebForm"] = null;
                 }
-
+                else if (Convert.ToString(Session["WebForm"]) == "dashWorkerPerformance")
+                {
+                    dashboard.Attributes.Add("class", "active");
+                    dashWorkerPerformance.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
 
                 // Report Print
                 else if (Convert.ToString(Session["WebForm"]) == "ultraReport")
@@ -353,7 +359,13 @@ namespace maamta_pw
                 }
 
 
-                    
+                       // Scret:
+                else if (Convert.ToString(Session["WebForm"]) == "CumulativeDatasets")
+                {
+                    secret.Attributes.Add("class", "active");
+                    CumulativeDatasets.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
                     
                 //TAB user Account:
                 else if (Convert.ToString(Session["WebForm"]) == "ListOfUsers")

@@ -158,7 +158,7 @@
                     </th>
                 </tr>
                 <tr class="trCSS">
-                    <td class="TableColumn tdCSS">Total duplicate DSSD on same date:</td>
+                    <td class="TableColumn tdCSS">Total duplicate DSSID on same date:</td>
                     <th class=" tdCSS">
                         <asp:LinkButton ID="linkDuplicate" OnClick="Link_Duplicate" Text="0" runat="server"></asp:LinkButton>
                     </th>

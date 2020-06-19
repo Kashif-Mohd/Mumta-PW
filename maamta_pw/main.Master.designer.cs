@@ -103,6 +103,15 @@ namespace maamta_pw {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl random;
         
         /// <summary>
+        /// dashWorkerPerformance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dashWorkerPerformance;
+        
+        /// <summary>
         /// navReportUltra control.
         /// </summary>
         /// <remarks>
@@ -598,13 +607,13 @@ namespace maamta_pw {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor secret;
         
         /// <summary>
-        /// Sticker control.
+        /// CumulativeDatasets control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Sticker;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CumulativeDatasets;
         
         /// <summary>
         /// navTabUsr control.

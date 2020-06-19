@@ -171,6 +171,9 @@
                             <asp:BoundField DataField="32_wks_plasma_proteomic_Weeks" HeaderText="32 wks Plasma Proteomic Weeks" />
                             <asp:BoundField DataField="32_wks_plasma_niacin" HeaderText="32 wks Plasma Niacin" />
                             <asp:BoundField DataField="32_wks_plasma_niacin_Weeks" HeaderText="32 wks Plasma Niacin Weeks" />
+                            <asp:BoundField DataField="cord_blood_dt" HeaderText="Cord Blood Collecting Date" />
+                            <asp:BoundField DataField="cord_blood_tm" HeaderText="Cord Blood Collecting Time" />
+                            <asp:BoundField DataField="Duration_Cord_Blood" HeaderText="Duration Cord Blood" />
                         </Columns>
 
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -231,6 +234,9 @@
                             <asp:BoundField DataField="32_wks_plasma_proteomic_Weeks" HeaderText="32 wks Plasma Proteomic Weeks" />
                             <asp:BoundField DataField="32_wks_plasma_niacin" HeaderText="32 wks Plasma Niacin" />
                             <asp:BoundField DataField="32_wks_plasma_niacin_Weeks" HeaderText="32 wks Plasma Niacin Weeks" />
+                            <asp:BoundField DataField="cord_blood_dt" HeaderText="Cord Blood Collecting Date" />
+                            <asp:BoundField DataField="cord_blood_tm" HeaderText="Cord Blood Collecting Time" />
+                            <asp:BoundField DataField="Duration_Cord_Blood" HeaderText="Duration Cord Blood" />
                         </Columns>
                     </asp:GridView>
                 </div>

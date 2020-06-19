@@ -77,7 +77,7 @@
     <div style="padding-left: 2%; margin-top: 15px;">
 
         <div style="color: #ff6b6b; font-size: 22px; width: 100%">
-            Compliance Cumulative Percentage:
+            LNS Compliance Cumulative Percentage:
         </div>
         <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: -3px">
 
@@ -164,6 +164,9 @@
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
                         <asp:BoundField DataField="percentage" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
+
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -198,6 +201,9 @@
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
                         <asp:BoundField DataField="percentage" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
+
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -232,6 +238,9 @@
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
                         <asp:BoundField DataField="percentage" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
+
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -266,6 +275,9 @@
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
                         <asp:BoundField DataField="percentage" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
+
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -299,6 +311,8 @@
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
                         <asp:BoundField DataField="percentage" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -372,10 +386,12 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="ARM" HeaderText="ARM" />
-                        <asp:BoundField DataField="total_Followups" HeaderText="Total Followups, a/c to Current Date" />
                         <asp:BoundField DataField="CRF4_Attempt" HeaderText="CRF4 Attempt" />
                         <asp:BoundField DataField="CRF4_Complete" HeaderText="CRF4 Complete" />
                         <asp:BoundField DataField="Cumulative" HeaderText="Cumulative Maamta Compliance" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
+
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -409,10 +425,11 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="ARM" HeaderText="ARM" />
-                        <asp:BoundField DataField="total_Followups" HeaderText="Total Followups, a/c to Current Date" />
                         <asp:BoundField DataField="CRF4_Attempt" HeaderText="CRF4 Attempt" />
                         <asp:BoundField DataField="CRF4_Complete" HeaderText="CRF4 Complete" />
                         <asp:BoundField DataField="Cumulative" HeaderText="Cumulative Maamta Compliance" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
                 </asp:GridView>
             </div>
