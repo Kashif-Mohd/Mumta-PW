@@ -353,17 +353,17 @@
                                 <li runat="server" id="showanc"><a href="showanc.aspx">ANC-Visits</a></li>
                                 <li runat="server" id="showFirstUltrasound"><a href="showFirstUltrasound.aspx">First Ultrasound</a></li>
                                 <li runat="server" id="showanc_enrolled"><a href="showanc_enrolled.aspx">ANC-Visits (Enrolled)</a></li>
-                                <li runat="server" id="showcrf2"><a href="showcrf2.aspx">RANDOM---CRF-2</a></li>
-                                <li runat="server" id="showcrf3a"><a href="showcrf3a.aspx">RANDOM---CRF-3a</a></li>
-                                <li runat="server" id="showcrf3b"><a href="showcrf3b.aspx">RANDOM---CRF-3b</a></li>
-                                <li runat="server" id="showcrf3c"><a href="showcrf3c.aspx">RANDOM---CRF-3c</a></li>
-                                <li runat="server" id="showcrf4"><a href="showcrf4.aspx">RANDOM---CRF-4</a></li>
-                                <li runat="server" id="showcrf4b"><a href="showcrf4b.aspx">RANDOM---CRF-4b</a></li>
-                                <li runat="server" id="showcrf5a"><a href="showcrf5a.aspx">RANDOM---CRF-5a</a></li>
-                                <li runat="server" id="showcrf5b"><a href="showcrf5b.aspx">RANDOM---CRF-5b</a></li>
-                                <li runat="server" id="showcrf5c"><a href="showcrf5c.aspx">RANDOM---CRF-5c</a></li>
-                                <li runat="server" id="showcrf6a"><a href="showcrf6a.aspx">RANDOM---CRF-6a</a></li>
-                                <li runat="server" id="showcrf6b"><a href="showcrf6b.aspx">RANDOM---CRF-6b</a></li>
+                                <li runat="server" id="showcrf2"><a href="showcrf2.aspx">Eligibility--CRF-2</a></li>
+                                <li runat="server" id="showcrf3a"><a href="showcrf3a.aspx">Randomization--CRF-3a</a></li>
+                                <li runat="server" id="showcrf3b"><a href="showcrf3b.aspx">Baseline--CRF-3b</a></li>
+                                <li runat="server" id="showcrf3c"><a href="showcrf3c.aspx">Treatment--CRF-3c</a></li>
+                                <li runat="server" id="showcrf4"><a href="showcrf4.aspx">Compliance--CRF-4</a></li>
+                                <li runat="server" id="showcrf4b"><a href="showcrf4b.aspx">Choline/Nico--CRF-4b</a></li>
+                                <li runat="server" id="showcrf5a"><a href="showcrf5a.aspx">Home ANC--CRF-5a</a></li>
+                                <li runat="server" id="showcrf5b"><a href="showcrf5b.aspx">FFQ--CRF-5b</a></li>
+                                <li runat="server" id="showcrf5c"><a href="showcrf5c.aspx">Anthro--CRF-5c</a></li>
+                                <li runat="server" id="showcrf6a"><a href="showcrf6a.aspx">Outcome Anthro---CRF-6a</a></li>
+                                <li runat="server" id="showcrf6b"><a href="showcrf6b.aspx">Outcome Info--CRF-6b</a></li>
                             </ul>
                         </li>
 
@@ -420,6 +420,7 @@
                             </a>
                             <ul class="sub">
                                 <li runat="server" id="CumulativeDatasets"><a href="CumulativeDatasets.aspx">Cumulative Datasets</a></li>
+                                <li runat="server" id="showanc_enrolled_labeled"><a href="showanc_enrolled_labeled.aspx">ANC-Visits (Labeled)</a></li>
                             </ul>
                         </li>
 

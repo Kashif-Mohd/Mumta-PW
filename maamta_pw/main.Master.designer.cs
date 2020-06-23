@@ -616,6 +616,15 @@ namespace maamta_pw {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl CumulativeDatasets;
         
         /// <summary>
+        /// showanc_enrolled_labeled control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl showanc_enrolled_labeled;
+        
+        /// <summary>
         /// navTabUsr control.
         /// </summary>
         /// <remarks>

@@ -366,6 +366,12 @@ namespace maamta_pw
                     CumulativeDatasets.Attributes.Add("class", "active");
                     Session["WebForm"] = null;
                 }
+                else if (Convert.ToString(Session["WebForm"]) == "showanc_enrolled_labeled")
+                {
+                    secret.Attributes.Add("class", "active");
+                    showanc_enrolled_labeled.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
                     
                 //TAB user Account:
                 else if (Convert.ToString(Session["WebForm"]) == "ListOfUsers")

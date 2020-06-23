@@ -10,7 +10,25 @@
 namespace maamta_pw {
     
     
-    public partial class dashUltra {
+    public partial class showanc_enrolled_labeled {
+        
+        /// <summary>
+        /// lbeDateFromTo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbeDateFromTo;
+        
+        /// <summary>
+        /// divExportButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divExportButton;
         
         /// <summary>
         /// Button1 control.
@@ -22,31 +40,58 @@ namespace maamta_pw {
         protected global::System.Web.UI.HtmlControls.HtmlButton Button1;
         
         /// <summary>
-        /// lbeUname control.
+        /// divSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbeUname;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divSearch;
         
         /// <summary>
-        /// lbeTotal control.
+        /// txtdssid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbeTotal;
+        protected global::System.Web.UI.WebControls.TextBox txtdssid;
         
         /// <summary>
-        /// linkDuplicate control.
+        /// btnSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkDuplicate;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnSearch;
+        
+        /// <summary>
+        /// UpdatePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
+        /// updateProgress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdateProgress updateProgress;
+        
+        /// <summary>
+        /// calendar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl calendar;
         
         /// <summary>
         /// txtCalndrDate control.
@@ -103,13 +148,13 @@ namespace maamta_pw {
         protected global::AjaxControlToolkit.CalendarExtender CalendarExtender2;
         
         /// <summary>
-        /// btnSearch control.
+        /// CheckBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
         
         /// <summary>
         /// GridView1 control.
@@ -128,14 +173,5 @@ namespace maamta_pw {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView2;
-        
-        /// <summary>
-        /// GridView3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView3;
     }
 }

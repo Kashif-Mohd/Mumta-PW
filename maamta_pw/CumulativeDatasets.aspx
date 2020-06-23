@@ -66,6 +66,9 @@
                     <asp:BoundField DataField="ARM" HeaderText="ARM" />
                     <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                    <asp:BoundField DataField="Form_Status" HeaderText="Form Status" />
+                    <asp:BoundField DataField="Birth_Outcome_Type" HeaderText="Birth Outcome Type" />
+                    <asp:BoundField DataField="Baby_Currently_Alive" HeaderText="Baby Currently Alive" />
                     <asp:BoundField DataField="AZO_GA_20_Weeks" HeaderText="AZO Dose G.A 20_Weeks" />
                     <asp:BoundField DataField="AZO_GA_28_Weeks" HeaderText="AZO Dose G.A 28_Weeks" />
                     <asp:BoundField DataField="LNS_Cumulative" HeaderText="LNS Cumulative" />
@@ -102,6 +105,9 @@
                     <asp:BoundField DataField="ARM" HeaderText="ARM" />
                     <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                    <asp:BoundField DataField="Form_Status" HeaderText="Form Status" />
+                    <asp:BoundField DataField="Birth_Outcome_Type" HeaderText="Birth Outcome Type" />
+                    <asp:BoundField DataField="Baby_Currently_Alive" HeaderText="Baby Currently Alive" />
                     <asp:BoundField DataField="AZO_GA_20_Weeks" HeaderText="AZO Dose G.A 20_Weeks" />
                     <asp:BoundField DataField="AZO_GA_28_Weeks" HeaderText="AZO Dose G.A 28_Weeks" />
                     <asp:BoundField DataField="LNS_Cumulative" HeaderText="LNS Cumulative" />

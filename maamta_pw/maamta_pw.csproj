@@ -169,6 +169,7 @@
     <Content Include="login.aspx" />
     <Content Include="showanc.aspx" />
     <Content Include="showanc_enrolled.aspx" />
+    <Content Include="showanc_enrolled_labeled.aspx" />
     <Content Include="showcrf1.aspx" />
     <Content Include="showcrf2.aspx" />
     <Content Include="showcrf2byid.aspx" />
@@ -452,6 +453,13 @@
     </Compile>
     <Compile Include="showanc_enrolled.aspx.designer.cs">
       <DependentUpon>showanc_enrolled.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showanc_enrolled_labeled.aspx.cs">
+      <DependentUpon>showanc_enrolled_labeled.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showanc_enrolled_labeled.aspx.designer.cs">
+      <DependentUpon>showanc_enrolled_labeled.aspx</DependentUpon>
     </Compile>
     <Compile Include="showcrf1.aspx.cs">
       <DependentUpon>showcrf1.aspx</DependentUpon>

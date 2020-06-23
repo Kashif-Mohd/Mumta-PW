@@ -224,6 +224,8 @@
     <br />
     <asp:GridView ID="GridView2" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
     </asp:GridView>
+        <asp:GridView ID="GridView3" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
 
 
 </asp:Content>
