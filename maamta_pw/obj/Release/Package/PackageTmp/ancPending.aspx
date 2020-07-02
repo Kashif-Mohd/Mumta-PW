@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="ancPending.aspx.cs" Inherits="maamta_pw.ancPending" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-       <style>
+    <style>
         /* For DropDown CSS */
         .textDropDownCSS {
             font-size: 1.2em;
@@ -17,7 +18,7 @@
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-       <div style="padding-left: 2%; margin-top: 15px;">
+    <div style="padding-left: 2%; margin-top: 15px;">
 
         <div style="color: #ff6b6b; font-size: 22px; width: 100%">
             Pending ANC-Visit:
@@ -59,11 +60,14 @@
                         <ItemStyle Width="2%" />
                     </asp:TemplateField>
                     <asp:BoundField DataField="assis_id" HeaderText="Assisment ID" />
+                    <asp:BoundField DataField="block" HeaderText="Block" />
                     <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                     <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                     <asp:BoundField DataField="screening_date" HeaderText="Screening Date" />
-                    <asp:BoundField DataField="ultrasound_Weeks" HeaderText="Pregnancy Weeks" />
+                    <asp:BoundField DataField="current_ga" HeaderText="Current G.A" />
+                    <asp:BoundField DataField="STATUS" HeaderText="Status" />
+                    <asp:BoundField DataField="" HeaderText="Remarks" />
                 </Columns>
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <EditRowStyle BackColor="#999999" />
@@ -87,11 +91,14 @@
                         <ItemStyle Width="2%" />
                     </asp:TemplateField>
                     <asp:BoundField DataField="assis_id" HeaderText="Assisment ID" />
+                    <asp:BoundField DataField="block" HeaderText="Block" />
                     <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                     <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                     <asp:BoundField DataField="screening_date" HeaderText="Screening Date" />
-                    <asp:BoundField DataField="ultrasound_Weeks" HeaderText="Pregnancy Weeks" />
+                    <asp:BoundField DataField="current_ga" HeaderText="Current G.A" />
+                    <asp:BoundField DataField="STATUS" HeaderText="Status" />
+                    <asp:BoundField DataField="" HeaderText="Remarks" />
                 </Columns>
             </asp:GridView>
         </div>

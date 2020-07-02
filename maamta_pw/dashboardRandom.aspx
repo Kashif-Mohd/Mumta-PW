@@ -240,8 +240,8 @@
     <asp:GridView ID="GridView9" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
     </asp:GridView>
 
-
-
+    <asp:GridView ID="GridView10" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
 
 
 
@@ -272,7 +272,13 @@
     <asp:GridView ID="GridView_CRF6_06" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
     </asp:GridView>
 
+    <%--Report:  Table-7 --%>
+    <asp:GridView ID="GridView_CRF6_07" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true"> 
+    </asp:GridView>
 
+     <%--Report:  Table-8 --%>
+    <asp:GridView ID="GridView_CRF6_08" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true"> 
+    </asp:GridView>
 
 
 

@@ -164,11 +164,11 @@ namespace maamta_pw
 
         protected void btnExport_Click(object sender, EventArgs e)
         {
-            ShowData();
-            if (GridView1.Rows.Count != 0)
-            {
-                ExcelExport();
-            }
+            //ShowData();
+            //if (GridView1.Rows.Count != 0)
+            //{
+            //    ExcelExport();
+            //}
         }
 
         public void ExcelExportMessage()
