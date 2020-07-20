@@ -135,7 +135,7 @@
     <div class="ballaaa">
 
 
-        <div style="text-align: right; margin-top: 8px">
+        <div style="text-align: right; margin-top: 8px; visibility:hidden ">
             <button type="button" id="Button1" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_Click">
                 Export Report &nbsp<span class="glyphicon glyphicon-export"></span>
             </button>

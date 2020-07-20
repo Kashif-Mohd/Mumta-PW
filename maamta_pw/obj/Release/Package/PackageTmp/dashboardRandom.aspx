@@ -164,8 +164,12 @@
         </button>
 
 
-        <button type="button" id="btnExport_CRF6" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_CRF6_Click">
-            CRF-6 Report &nbsp<span class="glyphicon glyphicon-export"></span>
+        <button type="button" id="btnExport_CRF6_R1" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_CRF6_R1_Click">
+            CRF-6 Report (1) &nbsp<span class="glyphicon glyphicon-export"></span>
+        </button>
+
+        <button type="button" id="btnExport_CRF6_R2" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_CRF6_R2_Click">
+            CRF-6 Report (2) &nbsp<span class="glyphicon glyphicon-export"></span>
         </button>
 
     </div>
@@ -248,36 +252,23 @@
 
 
 
-    <%--Report: Table-1 --%>
+    <%--CRF6 Report1: Table-1 --%>
     <asp:GridView ID="GridView_CRF6_01" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
     </asp:GridView>
-
-    <%--Report: Table-2 --%>
+    <%--CRF6 Report1: Table-2 --%>
     <asp:GridView ID="GridView_CRF6_02" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
     </asp:GridView>
-
-    <%--Report:  Table-3 --%>
+    <%--CRF6 Report1:  Table-3 --%>
     <asp:GridView ID="GridView_CRF6_03" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
     </asp:GridView>
-
-    <%--Report:  Table-4 --%>
+    <%--CRF6 Report1:  Table-4 --%>
     <asp:GridView ID="GridView_CRF6_04" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
     </asp:GridView>
-
-    <%--Report:  Table-5 --%>
-    <asp:GridView ID="GridView_CRF6_05" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    <%--CRF6 Report1:  Table-7 --%>
+    <asp:GridView ID="GridView_CRF6_07" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
     </asp:GridView>
-
-    <%--Report:  Table-6 --%>
-    <asp:GridView ID="GridView_CRF6_06" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
-    </asp:GridView>
-
-    <%--Report:  Table-7 --%>
-    <asp:GridView ID="GridView_CRF6_07" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true"> 
-    </asp:GridView>
-
-     <%--Report:  Table-8 --%>
-    <asp:GridView ID="GridView_CRF6_08" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true"> 
+    <%--CRF6 Report1:  Table-8 --%>
+    <asp:GridView ID="GridView_CRF6_08" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
     </asp:GridView>
 
 
@@ -285,6 +276,25 @@
 
 
 
+
+    <%--CRF6 Report2: Table-1 --%>
+    <asp:GridView ID="GridView_CRF6_R2_01" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+    <%--CRF6 Report2: Table-2 --%>
+    <asp:GridView ID="GridView_CRF6_R2_02" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+    <%--CRF6 Report2: Table-3 --%>
+    <asp:GridView ID="GridView_CRF6_R2_03" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+    <%--CRF6 Report2: Table-3 details --%>
+    <asp:GridView ID="GridView_CRF6_R2_03_Details" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+    <%--CRF6 Report2: Table-4 --%>
+    <asp:GridView ID="GridView_CRF6_R2_04" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+    <%--CRF6 Report2: Table-5 --%>
+    <asp:GridView ID="GridView_CRF6_R2_05" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
 
 
 
