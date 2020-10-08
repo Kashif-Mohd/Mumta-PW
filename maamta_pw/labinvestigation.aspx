@@ -56,10 +56,6 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-
-
-
-
     <div style="padding-left: 2%; margin-top: 15px;">
         <div style="color: #ff6b6b; font-size: 22px; width: 100%">
             LAB Investigation:

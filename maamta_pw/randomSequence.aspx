@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="randomSequence.aspx.cs" Inherits="maamta_pw.lab_investigation" %>
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-      <style>
+    <style>
         /* For DropDown CSS */
         .textDropDownCSS {
             font-size: 1.2em;
@@ -83,8 +84,19 @@
 
 
 
-    
 
+        <div id="divSearch" runat="server" class="col-lg-4 col-lg-offset-4" style="margin-bottom: 10px; margin-top: 0px;">
+
+            <asp:DropDownList ID="DropDownList1" CssClass="form-control textDropDownCSS" data-style="btn-primary" runat="server">
+                <asp:ListItem Value="0">Select Site</asp:ListItem>
+                <asp:ListItem Value="RG">RG (Rehri Goth)</asp:ListItem>
+                <asp:ListItem Value="IH">IH (Ibrahim Hyderi)</asp:ListItem>
+            </asp:DropDownList>
+
+        </div>
+        <div style="margin-bottom: 10px; margin-top: 3px; text-align: center" class="Mobile">
+            <asp:Button ID="btnSearch" runat="server" class="btn btn-theme" OnClick="btnSearch_Click" Text="Search" />
+        </div>
 
 
 
@@ -104,7 +116,7 @@
                     <asp:BoundField DataField="Randomization_ID" HeaderText="Correct Random ID" />
                     <asp:BoundField DataField="pw_crf_3a_19" HeaderText="Form ARM" />
                     <asp:BoundField DataField="treatment" HeaderText="Correct ARM" />
-                <asp:BoundField DataField="study_code" HeaderText="Study-ID" />
+                    <asp:BoundField DataField="study_code" HeaderText="Study-ID" />
                 </Columns>
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <EditRowStyle BackColor="#999999" />

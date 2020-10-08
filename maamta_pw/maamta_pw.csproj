@@ -136,10 +136,14 @@
     <Content Include="checkcompliance.aspx" />
     <Content Include="CholinePrtage.aspx" />
     <Content Include="compPrtage.aspx" />
+    <Content Include="crf8a.aspx" />
+    <Content Include="crf8b.aspx" />
+    <Content Include="crf8c.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\divtable.css" />
     <Content Include="CumulativeDatasets.aspx" />
     <Content Include="dashANC.aspx" />
+    <Content Include="dashboardCRF8.aspx" />
     <Content Include="dashWorkerPerformance.aspx" />
     <Content Include="dashboardRandom.aspx" />
     <Content Include="dashUltra.aspx" />
@@ -156,6 +160,7 @@
     <Content Include="followups5b.aspx" />
     <Content Include="followups5c.aspx" />
     <Content Include="followups6.aspx" />
+    <Content Include="infantdeath.aspx" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-1.9.1.min.js" />
     <Content Include="js\jquery.easing.min.js" />
@@ -193,7 +198,11 @@
     <Content Include="showcrf6a.aspx" />
     <Content Include="showcrf6b.aspx" />
     <Content Include="showFirstUltrasound.aspx" />
+    <Content Include="type_of_stillbirth.aspx" />
     <Content Include="ultraReport.aspx" />
+    <Content Include="updatecrf8a.aspx" />
+    <Content Include="updatecrf8b.aspx" />
+    <Content Include="updatecrf8c.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -255,6 +264,27 @@
     <Compile Include="compPrtage.aspx.designer.cs">
       <DependentUpon>compPrtage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="crf8a.aspx.cs">
+      <DependentUpon>crf8a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crf8a.aspx.designer.cs">
+      <DependentUpon>crf8a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crf8b.aspx.cs">
+      <DependentUpon>crf8b.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crf8b.aspx.designer.cs">
+      <DependentUpon>crf8b.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crf8c.aspx.cs">
+      <DependentUpon>crf8c.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crf8c.aspx.designer.cs">
+      <DependentUpon>crf8c.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CumulativeDatasets.aspx.cs">
       <DependentUpon>CumulativeDatasets.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -268,6 +298,13 @@
     </Compile>
     <Compile Include="dashANC.aspx.designer.cs">
       <DependentUpon>dashANC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardCRF8.aspx.cs">
+      <DependentUpon>dashboardCRF8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboardCRF8.aspx.designer.cs">
+      <DependentUpon>dashboardCRF8.aspx</DependentUpon>
     </Compile>
     <Compile Include="dashWorkerPerformance.aspx.cs">
       <DependentUpon>dashWorkerPerformance.aspx</DependentUpon>
@@ -389,6 +426,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>formANC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="infantdeath.aspx.cs">
+      <DependentUpon>infantdeath.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="infantdeath.aspx.designer.cs">
+      <DependentUpon>infantdeath.aspx</DependentUpon>
     </Compile>
     <Compile Include="labinvestigation.aspx.cs">
       <DependentUpon>labinvestigation.aspx</DependentUpon>
@@ -622,12 +666,40 @@
     <Compile Include="showFirstUltrasound.aspx.designer.cs">
       <DependentUpon>showFirstUltrasound.aspx</DependentUpon>
     </Compile>
+    <Compile Include="type_of_stillbirth.aspx.cs">
+      <DependentUpon>type_of_stillbirth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="type_of_stillbirth.aspx.designer.cs">
+      <DependentUpon>type_of_stillbirth.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ultraReport.aspx.cs">
       <DependentUpon>ultraReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ultraReport.aspx.designer.cs">
       <DependentUpon>ultraReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updatecrf8a.aspx.cs">
+      <DependentUpon>updatecrf8a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updatecrf8a.aspx.designer.cs">
+      <DependentUpon>updatecrf8a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updatecrf8b.aspx.cs">
+      <DependentUpon>updatecrf8b.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updatecrf8b.aspx.designer.cs">
+      <DependentUpon>updatecrf8b.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updatecrf8c.aspx.cs">
+      <DependentUpon>updatecrf8c.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updatecrf8c.aspx.designer.cs">
+      <DependentUpon>updatecrf8c.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

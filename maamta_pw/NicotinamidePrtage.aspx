@@ -102,7 +102,7 @@
 
         <div style="width: 100%; text-align: center; overflow: auto; margin-top: 30px" id="divGraph" runat="server">
 
-            <asp:Chart ID="Chart1" runat="server" Width="1000" Height="400px">
+            <asp:Chart ID="Chart1" runat="server" Width="1000" Height="400px" Visible="true">
                 <Series>
                     <asp:Series Name="Series1">
                     </asp:Series>
@@ -120,7 +120,6 @@
                     </asp:Title>
                 </Titles>
             </asp:Chart>
-
 
 
             <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: 0px">
@@ -161,8 +160,12 @@
                         <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                        <asp:BoundField DataField="Cumulative_Nicotinamide" HeaderText="Percentage" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_Nicotinamide" HeaderText="Consumed Nicotinamide" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used Nicotinamide" />
+                        <asp:BoundField DataField="Percentage" HeaderText="Percentage" />
                         <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -195,8 +198,12 @@
                         <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                        <asp:BoundField DataField="Cumulative_Nicotinamide" HeaderText="Percentage" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_Nicotinamide" HeaderText="Consumed Nicotinamide" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used Nicotinamide" />
+                        <asp:BoundField DataField="Percentage" HeaderText="Percentage" />
                         <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -229,8 +236,12 @@
                         <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                        <asp:BoundField DataField="Cumulative_Nicotinamide" HeaderText="Percentage" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_Nicotinamide" HeaderText="Consumed Nicotinamide" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used Nicotinamide" />
+                        <asp:BoundField DataField="Percentage" HeaderText="Percentage" />
                         <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -263,8 +274,12 @@
                         <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                        <asp:BoundField DataField="Cumulative_Nicotinamide" HeaderText="Percentage" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_Nicotinamide" HeaderText="Consumed Nicotinamide" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used Nicotinamide" />
+                        <asp:BoundField DataField="Percentage" HeaderText="Percentage" />
                         <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -296,8 +311,12 @@
                         <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                        <asp:BoundField DataField="Cumulative_Nicotinamide" HeaderText="Percentage" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_Nicotinamide" HeaderText="Consumed Nicotinamide" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used Nicotinamide" />
+                        <asp:BoundField DataField="Percentage" HeaderText="Percentage" />
                         <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -372,10 +391,12 @@
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="CRF4b_Attempt" HeaderText="CRF4b Attempt" />
                         <asp:BoundField DataField="CRF4b_Complete" HeaderText="CRF4b Complete" />
-                        <asp:BoundField DataField="Cumulative_Nicotinamide" HeaderText="Cumulative Nicotinamide Percentage" />
-                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_Nicotinamide" HeaderText="Consumed Nicotinamide" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used Nicotinamide" />
+                        <asp:BoundField DataField="Percentage" HeaderText="Cumulative Nicotinamide Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
-
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -410,8 +431,11 @@
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="CRF4b_Attempt" HeaderText="CRF4b Attempt" />
                         <asp:BoundField DataField="CRF4b_Complete" HeaderText="CRF4b Complete" />
-                        <asp:BoundField DataField="Cumulative_Nicotinamide" HeaderText="Cumulative Nicotinamide Percentage" />
-                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_Nicotinamide" HeaderText="Consumed Nicotinamide" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used Nicotinamide" />
+                        <asp:BoundField DataField="Percentage" HeaderText="Cumulative Nicotinamide Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
                 </asp:GridView>

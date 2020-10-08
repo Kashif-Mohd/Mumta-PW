@@ -130,22 +130,40 @@ namespace maamta_pw {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// GridView5 control.
+        /// GridView5_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView5;
+        protected global::System.Web.UI.WebControls.GridView GridView5_1;
         
         /// <summary>
-        /// GridView6 control.
+        /// GridView5_2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView6;
+        protected global::System.Web.UI.WebControls.GridView GridView5_2;
+        
+        /// <summary>
+        /// GridView6_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView6_1;
+        
+        /// <summary>
+        /// GridView6_2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView6_2;
         
         /// <summary>
         /// GridView8 control.
@@ -265,6 +283,24 @@ namespace maamta_pw {
         protected global::System.Web.UI.WebControls.GridView GridView_CRF6_R2_03_Details;
         
         /// <summary>
+        /// GridView_CRF6_R2_06 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_CRF6_R2_06;
+        
+        /// <summary>
+        /// GridView_CRF6_R2_06_Details control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_CRF6_R2_06_Details;
+        
+        /// <summary>
         /// GridView_CRF6_R2_04 control.
         /// </summary>
         /// <remarks>
@@ -281,5 +317,14 @@ namespace maamta_pw {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView_CRF6_R2_05;
+        
+        /// <summary>
+        /// GridView_CRF6_R2_07 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_CRF6_R2_07;
     }
 }

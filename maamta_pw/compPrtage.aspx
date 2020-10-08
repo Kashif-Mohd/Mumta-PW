@@ -163,8 +163,11 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
-                        <asp:BoundField DataField="percentage" HeaderText="Percentage" />
-                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
+                        <asp:BoundField DataField="Cumulative" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
 
                     </Columns>
@@ -200,8 +203,11 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
-                        <asp:BoundField DataField="percentage" HeaderText="Percentage" />
-                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
+                        <asp:BoundField DataField="Cumulative" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
 
                     </Columns>
@@ -237,8 +243,11 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
-                        <asp:BoundField DataField="percentage" HeaderText="Percentage" />
-                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
+                        <asp:BoundField DataField="Cumulative" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
 
                     </Columns>
@@ -274,8 +283,11 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
-                        <asp:BoundField DataField="percentage" HeaderText="Percentage" />
-                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
+                        <asp:BoundField DataField="Cumulative" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
 
                     </Columns>
@@ -310,8 +322,11 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
-                        <asp:BoundField DataField="percentage" HeaderText="Percentage" />
-                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
+                        <asp:BoundField DataField="Cumulative" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
@@ -388,9 +403,14 @@
                         <asp:BoundField DataField="ARM" HeaderText="ARM" />
                         <asp:BoundField DataField="CRF4_Attempt" HeaderText="CRF4 Attempt" />
                         <asp:BoundField DataField="CRF4_Complete" HeaderText="CRF4 Complete" />
+                        <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
                         <asp:BoundField DataField="Cumulative" HeaderText="Cumulative Maamta Compliance" />
                         <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
+
+                        <asp:BoundField DataField="date_of_registration" HeaderText="Date of Registration" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
 
                     </Columns>
 
@@ -427,9 +447,84 @@
                         <asp:BoundField DataField="ARM" HeaderText="ARM" />
                         <asp:BoundField DataField="CRF4_Attempt" HeaderText="CRF4 Attempt" />
                         <asp:BoundField DataField="CRF4_Complete" HeaderText="CRF4 Complete" />
+                        <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
                         <asp:BoundField DataField="Cumulative" HeaderText="Cumulative Maamta Compliance" />
                         <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
+                        <asp:BoundField DataField="date_of_registration" HeaderText="Date of Registration" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="F1" HeaderText="F1" />
+                        <asp:BoundField DataField="F2" HeaderText="F2" />
+                        <asp:BoundField DataField="F3" HeaderText="F3" />
+                        <asp:BoundField DataField="F4" HeaderText="F4" />
+                        <asp:BoundField DataField="F5" HeaderText="F5" />
+                        <asp:BoundField DataField="F6" HeaderText="F6" />
+                        <asp:BoundField DataField="F7" HeaderText="F7" />
+                        <asp:BoundField DataField="F8" HeaderText="F8" />
+                        <asp:BoundField DataField="F9" HeaderText="F9" />
+                        <asp:BoundField DataField="F10" HeaderText="F10" />
+                        <asp:BoundField DataField="F11" HeaderText="F11" />
+                        <asp:BoundField DataField="F12" HeaderText="F12" />
+                        <asp:BoundField DataField="F13" HeaderText="F13" />
+                        <asp:BoundField DataField="F14" HeaderText="F14" />
+                        <asp:BoundField DataField="F15" HeaderText="F15" />
+                        <asp:BoundField DataField="F16" HeaderText="F16" />
+                        <asp:BoundField DataField="F17" HeaderText="F17" />
+                        <asp:BoundField DataField="F18" HeaderText="F18" />
+                        <asp:BoundField DataField="F19" HeaderText="F19" />
+                        <asp:BoundField DataField="F20" HeaderText="F20" />
+                        <asp:BoundField DataField="F21" HeaderText="F21" />
+                        <asp:BoundField DataField="F22" HeaderText="F22" />
+                        <asp:BoundField DataField="F23" HeaderText="F23" />
+                        <asp:BoundField DataField="F24" HeaderText="F24" />
+                        <asp:BoundField DataField="F25" HeaderText="F25" />
+                        <asp:BoundField DataField="F26" HeaderText="F26" />
+                        <asp:BoundField DataField="F27" HeaderText="F27" />
+                        <asp:BoundField DataField="F28" HeaderText="F28" />
+                        <asp:BoundField DataField="F29" HeaderText="F29" />
+                        <asp:BoundField DataField="F30" HeaderText="F30" />
+                        <asp:BoundField DataField="F31" HeaderText="F31" />
+                        <asp:BoundField DataField="F32" HeaderText="F32" />
+                        <asp:BoundField DataField="F33" HeaderText="F33" />
+                        <asp:BoundField DataField="F34" HeaderText="F34" />
+                        <asp:BoundField DataField="F35" HeaderText="F35" />
+                        <asp:BoundField DataField="F36" HeaderText="F36" />
+                        <asp:BoundField DataField="F37" HeaderText="F37" />
+                        <asp:BoundField DataField="F38" HeaderText="F38" />
+                        <asp:BoundField DataField="F39" HeaderText="F39" />
+                        <asp:BoundField DataField="F40" HeaderText="F40" />
+                        <asp:BoundField DataField="F41" HeaderText="F41" />
+                        <asp:BoundField DataField="F42" HeaderText="F42" />
+                        <asp:BoundField DataField="F43" HeaderText="F43" />
+                        <asp:BoundField DataField="F44" HeaderText="F44" />
+                        <asp:BoundField DataField="F45" HeaderText="F45" />
+                        <asp:BoundField DataField="F46" HeaderText="F46" />
+                        <asp:BoundField DataField="F47" HeaderText="F47" />
+                        <asp:BoundField DataField="F48" HeaderText="F48" />
+                        <asp:BoundField DataField="F49" HeaderText="F49" />
+                        <asp:BoundField DataField="F50" HeaderText="F50" />
+                        <asp:BoundField DataField="F51" HeaderText="F51" />
+                        <asp:BoundField DataField="F52" HeaderText="F52" />
+                        <asp:BoundField DataField="F53" HeaderText="F53" />
+                        <asp:BoundField DataField="F54" HeaderText="F54" />
+                        <asp:BoundField DataField="F55" HeaderText="F55" />
+                        <asp:BoundField DataField="F56" HeaderText="F56" />
+                        <asp:BoundField DataField="F57" HeaderText="F57" />
+                        <asp:BoundField DataField="F58" HeaderText="F58" />
+                        <asp:BoundField DataField="F59" HeaderText="F59" />
+                        <asp:BoundField DataField="F60" HeaderText="F60" />
+                        <asp:BoundField DataField="F61" HeaderText="F61" />
+                        <asp:BoundField DataField="F62" HeaderText="F62" />
+                        <asp:BoundField DataField="F63" HeaderText="F63" />
+                        <asp:BoundField DataField="F64" HeaderText="F64" />
+                        <asp:BoundField DataField="F65" HeaderText="F65" />
+                        <asp:BoundField DataField="F66" HeaderText="F66" />
+                        <asp:BoundField DataField="F67" HeaderText="F67" />
+                        <asp:BoundField DataField="F68" HeaderText="F68" />
+                        <asp:BoundField DataField="F69" HeaderText="F69" />
+                        <asp:BoundField DataField="F70" HeaderText="F70" />
+                        <asp:BoundField DataField="F71" HeaderText="F71" />
                     </Columns>
                 </asp:GridView>
             </div>

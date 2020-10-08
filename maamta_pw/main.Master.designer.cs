@@ -454,6 +454,24 @@ namespace maamta_pw {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor WebEntry;
         
         /// <summary>
+        /// type_of_stillbirth control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl type_of_stillbirth;
+        
+        /// <summary>
+        /// infantdeath control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl infantdeath;
+        
+        /// <summary>
         /// showcrf4Compliance control.
         /// </summary>
         /// <remarks>
@@ -479,6 +497,24 @@ namespace maamta_pw {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl checkcompliance;
+        
+        /// <summary>
+        /// entrycrf8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl entrycrf8;
+        
+        /// <summary>
+        /// dashCrf8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dashCrf8;
         
         /// <summary>
         /// navError control.

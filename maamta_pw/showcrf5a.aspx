@@ -211,7 +211,10 @@
                     <asp:BoundField DataField="pw_crf5a_47" HeaderText="pw_crf5a_47" />
                     <asp:BoundField DataField="pw_crf5a_48" HeaderText="pw_crf5a_48" />
                     <asp:BoundField DataField="pw_crf5a_49" HeaderText="pw_crf5a_49" />
+                    <asp:BoundField DataField="pw_crf5a_49_b" HeaderText="pw_crf5a_49_b" />
                     <asp:BoundField DataField="pw_crf5a_50" HeaderText="pw_crf5a_50" />
+                    <asp:BoundField DataField="pw_crf5a_50_b" HeaderText="pw_crf5a_50_b" />
+                    <asp:BoundField DataField="pw_crf5a_50_temp" HeaderText="pw_crf5a_50_temp" />
                     <asp:BoundField DataField="pw_crf5a_51" HeaderText="pw_crf5a_51" />
                     <asp:BoundField DataField="pw_crf5a_52" HeaderText="pw_crf5a_52" />
                     <asp:BoundField DataField="pw_crf5a_53" HeaderText="pw_crf5a_53" />
@@ -376,7 +379,10 @@
                     <asp:BoundField DataField="pw_crf5a_47" HeaderText="pw_crf5a_47" />
                     <asp:BoundField DataField="pw_crf5a_48" HeaderText="pw_crf5a_48" />
                     <asp:BoundField DataField="pw_crf5a_49" HeaderText="pw_crf5a_49" />
+                    <asp:BoundField DataField="pw_crf5a_49_b" HeaderText="pw_crf5a_49_b" />
                     <asp:BoundField DataField="pw_crf5a_50" HeaderText="pw_crf5a_50" />
+                    <asp:BoundField DataField="pw_crf5a_50_b" HeaderText="pw_crf5a_50_b" />
+                    <asp:BoundField DataField="pw_crf5a_50_temp" HeaderText="pw_crf5a_50_temp" />
                     <asp:BoundField DataField="pw_crf5a_51" HeaderText="pw_crf5a_51" />
                     <asp:BoundField DataField="pw_crf5a_52" HeaderText="pw_crf5a_52" />
                     <asp:BoundField DataField="pw_crf5a_53" HeaderText="pw_crf5a_53" />

@@ -123,6 +123,7 @@
                     <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                     <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
+                    <asp:BoundField DataField="Status" HeaderText="Status" />
                     <asp:BoundField DataField="appointment_date" HeaderText="Appointment Date" />
                 </Columns>
 
@@ -155,6 +156,7 @@
                     <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                     <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
+                    <asp:BoundField DataField="Status" HeaderText="Status" />
                     <asp:BoundField DataField="appointment_date" HeaderText="Appointment Date" />
                 </Columns>
             </asp:GridView>

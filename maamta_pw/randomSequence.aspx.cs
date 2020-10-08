@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace maamta_pw
 {
@@ -14,12 +15,15 @@ namespace maamta_pw
     {
         string constr = ConfigurationManager.ConnectionStrings["LocalMySql"].ConnectionString;
 
+        static int Random_Sequence;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 Session["WebForm"] = "randomSequence";
-                ShowData();
+              //  ShowData();
             }
         }
 
@@ -31,28 +35,84 @@ namespace maamta_pw
 
 
 
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            ShowData();
+        }
+
+
 
 
         private void ShowData()
         {
+
+            if (GridView1.PageIndex == 0)
+            {
+                Random_Sequence = 0;
+            }
+            else if (GridView1.PageIndex == 1)
+            {
+                Random_Sequence = 200;
+            }
+            else if (GridView1.PageIndex == 2)
+            {
+                Random_Sequence = 400;
+            }
+            else if (GridView1.PageIndex == 3)
+            {
+                Random_Sequence = 600;
+            }
+            else if (GridView1.PageIndex == 4)
+            {
+                Random_Sequence = 800;
+            }
+            else if (GridView1.PageIndex == 5)
+            {
+                Random_Sequence = 1000;
+            }
+            else if (GridView1.PageIndex == 6)
+            {
+                Random_Sequence = 1200;
+            }
+            else if (GridView1.PageIndex == 7)
+            {
+                Random_Sequence = 1400;
+            }
+            else if (GridView1.PageIndex == 8)
+            {
+                Random_Sequence = 1600;
+            }
+            else if (GridView1.PageIndex == 9)
+            {
+                Random_Sequence = 1800;
+            }
+
+
             MySqlConnection con = new MySqlConnection(constr);
             try
             {
                 con.Open();
                 MySqlCommand cmd;
-
-                cmd = new MySqlCommand("select a.form_crf_3a_id,a.Site,a.study_code,a.pw_crf_3a_2, a.pw_crf_3a_3,a.pw_crf_3a_18,a.pw_crf_3a_19,a.study_code,a.dssid,b.Randomization_ID,b.treatment from view_crf3a as a left join lab_investigation as b on a.pw_crf_3a_18=b.Randomization_ID order by str_to_date(a.pw_crf_3a_2, '%d-%m-%Y'), STR_TO_DATE(a.pw_crf_3a_3,  '%H:%i')", con);
-
-                MySqlDataAdapter sda = new MySqlDataAdapter();
+                if (DropDownList1.SelectedValue == "0")
                 {
-                    cmd.Connection = con;
-                    sda.SelectCommand = cmd;
-                    DataTable dt = new DataTable();
+                    showalert("Please select Site");
+                    DropDownList1.Focus();
+                }
+                else
+                {
+                    cmd = new MySqlCommand("select a.form_crf_3a_id,a.Site,a.study_code,a.pw_crf_3a_2, a.pw_crf_3a_3,a.pw_crf_3a_18,a.pw_crf_3a_19,a.study_code,a.dssid,b.Randomization_ID,b.treatment from view_crf3a as a left join lab_investigation as b on a.pw_crf_3a_18=b.Randomization_ID      LEFT JOIN fixed_pregnant_woman AS c ON c.assis_id=a.assis_id              WHERE (CASE WHEN c.site !='' THEN c.site ELSE a.site END)   like '" + DropDownList1.SelectedValue + "%'            order by str_to_date(a.pw_crf_3a_2, '%d-%m-%Y'), STR_TO_DATE(a.pw_crf_3a_3,  '%H:%i')", con);
+
+                    MySqlDataAdapter sda = new MySqlDataAdapter();
                     {
-                        sda.Fill(dt);
-                        GridView1.DataSource = dt;
-                        GridView1.DataBind();
-                        con.Close();
+                        cmd.Connection = con;
+                        sda.SelectCommand = cmd;
+                        DataTable dt = new DataTable();
+                        {
+                            sda.Fill(dt);
+                            GridView1.DataSource = dt;
+                            GridView1.DataBind();
+                            con.Close();
+                        }
                     }
                 }
             }
@@ -65,6 +125,7 @@ namespace maamta_pw
                 con.Close();
             }
         }
+
 
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
@@ -103,19 +164,27 @@ namespace maamta_pw
 
                 con.Open();
                 MySqlCommand cmd;
-                cmd = new MySqlCommand("select a.form_crf_3a_id,a.Site,a.study_code,a.pw_crf_3a_2, a.pw_crf_3a_3,a.pw_crf_3a_18,a.pw_crf_3a_19,a.study_code,a.dssid,b.Randomization_ID,b.treatment from view_crf3a as a left join lab_investigation as b on a.pw_crf_3a_18=b.Randomization_ID order by str_to_date(a.pw_crf_3a_2, '%d-%m-%Y'), STR_TO_DATE(a.pw_crf_3a_3,  '%H:%i')", con);
-
-                MySqlDataAdapter sda = new MySqlDataAdapter();
+                if (DropDownList1.SelectedValue == "0")
                 {
-                    cmd.Connection = con;
-                    cmd.CommandTimeout = 999999;
-                    cmd.CommandType = CommandType.Text;
-                    sda.SelectCommand = cmd;
-                    DataTable dt = new DataTable();
+                    showalert("Please select Site");
+                    DropDownList1.Focus();
+                }
+                else
+                {
+                    cmd = new MySqlCommand("select a.form_crf_3a_id,a.Site,a.study_code,a.pw_crf_3a_2, a.pw_crf_3a_3,a.pw_crf_3a_18,a.pw_crf_3a_19,a.study_code,a.dssid,b.Randomization_ID,b.treatment from view_crf3a as a left join lab_investigation as b on a.pw_crf_3a_18=b.Randomization_ID       LEFT JOIN fixed_pregnant_woman AS c ON c.assis_id=a.assis_id                      WHERE (CASE WHEN c.site !='' THEN c.site ELSE a.site END)   like '" + DropDownList1.SelectedValue + "%'             order by str_to_date(a.pw_crf_3a_2, '%d-%m-%Y'), STR_TO_DATE(a.pw_crf_3a_3,  '%H:%i')", con);
+
+                    MySqlDataAdapter sda = new MySqlDataAdapter();
                     {
-                        sda.Fill(dt);
-                        GridView2.DataSource = dt;
-                        GridView2.DataBind();
+                        cmd.Connection = con;
+                        cmd.CommandTimeout = 999999;
+                        cmd.CommandType = CommandType.Text;
+                        sda.SelectCommand = cmd;
+                        DataTable dt = new DataTable();
+                        {
+                            sda.Fill(dt);
+                            GridView2.DataSource = dt;
+                            GridView2.DataBind();
+                        }
                     }
                 }
             }
@@ -167,10 +236,14 @@ namespace maamta_pw
         }
 
 
+
         protected void OnRowDataBound(object sender, GridViewRowEventArgs e)
         {
+
+            
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
+
                 TableCell cell1 = e.Row.Cells[5];
                 cell1.BackColor = System.Drawing.Color.FromName("#cef5cb");
 
@@ -181,6 +254,30 @@ namespace maamta_pw
                     TableCell cell = e.Row.Cells[6];
                     cell.ForeColor = System.Drawing.Color.FromName("#ffffff");
                 }
+
+
+                
+                
+                
+                // To Check Randomization Sequence 
+
+
+                Regex re = new Regex(@"([a-zA-Z]+)(\d+)");
+                Match result = re.Match(e.Row.Cells[4].Text);
+                string alphaPart = result.Groups[1].Value;
+                int numberPart = Convert.ToInt32(result.Groups[2].Value);
+
+                Random_Sequence = Random_Sequence + 1;
+
+                if (numberPart != Random_Sequence)
+                {
+                    TableCell cell0 = e.Row.Cells[4];
+                    cell0.BackColor = System.Drawing.Color.FromName("#ff7675");
+                    TableCell cell = e.Row.Cells[4];
+                    cell.ForeColor = System.Drawing.Color.FromName("#ffffff");
+                }
+
+
             }
         }
 

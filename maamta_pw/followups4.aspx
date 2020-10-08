@@ -132,6 +132,7 @@
                     <asp:BoundField DataField="husband_name" HeaderText="Husband Name" />
                     <asp:BoundField DataField="ARM" HeaderText="ARM" />
                     <asp:BoundField DataField="end_date" HeaderText="End_Date" />
+                    <asp:BoundField DataField="Percentage" HeaderText="LNS" />
                 </Columns>
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <EditRowStyle BackColor="#999999" />
@@ -167,6 +168,7 @@
                     <asp:BoundField DataField="husband_name" HeaderText="Husband Name" />
                     <asp:BoundField DataField="ARM" HeaderText="ARM" />
                     <asp:BoundField DataField="end_date" HeaderText="End_Date" />
+                    <asp:BoundField DataField="Percentage" HeaderText="LNS" />
                 </Columns>
             </asp:GridView>
 

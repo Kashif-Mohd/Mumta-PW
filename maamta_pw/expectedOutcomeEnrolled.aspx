@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="expectedOutcomeEnrolled.aspx.cs" Inherits="maamta_pw.expectedOutcomeEnrolled" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-             <style>
+    <style>
         /* For DropDown CSS */
         .textDropDownCSS {
             font-size: 1.2em;
@@ -14,7 +15,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-               <div style="padding-left: 2%; margin-top: 15px;">
+    <div style="padding-left: 2%; margin-top: 15px;">
 
         <div style="color: #ff6b6b; font-size: 22px; width: 100%">
             <b>Expected Outcome: </b>(Enrolled Participant)
@@ -47,7 +48,7 @@
 
 
         <div style="width: 100%; overflow: auto">
-            <asp:GridView ID="GridView1" runat="server" EmptyDataText="No Record Found."  CssClass="footable" AllowSorting="false" ForeColor="#333333" AutoGenerateColumns="false">
+            <asp:GridView ID="GridView1" runat="server" EmptyDataText="No Record Found." CssClass="footable" AllowSorting="false" ForeColor="#333333" AutoGenerateColumns="false">
                 <Columns>
                     <asp:TemplateField HeaderText="Serial no.">
                         <ItemTemplate>
@@ -62,6 +63,9 @@
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                     <asp:BoundField DataField="Expected_Date" HeaderText="Expected Date" />
                     <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
+                    <asp:BoundField DataField="Is this first pregnancy" HeaderText="Is this first pregnancy" />
+                    <asp:BoundField DataField="Gravida" HeaderText="Gravida" />
+                    <asp:BoundField DataField="Total Alive Births" HeaderText="Total Alive Births" />
                 </Columns>
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <EditRowStyle BackColor="#999999" />
@@ -91,6 +95,9 @@
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                     <asp:BoundField DataField="Expected_Date" HeaderText="Expected Date" />
                     <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
+                    <asp:BoundField DataField="Is this first pregnancy" HeaderText="Is this first pregnancy" />
+                    <asp:BoundField DataField="Gravida" HeaderText="Gravida" />
+                    <asp:BoundField DataField="Total Alive Births" HeaderText="Total Alive Births" />
                 </Columns>
             </asp:GridView>
         </div>

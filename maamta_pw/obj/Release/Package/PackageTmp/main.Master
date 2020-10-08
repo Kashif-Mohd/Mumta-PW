@@ -374,9 +374,13 @@
                                 <span>Entry Forms</span>
                             </a>
                             <ul class="sub">
+                                <li runat="server" id="type_of_stillbirth"><a href="type_of_stillbirth.aspx">Type of Stillbirth</a></li>
+                                <li runat="server" id="infantdeath"><a href="infantdeath.aspx">Infant Death (Entry)</a></li>
                                 <li runat="server" id="showcrf4Compliance"><a href="showcrf4Compliance.aspx">CRF-4 (Compliance)</a></li>
                                 <li runat="server" id="entrycompliance"><a href="entrycompliance.aspx">Entry Empty Sachet</a></li>
                                 <li runat="server" id="checkcompliance"><a href="checkcompliance.aspx">Search Compliance</a></li>
+                                <li runat="server" id="entrycrf8"><a href="crf8a.aspx">Entry (CRF-8) Adverse Event </a></li>
+                                <li runat="server" id="dashCrf8"><a href="dashboardCRF8.aspx">Show (CRF-8) Adverse Event </a></li>
                             </ul>
                         </li>
 

@@ -34,8 +34,12 @@ namespace maamta_pw
             }
             if (Convert.ToString(Session["RolePW"]) != "web_sup_admin")
             {
-                 navWebEntry.Visible = false;
-                 navSecret.Visible = false;
+               //  navWebEntry.Visible = false;
+                showcrf4Compliance.Visible = false;
+                entrycompliance.Visible = false;
+                checkcompliance.Visible = false;
+
+                navSecret.Visible = false;
             }
 
 
@@ -273,7 +277,7 @@ namespace maamta_pw
 
 
 
-                //Compliance Forms:
+                //Entry Forms:
 
                 else if (Convert.ToString(Session["WebForm"]) == "showcrf4Compliance")
                 {
@@ -294,8 +298,33 @@ namespace maamta_pw
                     Session["WebForm"] = null;
                 }
 
+                else if (Convert.ToString(Session["WebForm"]) == "type_of_stillbirth")
+                {
+                    WebEntry.Attributes.Add("class", "active");
+                    type_of_stillbirth.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
+                else if (Convert.ToString(Session["WebForm"]) == "infantdeath")
+                {
+                    WebEntry.Attributes.Add("class", "active");
+                    infantdeath.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
 
+                    
 
+                else if (Convert.ToString(Session["WebForm"]) == "entrycrf8")
+                {
+                    WebEntry.Attributes.Add("class", "active");
+                    entrycrf8.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
+                else if (Convert.ToString(Session["WebForm"]) == "dashCrf8")
+                {
+                    WebEntry.Attributes.Add("class", "active");
+                    dashCrf8.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
 
 
 

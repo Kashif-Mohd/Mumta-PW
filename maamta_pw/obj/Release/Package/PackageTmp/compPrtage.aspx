@@ -163,8 +163,11 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
-                        <asp:BoundField DataField="percentage" HeaderText="Percentage" />
-                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
+                        <asp:BoundField DataField="Cumulative" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
 
                     </Columns>
@@ -200,8 +203,11 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
-                        <asp:BoundField DataField="percentage" HeaderText="Percentage" />
-                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
+                        <asp:BoundField DataField="Cumulative" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
 
                     </Columns>
@@ -237,8 +243,11 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
-                        <asp:BoundField DataField="percentage" HeaderText="Percentage" />
-                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
+                        <asp:BoundField DataField="Cumulative" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
 
                     </Columns>
@@ -274,8 +283,11 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
-                        <asp:BoundField DataField="percentage" HeaderText="Percentage" />
-                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
+                        <asp:BoundField DataField="Cumulative" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
 
                     </Columns>
@@ -310,8 +322,11 @@
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="arm" HeaderText="ARM" />
-                        <asp:BoundField DataField="percentage" HeaderText="Percentage" />
-                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
+                        <asp:BoundField DataField="Cumulative" HeaderText="Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
@@ -388,9 +403,14 @@
                         <asp:BoundField DataField="ARM" HeaderText="ARM" />
                         <asp:BoundField DataField="CRF4_Attempt" HeaderText="CRF4 Attempt" />
                         <asp:BoundField DataField="CRF4_Complete" HeaderText="CRF4 Complete" />
+                        <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
                         <asp:BoundField DataField="Cumulative" HeaderText="Cumulative Maamta Compliance" />
                         <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
+
+                        <asp:BoundField DataField="date_of_registration" HeaderText="Date of Registration" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
 
                     </Columns>
 
@@ -427,9 +447,15 @@
                         <asp:BoundField DataField="ARM" HeaderText="ARM" />
                         <asp:BoundField DataField="CRF4_Attempt" HeaderText="CRF4 Attempt" />
                         <asp:BoundField DataField="CRF4_Complete" HeaderText="CRF4 Complete" />
+                        <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
                         <asp:BoundField DataField="Cumulative" HeaderText="Cumulative Maamta Compliance" />
                         <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
+
+                        <asp:BoundField DataField="date_of_registration" HeaderText="Date of Registration" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+
                     </Columns>
                 </asp:GridView>
             </div>

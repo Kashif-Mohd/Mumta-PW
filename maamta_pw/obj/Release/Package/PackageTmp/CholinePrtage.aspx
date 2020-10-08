@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="CholinePrtage.aspx.cs" Inherits="maamta_pw.CholinePrtage" %>
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -102,7 +103,7 @@
 
         <div style="width: 100%; text-align: center; overflow: auto; margin-top: 30px" id="divGraph" runat="server">
 
-            <asp:Chart ID="Chart1" runat="server" Width="1000" Height="400px">
+            <asp:Chart ID="Chart1" runat="server" Width="1000" Height="400px" Visible="true">
                 <Series>
                     <asp:Series Name="Series1">
                     </asp:Series>
@@ -120,7 +121,6 @@
                     </asp:Title>
                 </Titles>
             </asp:Chart>
-
 
 
             <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: 0px">
@@ -161,8 +161,12 @@
                         <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                        <asp:BoundField DataField="Cumulative_Choline" HeaderText="Percentage" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_Choline" HeaderText="Consumed Choline" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used Choline" />
+                        <asp:BoundField DataField="Percentage" HeaderText="Percentage" />
                         <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -195,8 +199,12 @@
                         <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                        <asp:BoundField DataField="Cumulative_Choline" HeaderText="Percentage" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_Choline" HeaderText="Consumed Choline" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used Choline" />
+                        <asp:BoundField DataField="Percentage" HeaderText="Percentage" />
                         <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -229,8 +237,12 @@
                         <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                        <asp:BoundField DataField="Cumulative_Choline" HeaderText="Percentage" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_Choline" HeaderText="Consumed Choline" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used Choline" />
+                        <asp:BoundField DataField="Percentage" HeaderText="Percentage" />
                         <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -263,8 +275,12 @@
                         <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                        <asp:BoundField DataField="Cumulative_Choline" HeaderText="Percentage" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_Choline" HeaderText="Consumed Choline" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used Choline" />
+                        <asp:BoundField DataField="Percentage" HeaderText="Percentage" />
                         <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -296,8 +312,12 @@
                         <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                        <asp:BoundField DataField="Cumulative_Choline" HeaderText="Percentage" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_Choline" HeaderText="Consumed Choline" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used Choline" />
+                        <asp:BoundField DataField="Percentage" HeaderText="Percentage" />
                         <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -372,8 +392,11 @@
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="CRF4b_Attempt" HeaderText="CRF4b Attempt" />
                         <asp:BoundField DataField="CRF4b_Complete" HeaderText="CRF4b Complete" />
-                        <asp:BoundField DataField="Cumulative_Choline" HeaderText="Cumulative Choline Percentage" />
-                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_Choline" HeaderText="Consumed Choline" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used Choline" />
+                        <asp:BoundField DataField="Percentage" HeaderText="Cumulative Choline Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
 
@@ -409,8 +432,11 @@
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                         <asp:BoundField DataField="CRF4b_Attempt" HeaderText="CRF4b Attempt" />
                         <asp:BoundField DataField="CRF4b_Complete" HeaderText="CRF4b Complete" />
-                        <asp:BoundField DataField="Cumulative_Choline" HeaderText="Cumulative Choline Percentage" />
-                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                        <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Consumed_Choline" HeaderText="Consumed Choline" />
+                        <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used Choline" />
+                        <asp:BoundField DataField="Percentage" HeaderText="Cumulative Choline Percentage" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
                         <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     </Columns>
                 </asp:GridView>
