@@ -75,7 +75,7 @@
             Randomization Form:
             <asp:Label ID="lbeDateFromTo" ForeColor="#10ac84" Font-Size="17px" Font-Bold="true" runat="server" Text=""></asp:Label>
         </div>
-        <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: -3px"/>
+        <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: -3px" />
 
         <div id="divExportButton" runat="server" style="text-align: right; margin-top: -17px">
             <button type="button" id="Button1" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_Click">
@@ -146,8 +146,12 @@
                         </ItemTemplate>
                         <ItemStyle Width="2%" />
                     </asp:TemplateField>
+
+                    <asp:BoundField DataField="unique_id" HeaderText="unique_id" />
+                    <asp:BoundField DataField="vr_id" HeaderText="vr_id" />
+
                     <asp:BoundField DataField="form_crf_3a_id" HeaderText="form_crf_3a_id" />
-                      <asp:TemplateField HeaderText="Assisment ID">
+                    <asp:TemplateField HeaderText="Assisment ID">
                         <ItemTemplate>
                             <asp:LinkButton ID="LinkAssis" OnClick="Link_Assis" Text='<%#Eval("assis_id") %>' runat="server" ToolTip="Form Detail" CommandArgument='<%#Eval("form_crf_3a_id")+","+ Eval("assis_id")%>'></asp:LinkButton>
                         </ItemTemplate>
@@ -206,6 +210,10 @@
                         </ItemTemplate>
                         <ItemStyle Width="2%" />
                     </asp:TemplateField>
+
+                    <asp:BoundField DataField="unique_id" HeaderText="unique_id" />
+                    <asp:BoundField DataField="vr_id" HeaderText="vr_id" />
+
                     <asp:BoundField DataField="form_crf_3a_id" HeaderText="form_crf_3a_id" />
                     <asp:BoundField DataField="assis_id" HeaderText="assis_id" />
                     <asp:BoundField DataField="pw_crf_3a_2" HeaderText="pw_crf_3a_2" />

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="followups5a.aspx.cs" Inherits="maamta_pw.followups5a" %>
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -125,6 +126,7 @@
                     <asp:BoundField DataField="pw_assid" HeaderText="Assessment ID" />
                     <asp:BoundField DataField="study_id" HeaderText="Study ID" />
                     <asp:BoundField DataField="dssid" HeaderText="DSSID" />
+                    <asp:BoundField DataField="block" HeaderText="block" />
                     <asp:BoundField DataField="pw_name" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_name" HeaderText="Husband Name" />
                     <asp:BoundField DataField="ARM" HeaderText="ARM" />
@@ -160,6 +162,7 @@
                     <asp:BoundField DataField="pw_assid" HeaderText="Assessment ID" />
                     <asp:BoundField DataField="study_id" HeaderText="Study ID" />
                     <asp:BoundField DataField="dssid" HeaderText="DSSID" />
+                    <asp:BoundField DataField="block" HeaderText="block" />
                     <asp:BoundField DataField="pw_name" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_name" HeaderText="Husband Name" />
                     <asp:BoundField DataField="ARM" HeaderText="ARM" />

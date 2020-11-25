@@ -42,9 +42,9 @@
     <div style="padding-left: 2%; margin-top: 15px;">
 
         <div style="color: #ff6b6b; font-size: 22px; width: 100%">
-            Next ANC-Visit Schedule:
+            Next ANC-Visit Schedule (Enrolled Participant):
         </div>
-        <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: -3px">
+        <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: -3px"/>
 
         <div id="divExportButton" runat="server" style="text-align: right; margin-top: -17px">
             <button type="button" id="Button1" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_Click">
@@ -95,11 +95,6 @@
                           <asp:CheckBox ID="CheckBox1" runat="server" Text="Disable" OnCheckedChanged="CheckBox1_CheckedChanged" AutoPostBack="true" CssClass="mycheckbox" />
                             </td>
                         </tr>
-                        <tr>
-                            <td style="padding-top: 20px;">
-                                <asp:CheckBox ID="chkSunday" runat="server" Text="Hide Sunday" CssClass="mycheckbox" Font-Size="1.2em" />
-                            </td>
-                        </tr>
                     </table>
                 </div>
             </ContentTemplate>
@@ -119,12 +114,18 @@
                         </ItemTemplate>
                         <ItemStyle Width="2%" />
                     </asp:TemplateField>
+                    <asp:BoundField DataField="unique_id" HeaderText="unique_id" />
+                    <asp:BoundField DataField="vr_id" HeaderText="vr_id" />
                     <asp:BoundField DataField="assis_id" HeaderText="Assisment ID" />
+                    <asp:BoundField DataField="Study_ID" HeaderText="Study ID" />
+                    <asp:BoundField DataField="real_sitee" HeaderText="Real Site" />
                     <asp:BoundField DataField="dssid" HeaderText="DSSID" />
+                    <asp:BoundField DataField="Block" HeaderText="Block" />
                     <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                    <asp:BoundField DataField="Status" HeaderText="Status" />
-                    <asp:BoundField DataField="appointment_date" HeaderText="Appointment Date" />
+                    <asp:BoundField DataField="Indicator" HeaderText="Indicator" />
+                    <asp:BoundField DataField="Current_GA" HeaderText="Current G.A" />
+                    <asp:BoundField DataField="appointment_datee" HeaderText="Appointment Date" />
                 </Columns>
 
 
@@ -152,12 +153,18 @@
                         </ItemTemplate>
                         <ItemStyle Width="2%" />
                     </asp:TemplateField>
+                    <asp:BoundField DataField="unique_id" HeaderText="unique_id" />
+                    <asp:BoundField DataField="vr_id" HeaderText="vr_id" />
                     <asp:BoundField DataField="assis_id" HeaderText="Assisment ID" />
+                    <asp:BoundField DataField="Study_ID" HeaderText="Study ID" />
+                    <asp:BoundField DataField="real_sitee" HeaderText="Real Site" />
                     <asp:BoundField DataField="dssid" HeaderText="DSSID" />
+                    <asp:BoundField DataField="Block" HeaderText="Block" />
                     <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                    <asp:BoundField DataField="Status" HeaderText="Status" />
-                    <asp:BoundField DataField="appointment_date" HeaderText="Appointment Date" />
+                    <asp:BoundField DataField="Indicator" HeaderText="Indicator" />
+                    <asp:BoundField DataField="Current_GA" HeaderText="Current G.A" />
+                    <asp:BoundField DataField="appointment_datee" HeaderText="Appointment Date" />
                 </Columns>
             </asp:GridView>
         </div>

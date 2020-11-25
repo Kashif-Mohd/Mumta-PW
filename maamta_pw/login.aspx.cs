@@ -109,7 +109,7 @@ namespace maamta_pw
             try
             {
                 con.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT * from team where team_title_id is null and password='" + txtPass.Text + "' and user_name='" + txtUserNme.Text + "'", con);
+                MySqlCommand cmd = new MySqlCommand("SELECT * from team where team_title_id is null and password='" + txtPass.Text + "' and user_name='" + txtUserNme.Text + "' and status='1'", con);
                 dreader = cmd.ExecuteReader();
                 if (dreader.Read())
                 {
@@ -128,5 +128,6 @@ namespace maamta_pw
             }
             return false;
         }
+
     }
 }

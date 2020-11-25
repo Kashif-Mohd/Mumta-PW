@@ -372,6 +372,24 @@
 
             <%--Search Button--%>
             <div id="divSearch" runat="server" class="col-lg-4 col-lg-offset-4" style="margin-bottom: 10px; margin-top: -10px;">
+                
+                <%--Start    Date checks--%>
+
+                <div class="Mobile" id="calendar" runat="server">
+                    <table style="width: 100%; text-align: center; margin-left: 6%; margin-bottom: 15px">
+                        <tr>
+                            <td class="tddd">&nbsp <b>DATE: </b>&nbsp
+                                        <asp:TextBox ID="txtCalndrDate_LNS" Font-Bold="true" Font-Size="16px" ClientIDMode="Static" CssClass="txtboxx" Height="32px" runat="server" Width="8.0em"></asp:TextBox>
+                                <asp:ImageButton ID="btnCalndrDate" ImageUrl="~/assets/img/calendar1.png" CssClass="calanderButton" runat="server" />
+                                <cc1:CalendarExtender ID="CalendarExtender1" runat="server" TargetControlID="txtCalndrDate_LNS" PopupButtonID="btnCalndrDate" Format="dd-MM-yyyy" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <%--End   Date checks--%>
+
+
 
 
                 <div id="imaginary_container" style="margin-top: 10px">
@@ -449,11 +467,13 @@
                         <asp:BoundField DataField="CRF4_Complete" HeaderText="CRF4 Complete" />
                         <asp:BoundField DataField="Consumed_LNS" HeaderText="Consumed LNS" />
                         <asp:BoundField DataField="Need_to_be_used" HeaderText="Need to be used LNS" />
-                        <asp:BoundField DataField="Cumulative" HeaderText="Cumulative Maamta Compliance" />
-                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
-                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                         <asp:BoundField DataField="date_of_registration" HeaderText="Date of Registration" />
                         <asp:BoundField DataField="last_DOV" HeaderText="Last DOV" />
+                        <asp:BoundField DataField="Cumulative" HeaderText="LNS Cumulative" />
+                        <asp:BoundField DataField="last_DOV_date" HeaderText="Last DOV (Seleted Date)" />
+                        <asp:BoundField DataField="Cumulative_date" HeaderText="LNS Cumulative (Selected Date)" />
+                        <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
+                        <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                         <asp:BoundField DataField="F1" HeaderText="F1" />
                         <asp:BoundField DataField="F2" HeaderText="F2" />
                         <asp:BoundField DataField="F3" HeaderText="F3" />

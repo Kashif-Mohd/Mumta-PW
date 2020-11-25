@@ -80,9 +80,9 @@
             SCREENING FORM &nbsp (Ultrasound)
             <asp:Label ID="lbeDateFromTo" ForeColor="#10ac84" Font-Size="17px" Font-Bold="true" runat="server" Text=""></asp:Label>
         </div>
-        <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: -3px">
+        <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: -3px" />
 
-        <div id="divExportButton" runat="server" style="text-align: right; margin-top: -17px">
+        <div id="divExportButton" runat="server" style="text-align: right; margin-top: -17px" visible="false">
             <button type="button" id="Button1" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_Click">
                 Export &nbsp<span class="glyphicon glyphicon-export"></span>
             </button>

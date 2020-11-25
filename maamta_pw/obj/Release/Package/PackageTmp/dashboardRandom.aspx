@@ -163,15 +163,20 @@
             Screening and Enrollment &nbsp<span class="glyphicon glyphicon-export"></span>
         </button>
 
-
-        <button type="button" id="btnExport_CRF6_R1" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_CRF6_R1_Click">
-            CRF-6 Report (1) &nbsp<span class="glyphicon glyphicon-export"></span>
-        </button>
-
-                <%-- CRF6_Report-2 --%>
-
         <button type="button" id="btnExport_CRF6_R2" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_CRF6_R2_Click">
             Birth Outcomes &nbsp<span class="glyphicon glyphicon-export"></span>
+        </button>
+
+        <button type="button" id="btnExport_Compliance" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_Compliance_Click">
+            Compliance &nbsp<span class="glyphicon glyphicon-export"></span>
+        </button>
+        <button type="button" id="btnExport_SAE" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_SAE_Click">
+            SAE's &nbsp<span class="glyphicon glyphicon-export"></span>
+        </button>
+
+        <%-- CRF6_Report-1 --%>
+        <button type="button" id="btnExport_CRF6_R1" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_CRF6_R1_Click" visible="false">
+            CRF-6 Report (1) &nbsp<span class="glyphicon glyphicon-export"></span>
         </button>
 
     </div>
@@ -251,7 +256,7 @@
     </asp:GridView>
 
     <asp:GridView ID="GridView10" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true" OnRowDataBound="OnRowDataBound">
-           <RowStyle BackColor="#6C7A89" ForeColor="WhiteSmoke" />
+        <RowStyle BackColor="#6C7A89" ForeColor="WhiteSmoke" />
     </asp:GridView>
 
 
@@ -260,7 +265,7 @@
 
 
     <%--CRF6 Report1: Table-1 --%>
-    <asp:GridView ID="GridView_CRF6_01" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true" >
+    <asp:GridView ID="GridView_CRF6_01" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
     </asp:GridView>
     <%--CRF6 Report1: Table-2 --%>
     <asp:GridView ID="GridView_CRF6_02" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
@@ -313,6 +318,42 @@
     <%--CRF6 Report2: Table-5 According to New Report of Birth Outcome --%>
     <asp:GridView ID="GridView_CRF6_R2_07" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
     </asp:GridView>
+
+
+
+
+
+
+
+
+
+    <%--CRF6 Compliance Report: Table-1 --%>
+    <asp:GridView ID="GridView_Compliance_Table1" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+    <%--CRF6 Compliance Report: Table-2 --%>
+    <asp:GridView ID="GridView_Compliance_Table2" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+    <%--CRF6 Compliance Report: Table-3 --%>
+    <asp:GridView ID="GridView_Compliance_Table3" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+
+
+
+
+
+    <%--SAE's Report: Table-1 --%>
+    <asp:GridView ID="GridView_SAE_Table1" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+    <%--SAE's Report: Table-2 --%>
+    <asp:GridView ID="GridView_SAE_Table2" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+    <%--SAE's Report: Table-3 --%>
+    <asp:GridView ID="GridView_SAE_Table3" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+    <%--SAE's Report: Table-4 --%>
+    <asp:GridView ID="GridView_SAE_Table4" runat="server" CssClass="footable" ForeColor="#333333" AutoGenerateColumns="true">
+    </asp:GridView>
+
 
 
 </asp:Content>

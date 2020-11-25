@@ -146,14 +146,14 @@
                         </ItemTemplate>
                         <ItemStyle Width="2%" />
                     </asp:TemplateField>
+                    <asp:BoundField DataField="unique_id" HeaderText="unique_id" />
+                    <asp:BoundField DataField="vr_id" HeaderText="vr_id" />
                     <asp:BoundField DataField="crf2_id" HeaderText="crf2_id" />
-
                     <asp:TemplateField HeaderText="Assisment ID">
                         <ItemTemplate>
                             <asp:LinkButton ID="LinkAssis" OnClick="Link_Assis" Text='<%#Eval("assis_id") %>' runat="server" ToolTip="Form Detail" CommandArgument='<%#Eval("crf2_id")+","+ Eval("assis_id")%>'></asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
-
                     <asp:BoundField DataField="pw_crf2_2" HeaderText="pw_crf2_2" />
                     <asp:BoundField DataField="pw_crf2_3" HeaderText="pw_crf2_3" />
                     <asp:BoundField DataField="woman_nm" HeaderText="woman_nm" />
@@ -235,6 +235,8 @@
                         </ItemTemplate>
                         <ItemStyle Width="2%" />
                     </asp:TemplateField>
+                    <asp:BoundField DataField="unique_id" HeaderText="unique_id" />
+                    <asp:BoundField DataField="vr_id" HeaderText="vr_id" />
                     <asp:BoundField DataField="crf2_id" HeaderText="crf2_id" />
                     <asp:BoundField DataField="assis_id" HeaderText="assis_id" />
                     <asp:BoundField DataField="pw_crf2_2" HeaderText="pw_crf2_2" />

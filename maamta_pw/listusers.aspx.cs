@@ -43,7 +43,7 @@ namespace maamta_pw
                 con.Open();
                 if (DropDownList1.SelectedValue == "0")
                 {
-                    MySqlCommand cmd = new MySqlCommand("select a.sra_name,b.title,a.user_name,a.password,a.status from team as a left join group_title as b on a.team_title_id=b.team_title_id where a.status is not null and a.sra_name like '%" + txtname.Text + "%'  and a.status='1'  order by a.team_title_id,a.sra_name", con);
+                    MySqlCommand cmd = new MySqlCommand("SELECT a.sra_name,c.`site`,b.title,a.user_name,a.password,a.status FROM team AS a LEFT JOIN group_title AS b ON a.team_title_id=b.team_title_id LEFT JOIN site AS c ON c.`site_id`=a.`site_id`  where a.status is not null and a.sra_name like '%" + txtname.Text + "%'  and a.status='1' AND c.`site`!=''  order by a.team_title_id,a.sra_name", con);
                     {
                         MySqlDataAdapter sda = new MySqlDataAdapter();
                         {
@@ -61,7 +61,7 @@ namespace maamta_pw
                 }
                 else
                 {
-                    MySqlCommand cmd = new MySqlCommand("select a.sra_name,b.title,a.user_name,a.password,a.status from team as a left join group_title as b on a.team_title_id=b.team_title_id where a.status is not null and a.sra_name like '%" + txtname.Text + "%'  and a.status='1'  and a.team_title_id='" + DropDownList1.SelectedValue + "' order by a.team_title_id,a.sra_name", con);
+                    MySqlCommand cmd = new MySqlCommand("SELECT a.sra_name,c.`site`,b.title,a.user_name,a.password,a.status FROM team AS a LEFT JOIN group_title AS b ON a.team_title_id=b.team_title_id LEFT JOIN site AS c ON c.`site_id`=a.`site_id`  where a.status is not null and a.sra_name like '%" + txtname.Text + "%'  and a.status='1' AND c.`site`!=''  and a.team_title_id='" + DropDownList1.SelectedValue + "' order by a.team_title_id,a.sra_name", con);
                     {
                         MySqlDataAdapter sda = new MySqlDataAdapter();
                         {

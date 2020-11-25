@@ -175,15 +175,6 @@ namespace maamta_pw {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl expectedOutcome;
         
         /// <summary>
-        /// ancPending control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ancPending;
-        
-        /// <summary>
         /// ancVisits control.
         /// </summary>
         /// <remarks>
@@ -659,6 +650,15 @@ namespace maamta_pw {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl showanc_enrolled_labeled;
+        
+        /// <summary>
+        /// del_crf1_assis_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl del_crf1_assis_id;
         
         /// <summary>
         /// navTabUsr control.

@@ -40,15 +40,6 @@ namespace maamta_pw {
         protected global::System.Web.UI.HtmlControls.HtmlButton btnExport;
         
         /// <summary>
-        /// btnExport_CRF6_R1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnExport_CRF6_R1;
-        
-        /// <summary>
         /// btnExport_CRF6_R2 control.
         /// </summary>
         /// <remarks>
@@ -56,6 +47,33 @@ namespace maamta_pw {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton btnExport_CRF6_R2;
+        
+        /// <summary>
+        /// btnExport_Compliance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnExport_Compliance;
+        
+        /// <summary>
+        /// btnExport_SAE control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnExport_SAE;
+        
+        /// <summary>
+        /// btnExport_CRF6_R1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnExport_CRF6_R1;
         
         /// <summary>
         /// txtCalndrDate control.
@@ -326,5 +344,68 @@ namespace maamta_pw {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView_CRF6_R2_07;
+        
+        /// <summary>
+        /// GridView_Compliance_Table1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_Compliance_Table1;
+        
+        /// <summary>
+        /// GridView_Compliance_Table2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_Compliance_Table2;
+        
+        /// <summary>
+        /// GridView_Compliance_Table3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_Compliance_Table3;
+        
+        /// <summary>
+        /// GridView_SAE_Table1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_SAE_Table1;
+        
+        /// <summary>
+        /// GridView_SAE_Table2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_SAE_Table2;
+        
+        /// <summary>
+        /// GridView_SAE_Table3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_SAE_Table3;
+        
+        /// <summary>
+        /// GridView_SAE_Table4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_SAE_Table4;
     }
 }

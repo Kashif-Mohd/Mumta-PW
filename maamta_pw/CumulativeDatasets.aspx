@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="CumulativeDatasets.aspx.cs" Inherits="maamta_pw.CumulativeReport" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        <style>
+    <style>
         /* For DropDown CSS */
         .textDropDownCSS {
             font-size: 1.2em;
@@ -20,7 +21,7 @@
             Cumulative Datasets:
         </div>
 
-        <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: -3px">
+        <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: -3px"/>
 
         <div id="divExportButton" runat="server" style="text-align: right; margin-top: -17px">
             <button type="button" id="Button1" class="btn btn-success" runat="server" style="height: 38px" onserverclick="btnExport_Click">
@@ -59,10 +60,13 @@
                         </ItemTemplate>
                         <ItemStyle Width="2%" />
                     </asp:TemplateField>
+                    <asp:BoundField DataField="unique_id" HeaderText="unique_id" />
+                    <asp:BoundField DataField="vr_id" HeaderText="vr_id" />
                     <asp:BoundField DataField="study_code" HeaderText="Study ID" />
                     <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                     <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
+                    <asp:BoundField DataField="DOE" HeaderText="Date of Enrollment" />
                     <asp:BoundField DataField="ARM" HeaderText="ARM" />
                     <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />
@@ -98,10 +102,13 @@
                         </ItemTemplate>
                         <ItemStyle Width="2%" />
                     </asp:TemplateField>
+                    <asp:BoundField DataField="unique_id" HeaderText="unique_id" />
+                    <asp:BoundField DataField="vr_id" HeaderText="vr_id" />
                     <asp:BoundField DataField="study_code" HeaderText="Study ID" />
                     <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                     <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
+                    <asp:BoundField DataField="DOE" HeaderText="Date of Enrollment" />
                     <asp:BoundField DataField="ARM" HeaderText="ARM" />
                     <asp:BoundField DataField="gestational_age" HeaderText="Gestational Age" />
                     <asp:BoundField DataField="Pregnancy_Status" HeaderText="Status" />

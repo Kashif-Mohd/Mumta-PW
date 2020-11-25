@@ -19,8 +19,6 @@ namespace maamta_pw
             //  Start Navigation:
 
 
-
-
             if (Convert.ToString(Session["RolePW"]) != "web_admin" && Convert.ToString(Session["RolePW"]) != "web_sup_admin")
             {
                 navdash.Visible = false;
@@ -122,12 +120,12 @@ namespace maamta_pw
                     expectedOutcomeEnrolled.Attributes.Add("class", "active");
                     Session["WebForm"] = null;
                 }
-                else if (Convert.ToString(Session["WebForm"]) == "ancPending")
-                {
-                    TaskList.Attributes.Add("class", "active");
-                    ancPending.Attributes.Add("class", "active");
-                    Session["WebForm"] = null;
-                }
+                //else if (Convert.ToString(Session["WebForm"]) == "ancPending")
+                //{
+                //    TaskList.Attributes.Add("class", "active");
+                //    ancPending.Attributes.Add("class", "active");
+                //    Session["WebForm"] = null;
+                //}
 
                 else if (Convert.ToString(Session["WebForm"]) == "ancVisits")
                 {
@@ -399,6 +397,12 @@ namespace maamta_pw
                 {
                     secret.Attributes.Add("class", "active");
                     showanc_enrolled_labeled.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
+                else if (Convert.ToString(Session["WebForm"]) == "del_crf1")
+                {
+                    secret.Attributes.Add("class", "active");
+                    del_crf1_assis_id.Attributes.Add("class", "active");
                     Session["WebForm"] = null;
                 }
                     

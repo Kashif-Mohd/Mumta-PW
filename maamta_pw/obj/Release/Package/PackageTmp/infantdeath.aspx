@@ -104,7 +104,8 @@
                             <%# Container.DataItemIndex + 1 %>
                         </ItemTemplate>
                         <ItemStyle Width="2%" />
-                    </asp:TemplateField>
+                    </asp:TemplateField>                    
+                    <asp:BoundField DataField="study_id" HeaderText="study_id" />
                     <asp:BoundField DataField="dssid" HeaderText="dssid" />
                     <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />

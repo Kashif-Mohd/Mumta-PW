@@ -18,7 +18,7 @@
         <div style="color: #ff6b6b; font-size: 24px;">
             List of Users:
         </div>
-        <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: -3px">
+        <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: -3px"/>
 
 
         <div class="col-lg-4 col-lg-offset-4" style="margin-bottom: 12px; margin-top: -8px;">
@@ -72,6 +72,7 @@
                     <ItemStyle Width="2%" />
                 </asp:TemplateField>
                 <asp:BoundField DataField="title" HeaderText="Team Title" />
+                <asp:BoundField DataField="site" HeaderText="Assign Site" />
                 <asp:BoundField DataField="sra_name" HeaderText="Full Name" />
                 <asp:BoundField DataField="user_name" HeaderText="User Name" />
                 <asp:BoundField DataField="password" HeaderText="Password" />

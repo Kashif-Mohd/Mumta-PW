@@ -147,6 +147,7 @@
     <Content Include="dashWorkerPerformance.aspx" />
     <Content Include="dashboardRandom.aspx" />
     <Content Include="dashUltra.aspx" />
+    <Content Include="del_crf1.aspx" />
     <Content Include="duplicateANC.aspx" />
     <Content Include="duplicateCRF1.aspx" />
     <Content Include="enrollmentPending.aspx" />
@@ -326,6 +327,13 @@
     </Compile>
     <Compile Include="dashUltra.aspx.designer.cs">
       <DependentUpon>dashUltra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="del_crf1.aspx.cs">
+      <DependentUpon>del_crf1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="del_crf1.aspx.designer.cs">
+      <DependentUpon>del_crf1.aspx</DependentUpon>
     </Compile>
     <Compile Include="duplicateANC.aspx.cs">
       <DependentUpon>duplicateANC.aspx</DependentUpon>
